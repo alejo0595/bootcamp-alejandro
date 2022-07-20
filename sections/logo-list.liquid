@@ -1,6 +1,11 @@
 {%- if section.settings.heading != blank or section.blocks.size > 0 -%}
   {%- liquid
-    if section.blocks.size == 4
+    
+    if section.blocks.size == 6
+      assign col_class = 'sixth'
+    elsif section.blocks.size == 5
+      assign col_class = 'fifth'
+    elsif section.blocks.size == 4
       assign col_class = 'quarter'
     elsif section.blocks.size == 3
       assign col_class = 'third'
@@ -95,6 +100,7 @@
                   <img src="{{ img | image_url: width: 200 }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}">
                 </noscript>
               {%- else -%}
+              {%- comment -%} Custom modification: Add several svg icons {%- endcomment -%}
                 {%- case block.settings.icon -%}
                   {%- when 'svg-package' -%}
                     {% render 'svg-package' %}
@@ -136,6 +142,18 @@
                     {% render 'svg-lock' %}
                   {%- when 'svg-thumbs-up' -%}
                     {% render 'svg-thumbs-up' %}
+                  {%- when 'mycustom-svg-baby_cart' -%}
+                    {% render 'mycustom-svg-baby_cart' %}
+                  {%- when 'mycustom-svg-flower' -%}
+                    {% render 'mycustom-svg-flower' %}
+                  {%- when 'mycustom-svg-hand_water' -%}
+                    {% render 'mycustom-svg-hand_water' %}
+                  {%- when 'mycustom-svg-plant' -%}
+                    {% render 'mycustom-svg-plant' %}
+                  {%- when 'mycustom-svg-spa' -%}
+                    {% render 'mycustom-svg-spa' %}
+                  {%- when 'mycustom-svg-field' -%}
+                    {% render 'mycustom-svg-field' %}
                 {%- endcase -%}
               {%- endif -%}
             </div>
@@ -155,6 +173,10 @@
   </div>
 {%- endif -%}
 
+{%- comment -%}
+Custom modification:
+-Add several svg icons
+{%- endcomment -%}
 {% schema %}
   {
     "name": "Logo list / Feature list",
@@ -220,7 +242,7 @@
         "label": "Custom text color"
       }
     ],
-    "max_blocks": 4,
+    "max_blocks": 6,
     "blocks": [
       {
         "type": "logo",
@@ -316,6 +338,30 @@
               {
                 "value": "svg-thumbs-up",
                 "label": "Thumbs up"
+              },
+              {
+                "value": "mycustom-svg-baby_cart",
+                "label": "Baby Cart"
+              },
+              {
+                "value": "mycustom-svg-flower",
+                "label": "Flower"
+              },
+              {
+                "value": "mycustom-svg-hand_water",
+                "label": "Hand and Water"
+              },
+              {
+                "value": "mycustom-svg-plant",
+                "label": "Plant"
+              },
+              {
+                "value": "mycustom-svg-spa",
+                "label": "Spa"
+              },
+              {
+                "value": "mycustom-svg-field",
+                "label": "Field"
               }
             ],
             "default": "svg-package"

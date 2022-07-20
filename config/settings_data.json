@@ -4,8 +4,8 @@
     "col_headings": "#152242",
     "col_links": "#5c6ac4",
     "col_page_bg": "#ffffff",
-    "col_header_bg": "#ffffff",
-    "col_header_text": "#152242",
+    "col_header_bg": "#3E7879",
+    "col_header_text": "#ffffff",
     "col_header_text_overlap": "#ffffff",
     "col_nav_bg": "#152242",
     "col_nav_links": "#ffffff",
@@ -29,9 +29,9 @@
     "col_footer_text": "#ffffff",
     "col_popup_background": "#ffffff",
     "col_popup_text": "#152242",
-    "type_base_font": "futura_n4",
+    "type_base_font": "montserrat_n4",
     "font_size_base_int": 15,
-    "type_heading_font": "din_neuzeit_grotesk_n3",
+    "type_heading_font": "playfair_display_n4",
     "font_scale_headings": 100,
     "capitalize_headings": false,
     "type_nav_font": "neuzeit_s_n4",
@@ -39,10 +39,10 @@
     "font_size_nav_int": 32,
     "type_logo_font": "neuzeit_s_n4",
     "logo_size_int": 24,
-    "col_btn_bg": "#152242",
-    "col_btn": "#ffffff",
+    "col_btn_bg": "#ffffff",
+    "col_btn": "#f4ab9d",
     "col_alt_btn_bg": "#ffffff",
-    "col_alt_btn": "#152242",
+    "col_alt_btn": "#f4ab9d",
     "button_shape": "sharp",
     "button_border_width": "2",
     "show_breadcrumbs": false,
@@ -66,6 +66,7 @@
     "live_search_search_meta": false,
     "enable_transition_in": true,
     "enable_overlay_transition": true,
+    "show_currency_code": true,
     "checkout_header_image": "",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
@@ -88,19 +89,71 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "announcement_bar_bg_color": "#ffe2d1",
-          "announcement_bar_bg_text": "#132625"
+          "show_announcement": true,
+          "announcement_home_only": true,
+          "announcement_bar_text": "Free Shipping Worldwide on Any Minimum Order Purchases!",
+          "announcement_bar_link": "",
+          "announcement_bar_bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "announcement_bar_bg_text": "#ffffff",
+          "mycustom_announcement_icon": "<svg id=\"ship_icon\" data-name=\"ship icon\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\">\n  <path id=\"Path_59\" data-name=\"Path 59\" d=\"M0,0H24V24H0Z\" fill=\"none\"><\/path>\n  <path id=\"Path_60\" data-name=\"Path 60\" d=\"M17,5H3A2,2,0,0,0,1,7v9H3a3,3,0,0,0,6,0h5.5a3,3,0,0,0,6,0H23V11ZM3,11V7H7v4Zm3,6.5A1.5,1.5,0,1,1,7.5,16,1.5,1.5,0,0,1,6,17.5ZM13,11H9V7h4Zm4.5,6.5A1.5,1.5,0,1,1,19,16,1.5,1.5,0,0,1,17.5,17.5ZM15,11V7h1l4,4Z\" fill=\"#fff\"><\/path>\n<\/svg>",
+          "mycustom_announcement_icon_show": true,
+          "mycustom_announcement_icon_size": 20,
+          "mycustom_announcement_icon_color": "#ffffff"
         }
       },
       "header": {
         "type": "header",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/LOGO.png",
+          "alt_logo": "shopify:\/\/shop_images\/LOGO.png",
+          "logo_width": 170,
+          "enable_header_overlap": true,
+          "enable_sticky": true,
+          "enable_logo_shrink": true,
+          "menu_linklist": "main-menu",
+          "menu_under_text": "",
+          "enable_inline_links": true,
+          "menu_align_logo_left": true,
+          "search_menu_title": "",
+          "search_menu_linklist": "",
+          "show_social_links": false,
+          "contact_info_phone": "",
+          "contact_info_email": "",
+          "contact_info_in_mega": true,
+          "show_country_selector": true,
+          "show_language_selector": true,
           "tint_color": "#000000",
-          "tint_opacity": 25,
+          "tint_opacity": 0,
           "text_color": "#ffffff"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "show_newsletter": false,
+          "newsletter_heading": "Subscribe to our newsletter",
+          "newsletter_text": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "show_social": true,
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_language_selector": true
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "mode": "disabled",
+          "popup_delay_seconds": 5,
+          "popup_dismiss_for_days": 30,
+          "position": "center",
+          "title": "Sign up and save",
+          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "show_newsletter": true,
+          "show_social_icons": true
+        }
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {
     "Modern": {
@@ -166,7 +219,8 @@
           "type": "announcement",
           "settings": {
             "announcement_bar_bg_color": "#d8ba7a",
-            "announcement_bar_bg_text": "#ffffff"
+            "announcement_bar_bg_text": "#ffffff",
+            "mycustom_announcement_icon_color": "#fff"
           }
         },
         "header": {
@@ -244,15 +298,16 @@
           "type": "announcement",
           "settings": {
             "announcement_bar_bg_color": "#252525",
-            "announcement_bar_bg_text": "#ffffff"
+            "announcement_bar_bg_text": "#ffffff",
+            "mycustom_announcement_icon_color": "#fff"
           }
         },
         "header": {
           "type": "header",
           "settings": {
-            "text_color": "#ffffff",
+            "tint_color": "#252525",
             "tint_opacity": 25,
-            "tint_color": "#252525"
+            "text_color": "#ffffff"
           }
         }
       }
@@ -320,15 +375,16 @@
           "type": "announcement",
           "settings": {
             "announcement_bar_bg_color": "#ffe2d1",
-            "announcement_bar_bg_text": "#132625"
+            "announcement_bar_bg_text": "#132625",
+            "mycustom_announcement_icon_color": "#fff"
           }
         },
         "header": {
           "type": "header",
           "settings": {
-            "text_color": "#ffffff",
+            "tint_color": "#000000",
             "tint_opacity": 25,
-            "tint_color": "#000000"
+            "text_color": "#ffffff"
           }
         }
       }

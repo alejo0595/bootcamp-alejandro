@@ -107,9 +107,9 @@
                           assign has_mega_drop_down = false
                         endif
                       -%}
-
+                      {%- comment -%}Custom modification: Add text reset class{%- endcomment -%}
                       <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
-                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
+                        <a class="text-reset" href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                         </a>
 
@@ -492,9 +492,10 @@
               </a>
             </span>
           {%- endif -%}
+          {%- comment -%}Custom modification: Add mycustom-svg-cart{%- endcomment -%}
           <span class="header-items__item header-items__cart-link">
             <a href="{{ routes.cart_url }}" aria-label="{{ 'layout.header.cart' | t | escape }}">
-              <span class="cart-link-icon">{% render 'svg-cart' %}</span>
+              <span class="cart-link-icon">{% render 'mycustom-svg-cart' %}</span>
               {% if cart.item_count > 0 %}<span class="cart-count">({{ cart.item_count }})</span>{% endif %}
             </a>
           </span>

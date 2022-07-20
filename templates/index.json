@@ -1,259 +1,45 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
+    "1658264819fe640f7c": {
+      "type": "image-banner",
       "blocks": {
-        "slide-0": {
-          "type": "image",
-          "settings": {
-            "image_align_desktop": "center",
-            "image_align_mobile": "center",
-            "text_position": "center center",
-            "heading": "Slideshow",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to tell a story<\/p>",
-            "enlarge_text": false,
-            "button_1_text": "See more",
-            "button_1_url": "",
-            "button_2_text": "Shop now",
-            "button_2_url": ""
-          }
-        },
-        "slide-1": {
-          "type": "image",
-          "settings": {
-            "image_align_desktop": "center",
-            "image_align_mobile": "center",
-            "text_position": "center center",
-            "heading": "Slideshow",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to tell a story<\/p>",
-            "enlarge_text": false,
-            "button_1_text": "See more",
-            "button_1_url": "",
-            "button_2_text": "",
-            "button_2_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide-0",
-        "slide-1"
-      ],
-      "settings": {
-        "size": "full_fixed",
-        "height_desktop": 700,
-        "height_mobile": 460,
-        "enable_split": false,
-        "tint_color": "#000000",
-        "tint_opacity": 20,
-        "text_box_style": "none",
-        "text_bg_color": "#000000",
-        "text_bg_opacity": 50,
-        "text_color": "#ffffff",
-        "text_below_mobile": false,
-        "slide_mode": "slide",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "show_mobile_arrows": true
-      }
-    },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "block-0": {
+        "1658264819a04faccf-0": {
           "type": "heading",
           "settings": {
-            "heading": "Rich text"
+            "heading": "Natural Products for You",
+            "heading_size": "h1",
+            "heading_h1": false
           }
         },
-        "block-1": {
+        "9998e843-56a5-4717-b30a-d5fd840d7fb7": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe product, share announcements, or welcome customers to your store.<\/p>",
-            "text_size": 100
-          }
-        },
-        "block-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Some link",
-            "button_link": "shopify:\/\/pages\/contact-us",
-            "button_style": "feature-link"
-          }
-        }
-      },
-      "block_order": [
-        "block-0",
-        "block-1",
-        "block-2"
-      ],
-      "settings": {
-        "text_alignment": "center",
-        "color_scheme": "scheme-1",
-        "color_bg": "",
-        "color_heading": "",
-        "color_text": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "collection": "",
-        "grid_show_vendor": false,
-        "products_per_row_int": 3,
-        "product_rows_int": 1,
-        "show_view_all": false
-      }
-    },
-    "image-gallery": {
-      "type": "image-gallery",
-      "blocks": {
-        "image-0": {
-          "type": "image",
-          "settings": {
-            "tint_color": "#000000",
-            "tint_opacity": 30,
-            "size": "third",
-            "link": "",
-            "title": "Image text",
-            "subheading": "",
-            "cta_text": "See more",
-            "text_color": "#ffffff"
-          }
-        },
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "tint_color": "#000000",
-            "tint_opacity": 20,
-            "size": "third",
-            "link": "",
-            "title": "Image text",
-            "subheading": "",
-            "cta_text": "See more",
-            "text_color": "#ffffff"
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "tint_color": "#000000",
-            "tint_opacity": 10,
-            "size": "third",
-            "link": "",
-            "title": "Image text",
-            "subheading": "",
-            "cta_text": "See more",
-            "text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "image-0",
-        "image-1",
-        "image-2"
-      ],
-      "settings": {
-        "skip_container": true
-      }
-    },
-    "slideshow-with-text": {
-      "type": "slideshow-with-text",
-      "blocks": {
-        "slide-0": {
-          "type": "image",
-          "settings": {}
-        },
-        "slide-1": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "slide-0",
-        "slide-1"
-      ],
-      "settings": {
-        "layout": "left",
-        "heading": "Slideshow with text",
-        "text": "<p>Pair large text with images to give focus to your chosen product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
-        "button_text": "Shop",
-        "button_link": "",
-        "button_style": "button button--alt",
-        "text_alignment": "left",
-        "text_center_mobile": false,
-        "bg_style": "content",
-        "color_scheme": "scheme-1",
-        "color_bg": "",
-        "color_heading": "",
-        "color_text": "",
-        "slide_mode": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "slide_show_mobile_arrows": true
-      }
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial-0": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews or press releases to showcase your store's happy customers.",
-            "link": "",
-            "author_name": "Author's name"
-          }
-        },
-        "testimonial-1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews or press releases to showcase your store's happy customers.",
-            "link": "",
-            "author_name": "Author's name"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-0",
-        "testimonial-1"
-      ],
-      "settings": {
-        "title": "Testimonials",
-        "autoplay": false,
-        "logo_height": 40
-      }
-    },
-    "video": {
-      "type": "video",
-      "blocks": {
-        "block-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video",
-            "heading_size": "h2"
-          }
-        },
-        "block-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with a video to draw attention to an important detail of your brand or product line.<\/p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "enlarge_text": false
           }
+        },
+        "1658264819a04faccf-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Our Creams",
+            "button_link": "shopify:\/\/collections\/all"
+          }
         }
       },
       "block_order": [
-        "block-0",
-        "block-1"
+        "1658264819a04faccf-0",
+        "9998e843-56a5-4717-b30a-d5fd840d7fb7",
+        "1658264819a04faccf-2"
       ],
       "settings": {
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "skip_container": false,
-        "tint_color": "#000000",
-        "tint_opacity": 0,
+        "image_desktop": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash.jpg",
+        "image_align_desktop": "top",
+        "image_align_mobile": "top",
+        "tint_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "tint_opacity": 20,
+        "size": "full-fixed",
+        "height_desktop": 630,
+        "height_mobile": 400,
         "text_box_style": "none",
         "text_bg_color": "#000000",
         "text_bg_opacity": 50,
@@ -262,15 +48,9 @@
         "text_below_mobile": false
       }
     },
-    "featured-blog": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "",
-        "blog": ""
-      }
-    },
-    "image-with-text": {
+    "1658281447f3f74bef": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "skip_container": false,
         "layout": "left",
@@ -278,11 +58,101 @@
         "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
         "button_text": "Shop",
         "button_link": "",
-        "button_style": "button button--alt",
+        "button_style": "feature-link",
         "text_alignment": "left",
-        "text_center_mobile": true,
+        "text_center_mobile": false,
         "bg_style": "content",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
+    },
+    "165828145485ed8763": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "skip_container": false,
+        "layout": "right",
+        "heading": "Image with text",
+        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
+        "button_text": "Shop",
+        "button_link": "",
+        "button_style": "feature-link",
+        "text_alignment": "left",
+        "text_center_mobile": false,
+        "bg_style": "content",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
+    },
+    "165832695999ca0a16": {
+      "type": "logo-list",
+      "blocks": {
+        "165832695963050079-0": {
+          "type": "logo",
+          "settings": {
+            "title": "Everything is safe and green",
+            "icon": "mycustom-svg-plant",
+            "url": ""
+          }
+        },
+        "3f6b4576-2cb9-4cf5-ad70-c49866e1249e": {
+          "type": "logo",
+          "settings": {
+            "title": "No Known Allergens, Baby Approved",
+            "icon": "mycustom-svg-baby_cart",
+            "url": ""
+          }
+        },
+        "f1a494ff-ab02-4836-9b8c-a02d2641c71a": {
+          "type": "logo",
+          "settings": {
+            "title": "Hand-made, vegan, and cruelty-free",
+            "icon": "mycustom-svg-hand_water",
+            "url": ""
+          }
+        },
+        "ed8775bc-bade-45d4-88c1-026c92014140": {
+          "type": "logo",
+          "settings": {
+            "title": "All Products are 100% Organic",
+            "icon": "mycustom-svg-spa",
+            "url": ""
+          }
+        },
+        "4f9cfc87-b083-4acb-bc77-2defc46c4bb7": {
+          "type": "logo",
+          "settings": {
+            "title": "Logo \/ feature",
+            "icon": "svg-package",
+            "url": ""
+          }
+        },
+        "f2392c5f-7ea7-480a-b2b9-d263bc5fbe1a": {
+          "type": "logo",
+          "settings": {
+            "title": "Logo \/ feature",
+            "icon": "svg-package",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "165832695963050079-0",
+        "3f6b4576-2cb9-4cf5-ad70-c49866e1249e",
+        "f1a494ff-ab02-4836-9b8c-a02d2641c71a",
+        "ed8775bc-bade-45d4-88c1-026c92014140",
+        "4f9cfc87-b083-4acb-bc77-2defc46c4bb7",
+        "f2392c5f-7ea7-480a-b2b9-d263bc5fbe1a"
+      ],
+      "settings": {
+        "heading": "",
+        "icon_size": 50,
+        "enlarge_text": false,
+        "color_scheme": "custom",
         "color_bg": "",
         "color_heading": "",
         "color_text": ""
@@ -290,14 +160,9 @@
     }
   },
   "order": [
-    "slideshow",
-    "rich-text",
-    "featured-collection",
-    "image-gallery",
-    "slideshow-with-text",
-    "testimonials",
-    "video",
-    "featured-blog",
-    "image-with-text"
+    "1658264819fe640f7c",
+    "1658281447f3f74bef",
+    "165828145485ed8763",
+    "165832695999ca0a16"
   ]
 }

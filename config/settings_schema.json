@@ -257,6 +257,32 @@
     "settings": [
       {
         "type": "header",
+        "content": "Custom Fonts"
+      },
+      {
+        "type": "select",
+        "id": "mycustom_font_picker",
+        "label": "Font",
+        "options": [
+          {
+            "value": "font_clicker_script",
+            "label": "Clicker Script"
+          }
+        ],
+        "default": "font_clicker_script"
+      },
+      {
+        "type": "range",
+        "id": "font_size_clicker_script",
+        "min": 13,
+        "max": 18,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      },
+      {
+        "type": "header",
         "content": "Body"
       },
       {

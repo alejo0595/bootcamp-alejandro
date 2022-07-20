@@ -1,76 +1,103 @@
 {%- if section.settings.show_announcement -%}
-{%- unless template != 'index' and section.settings.announcement_home_only -%}
-<style>
-  .announcement {
-    background-color: {
-        {
-        section.settings.announcement_bar_bg_color
+  {%- unless template != 'index' and section.settings.announcement_home_only -%}
+    {%- comment -%}Custom modification: Add style tag and classes{%- endcomment -%}
+    {% style %}
+      .announcement {
+        background-color: {{ section.settings.announcement_bar_bg_color }};
+        color: {{ section.settings.announcement_bar_bg_text }};
       }
-    }
-
-    ;
-
-    color: {
-        {
-        section.settings.announcement_bar_bg_text
+      .mycustom-announcement-icon svg>path[fill^="#"] {
+        fill: {{ section.settings.mycustom_announcement_icon_color }};
+        width: {{ section.settings.mycustom_announcement_icon_size | append: "px" }};
+        height: {{ section.settings.mycustom_announcement_icon_size | append: "px" }};
       }
-    }
-
-    ;
-  }
-</style>
-<div class="announcement">
-  {%- if section.settings.announcement_bar_link != blank -%}
-  <a href="{{ section.settings.announcement_bar_link }}">
-    {%- endif -%}
-    <div class="announcement__inner">
-      {{ section.settings.announcement_bar_text }}
+    {% endstyle %}
+    <div class="announcement">
+      {%- if section.settings.announcement_bar_link != blank -%}
+        <a href="{{ section.settings.announcement_bar_link }}">
+      {%- endif -%}
+      {%- comment -%}Custom modification: Add icon and Bootstrap{%- endcomment -%}
+      <div class="announcement__inner d-flex justify-content-center align-items-center">
+        {% if section.settings.mycustom_announcement_icon_show %}
+        <div class="me-2 mycustom-announcement-icon">{{ section.settings.mycustom_announcement_icon }}</div>
+        {% endif %}
+        <div>{{ section.settings.announcement_bar_text }}</div>
+      </div>
+      {%- if section.settings.announcement_bar_link != blank -%}
+        </a>
+      {%- endif -%}
     </div>
-    {%- if section.settings.announcement_bar_link != blank -%}
-  </a>
-  {%- endif -%}
-</div>
-{%- endunless -%}
+  {%- endunless -%}
 {%- endif -%}
 
+{%- comment -%}Custom modification: Add settings to the schema{%- endcomment -%}
 {% schema %}
-{
-"name": "Announcement bar",
-"settings": [
-{
-"type": "checkbox",
-"id": "show_announcement",
-"label": "Show announcement",
-"default": false
-},
-{
-"type": "checkbox",
-"id": "announcement_home_only",
-"label": "Home page only",
-"default": false
-},
-{
-"type": "text",
-"id": "announcement_bar_text",
-"label": "Text"
-},
-{
-"type": "url",
-"id": "announcement_bar_link",
-"label": "Link"
-},
-{
-"type": "color",
-"id": "announcement_bar_bg_color",
-"label": "Background color",
-"default": "#ffe2d1"
-},
-{
-"type": "color",
-"id": "announcement_bar_bg_text",
-"label": "Text color",
-"default": "#132625"
-}
-]
-}
+  {
+    "name": "Announcement bar",
+    "settings": [
+      {
+				"type": "checkbox",
+				"id": "show_announcement",
+				"label": "Show announcement",
+				"default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_home_only",
+        "label": "Home page only",
+        "default": false
+      },
+      {
+				"type": "text",
+				"id": "announcement_bar_text",
+				"label": "Text"
+      },
+      {
+				"type": "url",
+				"id": "announcement_bar_link",
+				"label": "Link"
+      },
+      {
+				"type": "color",
+				"id": "announcement_bar_bg_color",
+				"label": "Background color",
+				"default": "#ffe2d1"
+      },
+      {
+				"type": "color",
+				"id": "announcement_bar_bg_text",
+				"label": "Text color",
+				"default": "#132625"
+      },
+      {
+        "type": "html",
+        "id": "mycustom_announcement_icon",
+        "label": "SVG Icon",
+        "info": "Please insert the svg html code for the icon",
+        "placeholder": "<svg></svg>"
+      },
+      {
+        "type": "checkbox",
+        "id": "mycustom_announcement_icon_show",
+        "label": "Show icon",
+       "default": false
+       },
+       {
+        "type": "range",
+        "id": "mycustom_announcement_icon_size",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Icon size",
+        "default": 20
+      },
+      {
+        "type": "color",
+        "id": "mycustom_announcement_icon_color",
+        "label": "Icon color",
+        "default": "#fff"
+      }
+		]
+  }
 {% endschema %}
