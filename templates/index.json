@@ -49,11 +49,15 @@
         "text_below_mobile": false
       }
     },
-    "1658346661a15f3d9a": {
-      "type": "custom-liquid",
+    "1658379144f80600a9": {
+      "type": "featured-collection",
       "settings": {
-        "skip_container": false,
-        "custom_liquid": "Pending: Make a carrousel section"
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "grid_show_vendor": false,
+        "products_per_row_int": 4,
+        "product_rows_int": 1,
+        "show_view_all": false
       }
     },
     "1658281447f3f74bef": {
@@ -166,22 +170,11 @@
         "color_text": ""
       }
     },
-    "16583484195fbfb4cf": {
-      "type": "custom-liquid",
+    "1658379946c16e8305": {
+      "type": "collection-list",
       "settings": {
-        "skip_container": false,
-        "custom_liquid": "Pending: Make a Special gallery section"
-      }
-    },
-    "1658379144f80600a9": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "collection": "frontpage",
-        "grid_show_vendor": false,
-        "products_per_row_int": 4,
-        "product_rows_int": 1,
-        "show_view_all": false
+        "title": "Collection list",
+        "collections_per_row_int": 4
       }
     },
     "1658379177e98c8095": {
@@ -194,16 +187,23 @@
         "color_heading": "",
         "color_text": ""
       }
+    },
+    "16583484195fbfb4cf": {
+      "type": "custom-liquid",
+      "settings": {
+        "skip_container": false,
+        "custom_liquid": "Pending: Make a Special gallery section"
+      }
     }
   },
   "order": [
     "1658264819fe640f7c",
-    "1658346661a15f3d9a",
+    "1658379144f80600a9",
     "1658281447f3f74bef",
     "165828145485ed8763",
     "165832695999ca0a16",
-    "16583484195fbfb4cf",
-    "1658379144f80600a9",
-    "1658379177e98c8095"
+    "1658379946c16e8305",
+    "1658379177e98c8095",
+    "16583484195fbfb4cf"
   ]
 }
