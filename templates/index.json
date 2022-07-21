@@ -166,20 +166,6 @@
         "color_text": ""
       }
     },
-    "1658347587609ad555": {
-      "type": "collection-list",
-      "settings": {
-        "title": "Collection list",
-        "collections_per_row_int": 4
-      }
-    },
-    "1658348123587409f6": {
-      "type": "custom-liquid",
-      "settings": {
-        "skip_container": false,
-        "custom_liquid": "Pending: Make an Email subscription section"
-      }
-    },
     "16583484195fbfb4cf": {
       "type": "custom-liquid",
       "settings": {
@@ -187,50 +173,26 @@
         "custom_liquid": "Pending: Make a Special gallery section"
       }
     },
-    "1658365648debe6be2": {
-      "type": "background-video",
-      "blocks": {
-        "1658365648d4681cf0-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Tell your story",
-            "heading_size": "h1",
-            "heading_h1": false
-          }
-        },
-        "1658365648d4681cf0-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>with auto-playing, auto-looping videos<\/p>",
-            "enlarge_text": false
-          }
-        },
-        "1658365648d4681cf0-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Read more",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1658365648d4681cf0-0",
-        "1658365648d4681cf0-1",
-        "1658365648d4681cf0-2"
-      ],
+    "1658379144f80600a9": {
+      "type": "featured-collection",
       "settings": {
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "skip_container": true,
-        "height_desktop": 650,
-        "height_mobile": 250,
-        "tint_color": "#000000",
-        "tint_opacity": 10,
-        "text_box_style": "none",
-        "text_bg_color": "#000000",
-        "text_bg_opacity": 50,
-        "text_color": "#ffffff",
-        "text_position": "center center",
-        "text_below_mobile": false
+        "title": "Featured collection",
+        "collection": "",
+        "grid_show_vendor": false,
+        "products_per_row_int": 4,
+        "product_rows_int": 1,
+        "show_view_all": false
+      }
+    },
+    "1658379177e98c8095": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Subscribe to our newsletter",
+        "text": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
       }
     }
   },
@@ -240,9 +202,8 @@
     "1658281447f3f74bef",
     "165828145485ed8763",
     "165832695999ca0a16",
-    "1658347587609ad555",
-    "1658348123587409f6",
     "16583484195fbfb4cf",
-    "1658365648debe6be2"
+    "1658379144f80600a9",
+    "1658379177e98c8095"
   ]
 }
