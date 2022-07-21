@@ -177,7 +177,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Featured collection",
-        "collection": "",
+        "collection": "frontpage",
         "grid_show_vendor": false,
         "products_per_row_int": 4,
         "product_rows_int": 1,
