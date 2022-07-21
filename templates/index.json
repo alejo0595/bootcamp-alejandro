@@ -11,11 +11,12 @@
             "heading_h1": false
           }
         },
-        "9998e843-56a5-4717-b30a-d5fd840d7fb7": {
-          "type": "text",
+        "5f431232-92c0-4fa9-8e62-89c1fdf5ce6a": {
+          "type": "heading",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": false
+            "heading": "and your little one",
+            "heading_size": "h2",
+            "heading_h1": false
           }
         },
         "1658264819a04faccf-2": {
@@ -28,15 +29,15 @@
       },
       "block_order": [
         "1658264819a04faccf-0",
-        "9998e843-56a5-4717-b30a-d5fd840d7fb7",
+        "5f431232-92c0-4fa9-8e62-89c1fdf5ce6a",
         "1658264819a04faccf-2"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/Homepage_Header.jpg",
         "image_align_desktop": "top",
         "image_align_mobile": "top",
         "tint_color": "{{ shop.brand.colors.primary[0].foreground }}",
-        "tint_opacity": 20,
+        "tint_opacity": 30,
         "size": "full-fixed",
         "height_desktop": 630,
         "height_mobile": 400,
@@ -48,21 +49,28 @@
         "text_below_mobile": false
       }
     },
-    "1658281447f3f74bef": {
-      "type": "image-with-text",
-      "disabled": true,
+    "1658346661a15f3d9a": {
+      "type": "custom-liquid",
       "settings": {
         "skip_container": false,
+        "custom_liquid": "Pending: Make a carrousel section"
+      }
+    },
+    "1658281447f3f74bef": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
         "layout": "left",
-        "heading": "Image with text",
-        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
-        "button_text": "Shop",
-        "button_link": "",
-        "button_style": "feature-link",
-        "text_alignment": "left",
+        "heading": "We Make Our Pure Products",
+        "text": "<p>Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural.<\/p>",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_style": "button",
+        "text_alignment": "center",
         "text_center_mobile": false,
         "bg_style": "content",
-        "color_scheme": "scheme-1",
+        "color_scheme": "none",
         "color_bg": "",
         "color_heading": "",
         "color_text": ""
@@ -70,19 +78,19 @@
     },
     "165828145485ed8763": {
       "type": "image-with-text",
-      "disabled": true,
       "settings": {
         "skip_container": false,
+        "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
         "layout": "right",
-        "heading": "Image with text",
-        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
-        "button_text": "Shop",
-        "button_link": "",
-        "button_style": "feature-link",
-        "text_alignment": "left",
+        "heading": "Our Ingredients Are Amazing",
+        "text": "<p>Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural.<\/p>",
+        "button_text": "Lear More",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_style": "button",
+        "text_alignment": "center",
         "text_center_mobile": false,
         "bg_style": "content",
-        "color_scheme": "scheme-1",
+        "color_scheme": "none",
         "color_bg": "",
         "color_heading": "",
         "color_text": ""
@@ -126,16 +134,16 @@
         "4f9cfc87-b083-4acb-bc77-2defc46c4bb7": {
           "type": "logo",
           "settings": {
-            "title": "Logo \/ feature",
-            "icon": "svg-package",
+            "title": "No chemicals, no dyes, no problems :)",
+            "icon": "mycustom-svg-flower",
             "url": ""
           }
         },
         "f2392c5f-7ea7-480a-b2b9-d263bc5fbe1a": {
           "type": "logo",
           "settings": {
-            "title": "Logo \/ feature",
-            "icon": "svg-package",
+            "title": "Natural ingredients from sustainable sources",
+            "icon": "mycustom-svg-field",
             "url": ""
           }
         }
@@ -157,12 +165,84 @@
         "color_heading": "",
         "color_text": ""
       }
+    },
+    "1658347587609ad555": {
+      "type": "collection-list",
+      "settings": {
+        "title": "Collection list",
+        "collections_per_row_int": 4
+      }
+    },
+    "1658348123587409f6": {
+      "type": "custom-liquid",
+      "settings": {
+        "skip_container": false,
+        "custom_liquid": "Pending: Make an Email subscription section"
+      }
+    },
+    "16583484195fbfb4cf": {
+      "type": "custom-liquid",
+      "settings": {
+        "skip_container": false,
+        "custom_liquid": "Pending: Make a Special gallery section"
+      }
+    },
+    "1658365648debe6be2": {
+      "type": "background-video",
+      "blocks": {
+        "1658365648d4681cf0-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tell your story",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "1658365648d4681cf0-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>with auto-playing, auto-looping videos<\/p>",
+            "enlarge_text": false
+          }
+        },
+        "1658365648d4681cf0-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1658365648d4681cf0-0",
+        "1658365648d4681cf0-1",
+        "1658365648d4681cf0-2"
+      ],
+      "settings": {
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "skip_container": true,
+        "height_desktop": 650,
+        "height_mobile": 250,
+        "tint_color": "#000000",
+        "tint_opacity": 10,
+        "text_box_style": "none",
+        "text_bg_color": "#000000",
+        "text_bg_opacity": 50,
+        "text_color": "#ffffff",
+        "text_position": "center center",
+        "text_below_mobile": false
+      }
     }
   },
   "order": [
     "1658264819fe640f7c",
+    "1658346661a15f3d9a",
     "1658281447f3f74bef",
     "165828145485ed8763",
-    "165832695999ca0a16"
+    "165832695999ca0a16",
+    "1658347587609ad555",
+    "1658348123587409f6",
+    "16583484195fbfb4cf",
+    "1658365648debe6be2"
   ]
 }
