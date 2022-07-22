@@ -204,13 +204,13 @@ File structure:
 
 /*Custom modification: Conditional font source election*/
 
-{%- capture base_font -%}
-  {%- if settings.some == 'mycustom_fonts' -%}
-    {{settings.mycustom_type_base_font}}
-  {%- else -%}
-    {{settings.type_base_font}}
-  {%- endif -%}
-{%- endcapture -%}
+
+{%- if settings.some == 'mycustom_fonts' -%}
+  {%- assign base_font = settings.mycustom_type_base_font -%}
+{%- else -%}
+  {%- assign base_font = settings.type_base_font -%}
+{%- endif -%}
+
 
 /*{{ base_font }}*/
 {%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
