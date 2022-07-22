@@ -202,8 +202,7 @@ File structure:
 {% assign col_select_focused_opt_bg = col_page_bg | color_lighten: 8 %}
 {% endif %}
 
-/*Custom modification: Conditional font source election*/
-
+{%- comment -%}Custom modification: Conditional font source election{%- endcomment -%}
 
 {%- if settings.some == 'mycustom_fonts' -%}
   {%- assign base_font = settings.mycustom_type_base_font -%}
@@ -211,8 +210,6 @@ File structure:
   {%- assign base_font = settings.type_base_font -%}
 {%- endif -%}
 
-
-/*{{ base_font }}*/
 {%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
 {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
 {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
