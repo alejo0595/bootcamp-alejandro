@@ -172,6 +172,17 @@
     },
     "1658379946c16e8305": {
       "type": "collection-list",
+      "blocks": {
+        "1b4a24e0-c9e0-4e4f-8ace-e532a8c48e82": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "1b4a24e0-c9e0-4e4f-8ace-e532a8c48e82"
+      ],
       "settings": {
         "title": "Collection list",
         "collections_per_row_int": 4
