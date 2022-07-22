@@ -265,8 +265,8 @@
         "label": "Choose font source",
         "options": [
           {
-            "value": "Custom Fonts",
-            "label": "mycustom_fonts"
+            "value": "mycustom_fonts",
+            "label": "Custom Fonts"
           },
           {
             "value": "shopify_library_fonts",
