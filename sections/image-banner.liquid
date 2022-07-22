@@ -202,15 +202,15 @@
                 {%- case block.settings.sub_heading_size -%}
                   {%- when 'h3' -%}
                   <h3 class="text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                    {{- block.settings.sub_heading | newline_to_br -}}
+                    {{- block.settings.heading | newline_to_br -}}
                   </h3>
                   {%- when 'h4' -%}
                   <h4 class="text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                    {{- block.settings.sub_heading | newline_to_br -}}
+                    {{- block.settings.heading | newline_to_br -}}
                   </h4>
                   {%- else -%}
                     <h2 class="text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                      {{- block.settings.sub_heading | newline_to_br -}}
+                      {{- block.settings.heading | newline_to_br -}}
                     </h2>
                 {%- endcase -%}
               {%- if block.settings.heading_h1 -%}
