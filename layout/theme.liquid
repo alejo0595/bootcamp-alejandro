@@ -10,9 +10,9 @@
   {{ 'mycustom_style.min.css' | asset_url | stylesheet_tag }}
   {{ 'styles.css' | asset_url | stylesheet_tag }}
   <!-- Import Fonts -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
   {{ content_for_header }}
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 </head>
@@ -34,7 +34,7 @@
   {%- if settings.enable_transition_in -%}
     <script>if ('IntersectionObserver' in window) document.body.classList.add('cc-animate-enabled');</script>
   {%- endif -%}
-<p class="hello">hola</p>
+<p style="font-family: 'Clicker Script';">hola</p>
   <a class="skip-link visually-hidden" href="#main">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
   {% section 'announcement' %}
   {% section 'header' %}
