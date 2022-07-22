@@ -262,7 +262,7 @@
       {
         "type": "font_picker",
         "id": "type_base_font",
-        "label": "Shopify Library Fonts",
+        "label": "Font",
         "default": "karla_n4"
       },
       {
