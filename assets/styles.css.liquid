@@ -209,11 +209,7 @@ File structure:
     {{settings.mycustom_type_base_font}}
   {%- else -%}
     {{settings.type_base_font}}
-  {%- endif -%}
-{%- endcapture -%}
-
-
-{%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
+    {%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
 {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
 {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 {%- assign base_font_plus100 = base_font | font_modify: 'weight', '+100' -%}
@@ -222,6 +218,11 @@ File structure:
 {{ base_font_italic | font_face: font_display: 'fallback' }}
 {{ base_font_bold_italic | font_face: font_display: 'fallback' }}
 {{ base_font_plus100 | font_face: font_display: 'fallback' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+
+
 {%- assign heading_font = settings.type_heading_font -%}
 {%- assign heading_font_plus100 = heading_font | font_modify: 'weight', '+100' -%}
 {{ heading_font | font_face: font_display: 'fallback' }}
