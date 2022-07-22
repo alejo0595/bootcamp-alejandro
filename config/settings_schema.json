@@ -257,7 +257,13 @@
     "settings": [
       {
         "type": "header",
-        "content": "Custom Fonts"
+        "content": "Body"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_base_font",
+        "label": "Shopify Library Font",
+        "default": "karla_n4"
       },
       {
         "type": "select",
@@ -270,26 +276,6 @@
           }
         ],
         "default": "font_clicker_script"
-      },
-      {
-        "type": "range",
-        "id": "font_size_clicker_script",
-        "min": 13,
-        "max": 18,
-        "step": 1,
-        "unit": "px",
-        "label": "Font size",
-        "default": 16
-      },
-      {
-        "type": "header",
-        "content": "Body"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_base_font",
-        "label": "Font",
-        "default": "karla_n4"
       },
       {
         "type": "range",
