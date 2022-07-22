@@ -11,8 +11,8 @@ File structure:
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-  src: url("{{ 'ClickerScript-Regular.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ClickerScript-Regular.woff' | asset_url }}") format("woff");
+  src: url({{ 'ClickerScript-Regular.woff2' | asset_url }}) format("woff2"),
+       url({{ 'ClickerScript-Regular.woff' | asset_url }}) format("woff");
 }
 
 {% assign site_max_width = 1200 %}
