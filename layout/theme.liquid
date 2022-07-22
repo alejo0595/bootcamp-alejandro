@@ -29,7 +29,7 @@
     assign body_classes = body_classes | append: ' template-customer-area'
   endif
 -%}
-
+{%- comment -%}{%- endcomment -%}
 <body class="{{ body_classes }}" id="{{ page_title | handle }}">
   {%- if settings.enable_transition_in -%}
     <script>if ('IntersectionObserver' in window) document.body.classList.add('cc-animate-enabled');</script>
