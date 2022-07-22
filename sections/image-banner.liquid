@@ -198,6 +198,7 @@
                   {{- block.settings.heading | newline_to_br -}}
                 </h2>
               {%- endif -%}
+              {%- comment -%}MyCustom modfication: {%- endcomment -%}
               {%- when 'sub_heading' -%}
                 {%- case block.settings.sub_heading_size -%}
                   {%- when 'h3' -%}
@@ -230,7 +231,7 @@
   </div>
 </div>
 
-{%- comment -%}MyCustom modfication: Change Heading limit to 2{%- endcomment -%}
+{%- comment -%}MyCustom modfication: {%- endcomment -%}
 {% schema %}
   {
     "name": "Image banner",
