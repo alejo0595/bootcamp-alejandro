@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Clicker Script";
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url(//cdn.shopify.com/s/files/1/0606/1172/3414/t/11/assets/ClickerScript-Regular.woff2?v=13701247734198454151658463394) format("woff2"),
+       url(//cdn.shopify.com/s/files/1/0606/1172/3414/t/11/assets/ClickerScript-Regular.woff?v=113200352865973374331658464728) format("woff");
+}
