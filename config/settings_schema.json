@@ -283,7 +283,7 @@
       },
       {
         "type": "select",
-        "id": "mycustom_font_picker",
+        "id": "mycustom_type_base_font",
         "label": "Customs Font",
         "options": [
           {
