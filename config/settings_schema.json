@@ -260,38 +260,10 @@
         "content": "Body"
       },
       {
-        "type": "radio",
-        "id": "some",
-        "label": "Choose font source",
-        "options": [
-          {
-            "value": "mycustom_fonts",
-            "label": "Custom Fonts"
-          },
-          {
-            "value": "shopify_library_fonts",
-            "label": "Shopify Library Fonts"
-          }
-        ],
-        "default": "shopify_library_fonts"
-      },
-      {
         "type": "font_picker",
         "id": "type_base_font",
         "label": "Shopify Library Fonts",
         "default": "karla_n4"
-      },
-      {
-        "type": "select",
-        "id": "mycustom_type_base_font",
-        "label": "Customs Font",
-        "options": [
-          {
-            "value": "font_clicker_script",
-            "label": "Clicker Script"
-          }
-        ],
-        "default": "font_clicker_script"
       },
       {
         "type": "range",
