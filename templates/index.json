@@ -11,13 +11,11 @@
             "heading_h1": false
           }
         },
-        "5f431232-92c0-4fa9-8e62-89c1fdf5ce6a": {
-          "type": "heading",
-          "disabled": true,
+        "b9bdd0e2-147e-4ebc-a5b6-a25e0d962478": {
+          "type": "sub_heading",
           "settings": {
-            "heading": "and your little one",
-            "heading_size": "h2",
-            "heading_h1": false
+            "sub_heading": "Talk about your brand",
+            "sub_heading_size": "h2"
           }
         },
         "1658264819a04faccf-2": {
@@ -26,20 +24,12 @@
             "button_label": "Shop Our Creamsss",
             "button_link": "shopify:\/\/collections\/all"
           }
-        },
-        "b9bdd0e2-147e-4ebc-a5b6-a25e0d962478": {
-          "type": "sub_heading",
-          "settings": {
-            "sub_heading": "Talk about your brand",
-            "sub_heading_size": "h2"
-          }
         }
       },
       "block_order": [
         "1658264819a04faccf-0",
-        "5f431232-92c0-4fa9-8e62-89c1fdf5ce6a",
-        "1658264819a04faccf-2",
-        "b9bdd0e2-147e-4ebc-a5b6-a25e0d962478"
+        "b9bdd0e2-147e-4ebc-a5b6-a25e0d962478",
+        "1658264819a04faccf-2"
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Homepage_Header.jpg",
