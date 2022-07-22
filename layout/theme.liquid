@@ -7,12 +7,12 @@
     {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
   {% render 'social-meta-tags' %}
-  {{ 'mycustom_style.min.css' | asset_url | stylesheet_tag }}
+  <!-- {{ 'mycustom_style.min.css' | asset_url | stylesheet_tag }} -->
   {{ 'styles.css' | asset_url | stylesheet_tag }}
   <!-- Import Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet"> -->
   {{ content_for_header }}
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 </head>
