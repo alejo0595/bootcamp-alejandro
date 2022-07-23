@@ -372,12 +372,12 @@
       {
         "type": "range",
         "id": "mycustom_sub_heading_font_size",
-        "min": 13,
-        "max": 18,
+        "min": 20,
+        "max": 40,
         "step": 1,
         "unit": "px",
         "label": "Font size",
-        "default": 16
+        "default": 30
       }
     ]
   },
