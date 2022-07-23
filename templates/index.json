@@ -51,7 +51,7 @@
     "1658379144f80600a9": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Our Most Popular Products",
         "collection": "frontpage",
         "grid_show_vendor": false,
         "products_per_row_int": 4,
