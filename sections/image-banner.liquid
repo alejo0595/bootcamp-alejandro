@@ -89,7 +89,9 @@
   {%- comment -%}Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
   .mycustom-image_banner-sub_heading-font{
     font-family: {{ settings.mycustom_sub_heading_font }};
+    {%- if section.block.type == 'sub_heading' -%}
     font-size: {{ section.block.settings.mycustom_sub_heading_font_size }} px;
+    {%- endif -%}
   }
 {%- endstyle -%}
 
