@@ -86,6 +86,11 @@
     #shopify-section-{{ section.id }} + .shopify-section .section-content { margin-top: 0; }
     #shopify-section-{{ section.id }} + .shopify-section .spaced-section .section-content { padding: 0; }
   {%- endif -%}
+  {%- comment -%}Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
+  .mycustom-image_banner-sub_heading-font{
+    font-family: {{ settings.mycustom_sub_heading_font }};
+    font-size: {{ section.block.settings.mycustom_sub_heading_font_size }} px;
+  }
 {%- endstyle -%}
 
 <div {% unless full_width %}class="spaced-section" {% endunless %}id="{{ section.id }}">
@@ -547,6 +552,16 @@
               }
             ],
             "default": "h2"         
+          },
+          {
+            "type": "range",
+            "id": "mycustom_sub_heading_font_size",
+            "min": 20,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size",
+            "default": 30
           }
         ]
       },
