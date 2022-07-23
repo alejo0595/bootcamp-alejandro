@@ -352,6 +352,32 @@
         "unit": "px",
         "label": "Font size",
         "default": 24
+      },
+      {
+        "type": "header",
+        "content": "Sub-Headings"
+      },
+      {
+        "type": "select",
+        "id": "mycustom_sub_heading_font",
+        "label": "Font",
+        "options": [
+          {
+            "value": "clicker_script",
+            "label": "Clicker Script"
+          }
+        ],
+        "default": "clicker_script"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_sub_heading_font_size",
+        "min": 13,
+        "max": 18,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
       }
     ]
   },
