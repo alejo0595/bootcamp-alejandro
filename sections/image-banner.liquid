@@ -207,22 +207,11 @@
                   {{- block.settings.heading | newline_to_br -}}
                 </h2>
               {%- endif -%}
-              {%- comment -%}Custom modfication: Add a sub heading block{%- endcomment -%}
-              {%- when 'sub_heading' -%}
-                {%- case block.settings.sub_heading_size -%}
-                  {%- when 'h3' -%}
-                    <h3 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                      {{- block.settings.heading | newline_to_br -}}
-                    </h3>
-                  {%- when 'h4' -%}
-                    <h4 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                      {{- block.settings.heading | newline_to_br -}}
-                    </h4>
-                  {%- else -%}
-                    <h2 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                      {{- block.settings.heading | newline_to_br -}}
-                    </h2>
-              {%- endcase -%}
+            {%- comment -%}Custom modfication: Add a sub heading block{%- endcomment -%}
+            {%- when 'sub_heading' -%}
+              <h2 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                {{- block.settings.heading | newline_to_br -}}
+              </h2>
             {%- when 'text' -%}
               <div class="text-overlay__text{% if block.settings.enlarge_text %} large-text{% endif %} rte" data-cc-animate-delay="0.2s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
@@ -538,26 +527,6 @@
             "default": "Talk about your brand"
           },
           {
-            "type": "select",
-            "id": "sub_heading_size",
-            "label": "Sub-Heading size",
-            "options": [
-              {
-                "value": "h4",
-                "label": "Small"
-              },
-              {
-                "value": "h3",
-                "label": "Medium"
-              },
-              {
-                "value": "h2",
-                "label": "Large"
-              }
-            ],
-            "default": "h2"         
-          },
-          {
             "type": "range",
             "id": "mycustom_sub_heading_font_size",
             "min": 2,
@@ -565,7 +534,7 @@
             "step": 0.1,
             "unit": "rem",
             "label": "Font size",
-            "default": 2
+            "default": 4
           }
         ]
       },
