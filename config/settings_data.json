@@ -41,6 +41,7 @@
     "logo_size_int": 24,
     "col_btn_bg": "#f4ab9d",
     "col_btn": "#ffffff",
+    "mycustom_col_btn_hover": "#ffffff",
     "col_alt_btn_bg": "#ffffff",
     "col_alt_btn": "#f4ab9d",
     "button_shape": "sharp",
