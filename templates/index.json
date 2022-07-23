@@ -15,7 +15,7 @@
           "type": "sub_heading",
           "settings": {
             "heading": "and your little one",
-            "sub_heading_size": "h2"
+            "mycustom_sub_heading_font_size": 3.5
           }
         },
         "1658264819a04faccf-2": {
