@@ -63,6 +63,9 @@ File structure:
 {% assign font_size_base_int = settings.font_size_base_int %}
 {% assign col_btn_bg = settings.col_btn_bg %}
 {% assign col_btn = settings.col_btn %}
+/*Custom Modification: Add new varaibles for primary button styling when hover*/
+{% assign mycustom_col_btn_bg_hover = settings.mycustom_col_btn_bg_hover %}
+{% assign mycustom_col_btn_hover = settings.mycustom_col_btn_hover %}
 {% assign col_alt_btn_bg = settings.col_alt_btn_bg %}
 {% assign col_alt_btn = settings.col_alt_btn %}
 {% assign button_text_transform = settings.button_text_transform %}
@@ -1639,9 +1642,10 @@ button,
   margin-right: -12px;
 }
 
+/*Custom Modification: Add new varaibles for primary button styling when hover*/
 .button:hover {
-  background: {{ col_btn }};
-  color: {{ col_btn_bg }};
+  background: {{ mycustom_col_btn_hover }};
+  color: {{ mycustom_col_btn_bg_hover }};
 }
 
 .button.button--alt {
