@@ -392,19 +392,19 @@
       },
       {
         "type": "header",
-        "content": "Primary button colors (Hover)"
+        "content": "Primary button colors (hover)"
       },
       {
         "type": "color",
         "id": "mycustom_col_btn_bg_hover",
         "label": "Background",
-        "default": "#606468"
+        "default": "#D79E93"
       },
       {
         "type": "color",
         "id": "mycustom_col_btn_hover",
         "label": "Text",
-        "default": "#ffffff"
+        "default": "#465065"
       },
       {
         "type": "header",
