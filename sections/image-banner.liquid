@@ -197,6 +197,7 @@
       <div class="text-overlay{% unless section.settings.text_box_style == 'none' %} text-overlay--box text-overlay--{{ section.settings.text_box_style }}{% endunless %}{% unless bg_color != false and bg_color != settings.col_page_bg and section.settings.text_box_style == 'bg' %} text-overlay--stacked-no-pad{% endunless %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+          {%- comment -%}Custom modfication: Add a sub heading block{%- endcomment -%}
             {%- when 'heading' -%}
               {%- if block.settings.heading_h1 -%}
                 <h1 class="text-overlay__heading mb-1 {{ block.settings.heading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
@@ -207,7 +208,7 @@
                   {{- block.settings.heading | newline_to_br -}}
                 </h2>
               {%- endif -%}
-            {%- comment -%}Custom modfication: Add a sub heading block{%- endcomment -%}
+            {%- comment -%}Custom modfication: Add spacing{%- endcomment -%}
             {%- when 'sub_heading' -%}
               <h2 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{- block.settings.heading | newline_to_br -}}
@@ -218,7 +219,7 @@
               </div>
             {%- when 'button' -%}
               <div class="text-overlay__link" data-cc-animate-delay="0.3s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                <a class="button button--hollow" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
+                <a class="button" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
                   {{- block.settings.button_label | escape -}}
                 </a>
               </div>
