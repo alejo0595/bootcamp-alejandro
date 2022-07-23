@@ -368,16 +368,6 @@
           }
         ],
         "default": "clicker_script"
-      },
-      {
-        "type": "range",
-        "id": "mycustom_sub_heading_font_size",
-        "min": 20,
-        "max": 40,
-        "step": 1,
-        "unit": "px",
-        "label": "Font size",
-        "default": 30
       }
     ]
   },
