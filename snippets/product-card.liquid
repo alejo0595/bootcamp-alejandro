@@ -82,7 +82,7 @@
     <h3 class="card__title text-center">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
-    <div class="product-price">
+    <div class="product-price text-center">
       {% if product.price_varies %}
         <span class="product-price__from">{{ 'products.listing.from' | t }}</span>
       {% endif %}
