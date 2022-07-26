@@ -39,6 +39,8 @@
             items_per_row: section.settings.products_per_row_int,
             animate: forloop.index,
             product_card_title_alignment: section.settings.mycustom_product_title_alignment,
+            product_card_title_font_color: section.settings.mycustom_product_title_font_color,
+            product_card_title_font_size: section.settings.mycustom_product_title_font_size,
             product_card_price_alignment: section.settings.mycustom_product_price_alignment
           %}
         {%- endfor -%}
@@ -62,96 +64,101 @@
 </div>
 {%- comment -%}Alejandro Custom modification:{%- endcomment -%}
 {% schema %}
-  {
-    "name": "Featured collection",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "Featured collection"
-      },
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
-      },
-      {
-        "type": "checkbox",
-        "id": "grid_show_vendor",
-        "label": "Show product vendor",
-        "default": false
-      },
-      {
-        "type": "range",
-        "id": "products_per_row_int",
-        "min": 2,
-        "max": 5,
-        "step": 1,
-        "label": "Products per row",
-        "default": 4
-      },
-      {
-        "type": "range",
-        "id": "product_rows_int",
-        "min": 1,
-        "max": 4,
-        "step": 1,
-        "label": "Rows",
-        "default": 1
-      },
-      {
-        "type": "checkbox",
-        "id": "show_view_all",
-        "label": "Show 'View all' link",
-        "default": false
-      },
-      {
-        "type": "select",
-        "id": "mycustom_product_title_alignment",
-        "label": "Product card title position",
-        "options":[
-          {
-            "value": "start",
-            "label":"Rigth"
-          },
-          {
-            "value": "center",
-            "label":"Center"
-          },
-          {
-            "value": "end",
-            "label":"Left"
-          }
-        ],
-        "default": "start"
-      },
-      {
-        "type": "select",
-        "id": "mycustom_product_price_alignment",
-        "label": "Product card price position",
-        "options":[
-          {
-            "value": "start",
-            "label":"Rigth"
-          },
-          {
-            "value": "center",
-            "label":"Center"
-          },
-          {
-            "value": "end",
-            "label":"Left"
-          }
-        ],
-        "default": "start"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Featured collection"
-      }
-    ]
-  }
+
+{
+  "name": "Featured collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    }, {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }, {
+      "type": "checkbox",
+      "id": "grid_show_vendor",
+      "label": "Show product vendor",
+      "default": false
+    }, {
+      "type": "range",
+      "id": "products_per_row_int",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "label": "Products per row",
+      "default": 4
+    }, {
+      "type": "range",
+      "id": "product_rows_int",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Rows",
+      "default": 1
+    }, {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' link",
+      "default": false
+    }, {
+      "type": "select",
+      "id": "mycustom_product_title_alignment",
+      "label": "Product card title position",
+      "options": [
+        {
+          "value": "start",
+          "label": "Rigth"
+        }, {
+          "value": "center",
+          "label": "Center"
+        }, {
+          "value": "end",
+          "label": "Left"
+        }
+      ],
+      "default": "start"
+    }, {
+      "type": "range",
+      "id": "mycustom_product_title_font_size",
+      "label": "Title size",
+      "unit": "rem",
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "default": 2.5
+    }, {
+      "type": "color",
+      "id": "mycustom_product_title_font_color",
+      "label": "Title color",
+      "default": "#D79E93"
+    }, {
+      "type": "select",
+      "id": "mycustom_product_price_alignment",
+      "label": "Product card price position",
+      "options": [
+        {
+          "value": "start",
+          "label": "Rigth"
+        }, {
+          "value": "center",
+          "label": "Center"
+        }, {
+          "value": "end",
+          "label": "Left"
+        }
+      ],
+      "default": "start"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection"
+    }
+  ]
+}
+
 {% endschema %}
