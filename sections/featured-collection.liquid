@@ -13,6 +13,9 @@
 .mycustom-feautured_collection-product_card_title-font {
   color: {{section.settings.mycustom_product_title_font_color}}!important;
   font-size: {{section.settings.mycustom_product_title_font_size}}rem !important;
+  {%- if section.settings.mycustom_product_title_font_weight -%}
+    font-weight: bold; 
+  {%- endif -%}
 }
 
 {% endstyle %}
@@ -164,6 +167,11 @@
         }
       ],
       "default": "start"
+    }, {
+      "type": "checkbox",
+      "id": "mycustom_product_title_font_weight",
+      "label": "Bold",
+      "default": false
     }, {
       "type": "range",
       "id": "mycustom_product_title_font_size",
