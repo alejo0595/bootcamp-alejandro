@@ -1,6 +1,15 @@
 {%- assign collection = collections[section.settings.collection] -%}
 {%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
 
+{%- comment -%}Alejandro Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
+{% style %}
+
+.mycustom-feautured_collectin-product_card_title-font {
+  color: {{ section.settings.mycustom_product_title_font_color}};
+  font-size: {{ section.settings.mycustom_product_title_font_size}}rem;
+
+{% endstyle %}
+
 <div class="spaced-section" data-section-type="featured-collection">
   <div class="container section-content">
     {%- if section.settings.title != blank -%}
@@ -39,8 +48,7 @@
             items_per_row: section.settings.products_per_row_int,
             animate: forloop.index,
             product_card_title_alignment: section.settings.mycustom_product_title_alignment,
-            product_card_title_font_color: section.settings.mycustom_product_title_font_color,
-            product_card_title_font_size: section.settings.mycustom_product_title_font_size,
+            product_card_title_font_parameters: '.mycustom-feautured_collectin-product_card_title-font',
             product_card_price_alignment: section.settings.mycustom_product_price_alignment
           %}
         {%- endfor -%}
