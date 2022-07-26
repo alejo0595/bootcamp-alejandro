@@ -30,6 +30,17 @@
   {%- endunless -%}
 {%- endif -%}
 
+{%- for product in collection.products limit: max_products -%}
+          {%- comment -%}Alejandr Custom Modfication:{%- endcomment -%}
+          {% render 'product-card',
+            product: product,
+            aspect_ratio: aspect_ratio,
+            grid_show_vendor: section.settings.grid_show_vendor,
+            items_per_row: section.settings.products_per_row_int,
+            animate: forloop.index
+          %}
+        {%- endfor -%}
+
 {%- comment -%}Custom modification: Add settings to the schema{%- endcomment -%}
 {% schema %}
   {
