@@ -33,6 +33,13 @@
   endif
 -%}
 
+{%- comment -%}Alejandro Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
+{% style %}
+.mycustom-feautured_collectin-product_card_title-font{
+  color: {{ product_card_title_font_color }};
+  font-size: {{ product_card_title_font_size }}rem;
+{% endstyle %}
+
 <div class="card{% if settings.product_hover_image and product.media.size > 1 %} card--with-hover{% endif %} column {{ col_class }}{% unless product.available %} sold-out{% endunless %}{% if on_sale %} on-sale{% endif %}" {% if animate %} data-cc-animate="cc-fade-in-up" data-cc-animate-delay="{{ animate | times: 0.15 }}s" {% endif %}>
   <div class="card__image">
     {%- if product.featured_media -%}
