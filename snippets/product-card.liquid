@@ -92,7 +92,7 @@
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
     {%- comment -%}Alejandro Custom Modification: {%- endcomment -%}
-    <h3 class="card__title {{ product_card_title_alignment_class }}">
+    <h3 class="card__title {{ product_card_title_alignment_class }}  {{ product_card_title_font_class }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
     <div class="product-price {{ product_card_price_alignment_class }}">
