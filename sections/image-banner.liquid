@@ -209,7 +209,7 @@
                   {{- block.settings.heading | newline_to_br -}}
                 </h2>
               {%- endif -%}
-            {%- comment -%}Custom modfication: Add spacing{%- endcomment -%}
+            {%- comment -%}Alejandro Custom modfication: Add spacing{%- endcomment -%}
             {%- when 'sub_heading' -%}
               <h2 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{- block.settings.heading | newline_to_br -}}
@@ -218,7 +218,7 @@
               <div class="text-overlay__text{% if block.settings.enlarge_text %} large-text{% endif %} rte" data-cc-animate-delay="0.2s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
               </div>
-              {%- comment -%}Custom modfication: Modify button class{%- endcomment -%}
+              {%- comment -%}Alejandro Custom modfication: Modify button class{%- endcomment -%}
             {%- when 'button' -%}
               <div class="text-overlay__link" data-cc-animate-delay="0.3s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 <a class="button" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
@@ -232,7 +232,7 @@
   </div>
 </div>
 
-{%- comment -%}MyCustom modfication: {%- endcomment -%}
+{%- comment -%}Alejandro Custom modfication: {%- endcomment -%}
 {% schema %}
   {
     "name": "Image banner",
