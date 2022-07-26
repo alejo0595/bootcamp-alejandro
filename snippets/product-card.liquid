@@ -78,8 +78,8 @@
     {%- if grid_show_vendor -%}
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
-    {%- comment -%}Custom Modification: {%- endcomment -%}
-    <h3 class="card__title text-center">
+    {%- comment -%}Alejandro Custom Modification: {%- endcomment -%}
+    <h3 class="card__title text-{{ product_card_title_alignment }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
     <div class="product-price text-center">
