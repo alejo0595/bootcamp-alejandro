@@ -38,7 +38,8 @@
             grid_show_vendor: section.settings.grid_show_vendor,
             items_per_row: section.settings.products_per_row_int,
             animate: forloop.index,
-            product_card_title_alignment: section.settings.mycustom_product_title_alignment
+            product_card_title_alignment: section.settings.mycustom_product_title_alignment,
+            product_card_price_alignment: section.settings.mycustom_product_price_alignment
           %}
         {%- endfor -%}
       {%- else -%}
@@ -110,6 +111,26 @@
         "type": "select",
         "id": "mycustom_product_title_alignment",
         "label": "Product card title alignment",
+        "options":[
+          {
+            "value": "start",
+            "label":"Rigth"
+          },
+          {
+            "value": "center",
+            "label":"Center"
+          },
+          {
+            "value": "end",
+            "label":"Left"
+          }
+        ],
+        "default": "start"
+      },
+      {
+        "type": "select",
+        "id": "mycustom_product_price_alignment",
+        "label": "Product card price alignment",
         "options":[
           {
             "value": "start",
