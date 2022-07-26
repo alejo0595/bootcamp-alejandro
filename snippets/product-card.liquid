@@ -1,4 +1,4 @@
-{%- comment -%}Alejandro Custom modfication: {%- endcomment -%}
+{%- comment -%}Alejandro Custom modfication: Adding aligment and font properties variables {%- endcomment -%}
 {%- liquid
   assign inv_mngmt_size = product.variants.first.inventory_management | size
   assign limit_as_int = settings.prod_stock_warn_limit_int | plus: 0
@@ -97,7 +97,7 @@
     {%- if grid_show_vendor -%}
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
-    {%- comment -%}Alejandro Custom Modification: {%- endcomment -%}
+    {%- comment -%}Alejandro Custom Modification: Adding aligment and font properties {%- endcomment -%}
     <h3 class="card__title {{ product_card_title_alignment_class }}  {{ product_card_title_font_class }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
