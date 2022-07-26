@@ -38,9 +38,15 @@
       echo product_card_title_alignment | prepend: 'text-'
     endcapture
   endif
+  
+  if product_card_price_alignment
+    capture product_card_price_alignment_class
+      echo product_card_price_alignment | prepend: 'text-'
+    endcapture
+  endif
 
   if product_card_title_font_parameters
-    assign product_card_title_font_class = '.mycustom-feautured_collectin-product_card_title-font'
+    assign product_card_title_font_class = 'mycustom-feautured_collection-product_card_title-font'
   endif
 -%}
 
