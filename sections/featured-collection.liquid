@@ -22,6 +22,9 @@
       <h2 class="section-heading align-center" data-cc-animate>
         {{ section.settings.title | link_to: collection.url }}
       </h2>
+      {%- if true -%}
+        <h3>{{ section.settings.mycustom_sub_title }}</h3>
+      {%- endif -%}
     {%- endif -%}
 
     <div class="grid grid--row-gutters product-list">
