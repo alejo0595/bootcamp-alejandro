@@ -52,12 +52,18 @@
       "type": "featured-collection",
       "settings": {
         "title": "Our Most Popular Products",
+        "mycustom_sub_title": "all hand-crafted",
+        "mycustom_sub_title_show": true,
+        "mycustom_sub_title_font_size": 1.5,
+        "mycustom_sub_title_font_color": "#D79E93",
         "collection": "frontpage",
         "grid_show_vendor": false,
         "products_per_row_int": 4,
         "product_rows_int": 1,
         "show_view_all": false,
         "mycustom_product_title_alignment": "center",
+        "mycustom_product_title_font_size": 1,
+        "mycustom_product_title_font_color": "#D79E93",
         "mycustom_product_price_alignment": "center"
       }
     },
