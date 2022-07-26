@@ -31,12 +31,14 @@
           endif
         -%}
         {%- for product in collection.products limit: max_products -%}
+          {%- comment -%}Alejandr Custom Modfication:{%- endcomment -%}
           {% render 'product-card',
             product: product,
             aspect_ratio: aspect_ratio,
             grid_show_vendor: section.settings.grid_show_vendor,
             items_per_row: section.settings.products_per_row_int,
-            animate: forloop.index
+            animate: forloop.index,
+            product_card_title_alignment: section.settings.mycustom_product_title_alignment
           %}
         {%- endfor -%}
       {%- else -%}
@@ -57,7 +59,7 @@
     {%- endif -%}
   </div>
 </div>
-
+{%- comment -%}Alejandro Custom modification:{%- endcomment -%}
 {% schema %}
   {
     "name": "Featured collection",
@@ -106,8 +108,8 @@
       },
       {
         "type": "select",
-        "id": "mycustom_product_title_aligment",
-        "label": "Product card title aligment",
+        "id": "mycustom_product_title_alignment",
+        "label": "Product card title alignment",
         "options":[
           {
             "value": "start",
