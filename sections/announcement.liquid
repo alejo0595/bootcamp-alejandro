@@ -1,6 +1,6 @@
 {%- if section.settings.show_announcement -%}
   {%- unless template != 'index' and section.settings.announcement_home_only -%}
-    {%- comment -%}Custom modification: Add style tag and classes{%- endcomment -%}
+    {%- comment -%}Alejandro Custom modification: Add style tag and classes{%- endcomment -%}
     {% style %}
       .announcement {
         background-color: {{ section.settings.announcement_bar_bg_color }};
@@ -16,7 +16,7 @@
       {%- if section.settings.announcement_bar_link != blank -%}
         <a href="{{ section.settings.announcement_bar_link }}">
       {%- endif -%}
-      {%- comment -%}Custom modification: Add icon and Css{%- endcomment -%}
+      {%- comment -%}Alejandro Custom modification: Add icon and Css{%- endcomment -%}
       <div class="announcement__inner d-flex justify-content-center align-items-center">
         {% if section.settings.mycustom_announcement_icon_show %}
         <div class="me-2 mycustom-announcement-icon">{{ section.settings.mycustom_announcement_icon }}</div>
@@ -30,7 +30,7 @@
   {%- endunless -%}
 {%- endif -%}
 
-{%- comment -%}Custom modification: Add settings to the schema{%- endcomment -%}
+{%- comment -%}Alejandro Custom modification: Add settings to the schema{%- endcomment -%}
 {% schema %}
   {
     "name": "Announcement bar",
