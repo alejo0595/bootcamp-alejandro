@@ -98,9 +98,9 @@
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
     {%- comment -%}Alejandro Custom Modification: Adding aligment and font properties {%- endcomment -%}
-    <h4 class="card__title {{ product_card_title_alignment_class }}  {{ product_card_title_font_class }}">
+    <h2 class="card__title {{ product_card_title_alignment_class }}  {{ product_card_title_font_class }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
-    </h4>
+    </h2>
     <div class="product-price {{ product_card_price_alignment_class }}">
       {% if product.price_varies %}
         <span class="product-price__from">{{ 'products.listing.from' | t }}</span>
