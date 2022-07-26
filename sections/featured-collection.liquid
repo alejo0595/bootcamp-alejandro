@@ -31,13 +31,13 @@
           endif
         -%}
         {%- for product in collection.products limit: max_products -%}
-          <!-- {% render 'product-card',
+          {% render 'product-card',
             product: product,
             aspect_ratio: aspect_ratio,
             grid_show_vendor: section.settings.grid_show_vendor,
             items_per_row: section.settings.products_per_row_int,
             animate: forloop.index
-          %} -->
+          %}
         {%- endfor -%}
       {%- else -%}
         {%- for product in (1..max_products) -%}
