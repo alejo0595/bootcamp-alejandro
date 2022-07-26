@@ -31,6 +31,10 @@
   else
     assign on_sale = false
   endif
+
+  if product_card_price_alignment
+    assign product_card_price_alignment_class = 'text-{{ product_card_price_alignment }}'
+  endif
 -%}
 
 {%- comment -%}Alejandro Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
@@ -91,7 +95,7 @@
     <h3 class="card__title text-{{ product_card_title_alignment }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
-    <div class="product-price {%- if product_card_price_alignment -%} text-{{ product_card_price_alignment }}{%- endif -%}">
+    <div class="product-price {{ product_card_price_alignment_class }}">
       {% if product.price_varies %}
         <span class="product-price__from">{{ 'products.listing.from' | t }}</span>
       {% endif %}
