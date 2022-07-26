@@ -1,11 +1,11 @@
 {%- assign collection = collections[section.settings.collection] -%}
 {%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
 
-{%- comment -%}Alejandro Custom modfication: Add a clas for sub-headings font size{%- endcomment -%}
+{%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
 {% style %}
 
 .mycustom-feautured_collection-sub_title-font {
-  font-family: {{ settings.mycustom_sub_heading_font }} !important;
+  font-family: {{settings.mycustom_sub_heading_font}}!important;
   color: {{section.settings.mycustom_sub_title_font_color}}!important;
   font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
 }
@@ -23,7 +23,8 @@
       <h2 class="section-heading align-center" data-cc-animate>
         {{ section.settings.title | link_to: collection.url }}
       </h2>
-      {%- if false -%}
+      {%- comment -%}Alejandr Custom Modfication: Adding a customazible sub-heading{%- endcomment -%}
+      {%- if  section.settings.mycustom_sub_title_show  -%}
         <h3 class="align-center mycustom-feautured_collection-sub_title-font">{{ section.settings.mycustom_sub_title }}</h3>
       {%- endif -%}
     {%- endif -%}
@@ -50,7 +51,7 @@
           endif
         -%}
         {%- for product in collection.products limit: max_products -%}
-          {%- comment -%}Alejandr Custom Modfication:{%- endcomment -%}
+          {%- comment -%}Alejandr Custom Modfication: Modifying aligments and font size{%- endcomment -%}
           {% render 'product-card',
             product: product,
             aspect_ratio: aspect_ratio,
@@ -80,7 +81,7 @@
     {%- endif -%}
   </div>
 </div>
-{%- comment -%}Alejandro Custom modification:{%- endcomment -%}
+{%- comment -%}Alejandro Custom modification: Adding several custom modifications settings{%- endcomment -%}
 {% schema %}
 
 {
@@ -97,6 +98,11 @@
       "id": "mycustom_sub_title",
       "label": "Sub-Heading",
       "default": "My awsome featured collection "
+    }, {
+      "type": "checkbox",
+      "id": "mycustom_sub_title_show",
+      "label": "Enable sub-heading",
+      "default": true
     }, {
       "type": "range",
       "id": "mycustom_sub_title_font_size",
