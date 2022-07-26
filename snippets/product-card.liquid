@@ -1,3 +1,4 @@
+{%- comment -%}Alejandro Custom modfication: {%- endcomment -%}
 {%- liquid
   assign inv_mngmt_size = product.variants.first.inventory_management | size
   assign limit_as_int = settings.prod_stock_warn_limit_int | plus: 0
@@ -31,9 +32,13 @@
   else
     assign on_sale = false
   endif
-comment 
-  hello 
-endcomment
+
+  if product_card_title_alignment
+    capture product_card_title_alignment_class
+      echo product_card_title_alignment | prepend: 'text-'
+    endcapture
+  endif
+
   if product_card_price_alignment
     capture product_card_price_alignment_class
       echo product_card_price_alignment | prepend: 'text-'
@@ -96,7 +101,7 @@ endcomment
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
     {%- comment -%}Alejandro Custom Modification: {%- endcomment -%}
-    <h3 class="card__title text-{{ product_card_title_alignment }}">
+    <h3 class="card__title {{ product_card_title_alignment_class }}">
       <a href="{{ product.url | within: collection }}" class="card__link">{{ product.title | escape }}</a>
     </h3>
     <div class="product-price {{ product_card_price_alignment_class }}">
