@@ -1,3 +1,4 @@
+{%- comment -%}Alejandro Custom modfication: Add a products variable for applying reverse filter{%- endcomment -%}
 {%- assign collection = collections[section.settings.collection] -%}
 {%- assign products = collection.products | reverse -%}
 {%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
