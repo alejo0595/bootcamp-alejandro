@@ -51,10 +51,10 @@
     "1658956760bcd9ccf4": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "mycustom_sub_title": "My awsome featured collection",
-        "mycustom_sub_title_font_size": 1,
-        "mycustom_sub_title_font_color": "#D79E93",
+        "title": "Our Most Popular Products",
+        "mycustom_sub_title": "all hand-crafted",
+        "mycustom_sub_title_font_size": 2,
+        "mycustom_sub_title_font_color": "#eaae86",
         "collection": "frontpage",
         "grid_show_vendor": false,
         "products_per_row_int": 4,
@@ -63,7 +63,7 @@
         "mycustom_product_title_alignment": "start",
         "mycustom_product_title_font_weight": false,
         "mycustom_product_title_font_size": 1,
-        "mycustom_product_title_font_color": "#D79E93",
+        "mycustom_product_title_font_color": "#d79e93",
         "mycustom_product_price_alignment": "start"
       }
     },
