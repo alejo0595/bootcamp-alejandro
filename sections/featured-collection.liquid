@@ -6,7 +6,7 @@
 {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
 {%- style -%}
 
-#{{ section.id }} .mycustom-feautured_collection-sub_title-font > a {
+#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
   font-family: {{settings.mycustom_sub_heading_font}}!important;
   color: {{section.settings.mycustom_sub_title_font_color}}!important;
   font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
@@ -57,7 +57,7 @@
             assign aspect_ratio = settings.prod_card_image_ratio
           endif
         -%}
-        {%- for product in products limit: max_products -%}
+        {%- for product in collection.products limit: max_products -%}
           {%- comment -%}Alejandr Custom Modfication: Modifying aligments and font size{%- endcomment -%}
           {% render 'product-card',
             product: product,
