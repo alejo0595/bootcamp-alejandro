@@ -6,7 +6,7 @@
 {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
 {%- style -%}
 
-#{{ section.id }} #mycustom-feautured_collection-sub_title-font {
+#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
   font-family: {{settings.mycustom_sub_heading_font}}!important;
   color: {{section.settings.mycustom_sub_title_font_color}}!important;
   font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
@@ -30,8 +30,8 @@
         {{ section.settings.title | link_to: collection.url }}
       </h2>
       {%- if  section.settings.mycustom_sub_title != blank  -%}
-        <h3 id="mycustom-feautured_collection-sub_title-font" class="align-center" data-cc-animate>
-          {{ section.settings.mycustom_sub_title  }}
+        <h3 class="align-center mycustom-feautured_collection-sub_title-font" data-cc-animate>
+          {{ section.settings.mycustom_sub_title | link_to : collection.url }}
         </h3>
       {%- endif -%}
     {%- endif -%}
