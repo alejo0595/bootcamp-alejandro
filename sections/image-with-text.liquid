@@ -106,8 +106,8 @@
             </h2>
           {%- endif -%}
           {%- comment -%}{%- endcomment -%}
-          {%- if true -%}
-            <h3 class="mycustom-image_with_text-sub_heading-font">Hloa{{ section.settings.mycustom_sub_heading }}</h3>
+          {%- if section.settings.mycustom_sub_heading_show -%}
+            <h3 class="mycustom-image_with_text-sub_heading-font">Hola {{ section.settings.mycustom_sub_heading }}</h3>
           {%- endif -%}
           {%- if section.settings.text != blank -%}
             <div class="rte" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">
