@@ -99,7 +99,7 @@
             </h2>
           {%- endif -%}
           {%- comment -%}{%- endcomment -%}
-          {%- if section.settings.mycustom_sub_heading_show -%}          
+          {%- if section.settings.mycustom_sub_heading != blank -%}          
             {%- comment -%}Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
             {%- style -%}
             .mycustom-image_with_text-sub_heading-font {
