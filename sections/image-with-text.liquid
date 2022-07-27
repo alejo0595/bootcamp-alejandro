@@ -13,13 +13,13 @@
     endif
   -%}
   {%- comment -%}{%- endcomment -%}
-    {% style %}
+    {%- style -%}
       .mycustom-image_with_text-sub_heading-font{
         font-family: {{ settings.mycustom_sub_heading_font }} !important;
         color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
         font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem !important;
       }
-    {% endstyle %}
+    {%- endstyle -%}
   {%- if section.settings.bg_style == 'section' -%}
     {%- unless section.settings.skip_container -%}
       {%- style -%}
