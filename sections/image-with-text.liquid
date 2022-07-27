@@ -48,15 +48,6 @@
   {%- endif -%}
 {%- endunless -%}
 
-{%- comment -%}Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
-{%- style -%}
-.mycustom-image_with_text-sub_heading-font {
-  font-family: {{ settings.mycustom_sub_heading_font }} !important;
-  color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
-  font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem ;
-}
-{%- endstyle -%}
-
 <div id="{{ section.id }}"{% unless section.settings.skip_container %} class="{% if bg_color == settings.col_page_bg or section.settings.bg_style != 'section' or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}"{% endunless %} data-cc-animate>
   {%- unless section.settings.skip_container -%}
     <div class="container section-content section-content--no-padding">
@@ -108,7 +99,15 @@
             </h2>
           {%- endif -%}
           {%- comment -%}{%- endcomment -%}
-          {%- if section.settings.mycustom_sub_heading_show -%}
+          {%- if section.settings.mycustom_sub_heading_show -%}          
+            {%- comment -%}Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
+            {%- style -%}
+            .mycustom-image_with_text-sub_heading-font {
+              font-family: {{ settings.mycustom_sub_heading_font }} !important;
+              color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
+              font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem ;
+            }
+            {%- endstyle -%}
             <h3 class="mycustom-image_with_text-sub_heading-font">{{ section.settings.mycustom_sub_heading }}</h3>
           {%- endif -%}
           {%- if section.settings.text != blank -%}
