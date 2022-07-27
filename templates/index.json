@@ -60,11 +60,11 @@
         "products_per_row_int": 4,
         "product_rows_int": 1,
         "show_view_all": false,
-        "mycustom_product_title_alignment": "start",
-        "mycustom_product_title_font_weight": false,
-        "mycustom_product_title_font_size": 1,
+        "mycustom_product_title_alignment": "center",
+        "mycustom_product_title_font_weight": true,
+        "mycustom_product_title_font_size": 0.8,
         "mycustom_product_title_font_color": "#d79e93",
-        "mycustom_product_price_alignment": "start"
+        "mycustom_product_price_alignment": "center"
       }
     },
     "1658281447f3f74bef": {
