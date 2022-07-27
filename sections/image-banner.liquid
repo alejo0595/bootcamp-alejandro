@@ -33,16 +33,6 @@
 -%}
 
 {%- style -%}
-  {%- comment -%}Custom modfication: Add a class for sub-headings font size{%- endcomment -%}
-  .mycustom-image_banner-sub_heading-font{
-    font-family: {{ settings.mycustom_sub_heading_font }};
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when 'sub_heading' -%}
-          font-size: {{ block.settings.mycustom_sub_heading_font_size }}rem;
-      {%- endcase -%}
-    {%- endfor -%}
-  }
   {%- if section.settings.size contains 'fixed' -%}
     #{{ section.id }} .image-banner { min-height: {{ section.settings.height_mobile }}px; }
     @media (max-width: 480px) {
@@ -211,6 +201,18 @@
               {%- endif -%}
             {%- comment -%}Alejandro Custom modfication: Add spacing{%- endcomment -%}
             {%- when 'sub_heading' -%}
+              {%- comment -%}Custom modfication: Add a class for sub-headings font size{%- endcomment -%}
+              {% style %}
+                #{{ section.id }} .mycustom-image_banner-sub_heading-font{
+                  font-family: {{ settings.mycustom_sub_heading_font }};
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'sub_heading' -%}
+                        font-size: {{ block.settings.mycustom_sub_heading_font_size }}rem;
+                    {%- endcase -%}
+                  {%- endfor -%}
+                }
+              {% endstyle %}
               <h2 class="mycustom-image_banner-sub_heading-font text-overlay__heading " data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{- block.settings.heading | newline_to_br -}}
               </h2>
