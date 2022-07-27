@@ -4,8 +4,8 @@
     "col_headings": "#152242",
     "col_links": "#5c6ac4",
     "col_page_bg": "#ffffff",
-    "col_header_bg": "#3E7879",
-    "col_header_text": "#ffffff",
+    "col_header_bg": "#ffffff",
+    "col_header_text": "#465065",
     "col_header_text_overlap": "#ffffff",
     "col_nav_bg": "#152242",
     "col_nav_links": "#ffffff",
@@ -107,7 +107,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/natural-mums-white_295x_6acc71c0-1963-4c8e-b86d-c0e7c5da905a.webp",
+          "logo": "shopify:\/\/shop_images\/natural-mums-colour_295x_ad52823a-d25b-4c62-a6bd-389f004cffc0.webp",
           "alt_logo": "shopify:\/\/shop_images\/natural-mums-white_295x_6acc71c0-1963-4c8e-b86d-c0e7c5da905a.webp",
           "logo_width": 170,
           "enable_header_overlap": true,
