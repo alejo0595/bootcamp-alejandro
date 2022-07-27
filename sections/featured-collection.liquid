@@ -4,16 +4,7 @@
 {%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
 
 {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
-{%- style -%}
 
-#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
-  font-family: {{settings.mycustom_sub_heading_font}}!important;
-  color: {{section.settings.mycustom_sub_title_font_color}}!important;
-  font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
-}
-
-
-{%- endstyle -%}
 
 {%- comment -%}Alejandr Custom Modfication: Adding a customazible sub-heading and extra spacing{%- endcomment -%}
 <div class="spaced-section" data-section-type="featured-collection">
@@ -23,6 +14,16 @@
         {{ section.settings.title | link_to: collection.url }}
       </h2>
       {%- if  section.settings.mycustom_sub_title != blank  -%}
+      {%- style -%}
+
+#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
+  font-family: {{settings.mycustom_sub_heading_font}}!important;
+  color: {{section.settings.mycustom_sub_title_font_color}}!important;
+  font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
+}
+
+
+{%- endstyle -%}
         <h3 class="align-center mycustom-feautured_collection-sub_title-font" data-cc-animate>
           {{ section.settings.mycustom_sub_title | link_to : collection.url }}
         </h3>
