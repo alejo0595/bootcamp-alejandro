@@ -98,9 +98,9 @@
               {{- section.settings.heading | escape -}}
             </h2>
           {%- endif -%}
-          {%- comment -%}{%- endcomment -%}
+          {%- comment -%}Alejandro Custom modfication: Add a sub-headings{%- endcomment -%}
           {%- if section.settings.mycustom_sub_heading != blank -%}          
-            {%- comment -%}Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
+            {%- comment -%}Alejandro Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
             {%- style -%}
             #{{ section.id }} .mycustom-image_with_text-sub_heading-font {
               font-family: {{ settings.mycustom_sub_heading_font }} !important;
