@@ -57,7 +57,7 @@
             assign aspect_ratio = settings.prod_card_image_ratio
           endif
         -%}
-        {%- for product in collection.products limit: max_products -%}
+        {%- for product in products limit: max_products -%}
           {%- comment -%}Alejandr Custom Modfication: Modifying aligments and font size{%- endcomment -%}
           {% render 'product-card',
             product: product,
