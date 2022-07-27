@@ -4,7 +4,7 @@
 {%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
 
 {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
-{% style %}
+{%- style -%}
 
 .mycustom-feautured_collection-sub_title-font {
   font-family: {{settings.mycustom_sub_heading_font}}!important;
@@ -21,7 +21,7 @@
   {%- endif -%}
 }
 
-{% endstyle %}
+{%- endstyle -%}
 
 {%- comment -%}Alejandr Custom Modfication: Adding a customazible sub-heading and extra spacing{%- endcomment -%}
 <div class="spaced-section" data-section-type="featured-collection">
