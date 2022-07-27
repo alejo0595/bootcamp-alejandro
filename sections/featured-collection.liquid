@@ -1,29 +1,7 @@
 {%- comment -%}Alejandro Custom modfication: Add a products variable for applying reverse filter{%- endcomment -%}
 {%- assign collection = collections[section.settings.collection] -%}
 {%- assign products = collection.products | reverse -%}
-{%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}
-
-{%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
-{%- if products.size > 0 -%}
-  {%- style -%}
-
-    #{{ section.id }} > .mycustom-feautured_collection-sub_title-font {
-      font-family: {{settings.mycustom_sub_heading_font}}!important;
-      color: {{section.settings.mycustom_sub_title_font_color}}!important;
-      font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
-    }
-
-    #{{ section.id }} .mycustom-feautured_collection-product_card_title-font {
-      font-family: inherit !important;
-      color: {{section.settings.mycustom_product_title_font_color}}!important;
-      font-size: {{section.settings.mycustom_product_title_font_size}}rem !important;
-      {%- if section.settings.mycustom_product_title_font_weight -%}
-        font-weight: bold !important;
-      {%- endif -%}
-    }
-
-  {%- endstyle -%}
-{%- endif -%}  
+{%- assign max_products = section.settings.product_rows_int | times: section.settings.products_per_row_int -%}  
 
 {%- comment -%}Alejandr Custom Modfication: Adding a customazible sub-heading and extra spacing{%- endcomment -%}
 <div class="spaced-section" data-section-type="featured-collection">
@@ -58,6 +36,25 @@
             assign aspect_ratio = settings.prod_card_image_ratio
           endif
         -%}
+        {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
+        {%- style -%}
+        
+          #{{ section.id }} > .mycustom-feautured_collection-sub_title-font {
+            font-family: {{settings.mycustom_sub_heading_font}}!important;
+            color: {{section.settings.mycustom_sub_title_font_color}}!important;
+            font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
+          }
+        
+          #{{ section.id }} .mycustom-feautured_collection-product_card_title-font {
+            font-family: inherit !important;
+            color: {{section.settings.mycustom_product_title_font_color}}!important;
+            font-size: {{section.settings.mycustom_product_title_font_size}}rem !important;
+            {%- if section.settings.mycustom_product_title_font_weight -%}
+              font-weight: bold !important;
+            {%- endif -%}
+          }
+        
+        {%- endstyle -%}
         {%- for product in products limit: max_products -%}
           {%- comment -%}Alejandr Custom Modfication: Modifying aligments and font size{%- endcomment -%}
           {% render 'product-card',
