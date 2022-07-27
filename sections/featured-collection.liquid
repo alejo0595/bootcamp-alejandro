@@ -7,13 +7,13 @@
 {%- if products.size > 0 -%}
   {%- style -%}
 
-    .mycustom-feautured_collection-sub_title-font {
+    #{{ section.id }} .mycustom-feautured_collection-sub_title-font {
       font-family: {{settings.mycustom_sub_heading_font}}!important;
       color: {{section.settings.mycustom_sub_title_font_color}}!important;
       font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
     }
 
-    .mycustom-feautured_collection-product_card_title-font {
+    #{{ section.id }} .mycustom-feautured_collection-product_card_title-font {
       font-family: inherit !important;
       color: {{section.settings.mycustom_product_title_font_color}}!important;
       font-size: {{section.settings.mycustom_product_title_font_size}}rem !important;
