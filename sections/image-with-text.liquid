@@ -50,10 +50,10 @@
 
 {%- comment -%}Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
 {%- style -%}
-.mycustom-image_with_text-sub_heading-font{
+.mycustom-image_with_text-sub_heading-font {
   font-family: {{ settings.mycustom_sub_heading_font }} !important;
   color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
-  font-size: {{ section.settings.mycustom_subb_heading_font_size }}rem !important;
+  font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem !important;
 }
 {%- endstyle -%}
 
@@ -179,7 +179,7 @@
         "default": "Subtitle for image with text"
       }, {
         "type": "range",
-        "id": "mycustom_subb_heading_font_size",
+        "id": "mycustom_sub_heading_font_size",
         "label": "Sub-heading size",
         "unit": "rem",
         "min": 0.5,
