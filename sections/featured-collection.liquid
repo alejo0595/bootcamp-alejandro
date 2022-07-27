@@ -10,7 +10,7 @@
       <h2 class="section-heading align-center  {%- if section.settings.mycustom_sub_title != blank -%} {{ 'mb-1' | prepend: ' ' }} {%- endif -%}" data-cc-animate>
         {{ section.settings.title | link_to: collection.url }}
       </h2>
-      {%- if  section.settings.mycustom_sub_title_show  -%}
+      {%- if  section.settings.mycustom_sub_title  -%}
         <h3 class="mycustom-feautured_collection-sub_title-font">{{ section.settings.mycustom_sub_title | link_to: collection.url }}</h3>
       {%- endif -%}
     {%- endif -%}
