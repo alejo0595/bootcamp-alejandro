@@ -8,7 +8,11 @@
 }
 
 #{{section.id}} .mycustom-newsletter-input-styling {
-  border: 3px solid #F4AB9D;
+  border: 3px solid #F4AB9D !important;
+}
+
+#{{ section.id }} .mycustom-newsletter-icon-styling > svg {
+  width: {{ section.settings.mycustom_icon_size }}px !important; height: {{ section.settings.icon_size }}px !important;
 }
 
 }
@@ -73,7 +77,7 @@
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
         {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
         {%- if section.settings.mycustom_show_icon -%}
-          <div class="signup-icon">
+          <div class="signup-icon mycustom-newsletter-icon-styling">
             {% render 'svg-email' %}
           </div>
         {%- endif -%}
@@ -96,7 +100,7 @@
                    aria-required="true"
                    required>
           </div>
-          <button class="input-with-button__button button" type="submit">{% render 'mycustom-svg-arrow_foward' %}</button>
+          <button class="input-with-button__button button" type="submit">{% render 'mycustom-{{ section.settings.mycustom_icon }}' %}</button>
         </div>
 
         {%- if section.settings.text != blank -%}
@@ -109,6 +113,7 @@
   </div>
 </div>
 
+{%- comment -%}{%- endcomment -%}
 {% schema %}
   {
     "name": "Newsletter",
@@ -151,6 +156,136 @@
         "id": "text",
         "label": "Text",
         "default": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+      },
+      {
+        "type": "header",
+        "content": "Icon options"
+      },
+      {
+        "type": "select",
+        "id": "mycustom_icon",
+        "label": "Icon",
+        "options": [
+          {
+            "value": "svg-package",
+            "label": "Package"
+          },
+          {
+            "value": "svg-support",
+            "label": "Support"
+          },
+          {
+            "value": "svg-shield",
+            "label": "Shield"
+          },
+          {
+            "value": "svg-return",
+            "label": "Return"
+          },
+          {
+            "value": "svg-cart",
+            "label": "Cart"
+          },
+          {
+            "value": "svg-beer",
+            "label": "Beer"
+          },
+          {
+            "value": "svg-coffee",
+            "label": "Coffee"
+          },
+          {
+            "value": "svg-draw",
+            "label": "Draw"
+          },
+          {
+            "value": "svg-map-location",
+            "label": "Map location"
+          },
+          {
+            "value": "svg-send",
+            "label": "Send"
+          },
+          {
+            "value": "svg-view",
+            "label": "View"
+          },
+          {
+            "value": "svg-bookmark",
+            "label": "Bookmark"
+          },
+          {
+            "value": "svg-compass",
+            "label": "Compass"
+          },
+          {
+            "value": "svg-heart-mobile",
+            "label": "Heart mobile"
+          },
+          {
+            "value": "svg-phone",
+            "label": "Phone"
+          },
+          {
+            "value": "svg-world",
+            "label": "World"
+          },
+          {
+            "value": "svg-chat",
+            "label": "Chat"
+          },
+          {
+            "value": "svg-credit-card",
+            "label": "Credit card"
+          },
+          {
+            "value": "svg-lock",
+            "label": "Lock"
+          },
+          {
+            "value": "svg-thumbs-up",
+            "label": "Thumbs up"
+          },
+          {
+            "value": "mycustom-svg-baby_cart",
+            "label": "Baby Cart"
+          },
+          {
+            "value": "mycustom-svg-flower",
+            "label": "Flower"
+          },
+          {
+            "value": "mycustom-svg-hand_water",
+            "label": "Hand and Water"
+          },
+          {
+            "value": "mycustom-svg-plant",
+            "label": "Plant"
+          },
+          {
+            "value": "mycustom-svg-spa",
+            "label": "Spa"
+          },
+          {
+            "value": "mycustom-svg-field",
+            "label": "Field"
+          },
+          {
+            "value": "mycustom-svg-arrow_forward",
+            "label": "Arrow Forward"
+          }
+        ],
+        "default": "mycustom-svg-arrow_forward"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_icon_size",
+        "min": 20,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Icon / image size",
+        "default": 50
       },
       {
         "type": "header",
