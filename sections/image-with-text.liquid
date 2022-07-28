@@ -71,7 +71,7 @@
                         media="(max-width: 480px)"
                         width="428"
                         height="{{ 428 | divided_by: img.aspect_ratio | round }}">
-                <img class="test" data-srcset="{%- if img.width < 600 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
+                <img  data-srcset="{%- if img.width < 600 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
                                   {%- if img.width >= 600 %}{{ img | image_url: width: 600 }} 600w{% endif -%}
                                   {%- if img.width >= 960 %}, {{ img | image_url: width: 960 }} 960w{% endif -%}
                                   {%- if img.width >= 1200 %}, {{ img | image_url: width: 1200 }} 1200w{% endif -%}
