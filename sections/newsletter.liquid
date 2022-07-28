@@ -69,7 +69,7 @@
   {%- endstyle -%}
 {%- endunless -%}
 
-<div class="newsletter {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}" id="{{ section.id }}" data-section-type="newsletter" data-cc-animate>
+<div id="{{ section.id }}" class="newsletter {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}" id="{{ section.id }}" data-section-type="newsletter" data-cc-animate>
   <div class="container">
     <div class="signup-section">
       {%- assign form_id = section.id | prepend: 'signup-form-' -%}
