@@ -11,7 +11,7 @@
   border: 3px solid #F4AB9D !important;
 }
 
-#{{ section.id }} .mycustom-newsletter-icon-styling > svg {
+#{{ section.id }} .mycustom-newsletter-icon-styling_button > svg {
   width: {{ section.settings.mycustom_icon_size }}px !important; height: {{ section.settings.icon_size }}px !important;
 }
 
@@ -77,7 +77,7 @@
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
         {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
         {%- if section.settings.mycustom_show_icon -%}
-          <div class="signup-icon mycustom-newsletter-icon-styling">
+          <div class="signup-icon">
             {% render 'svg-email' %}
           </div>
         {%- endif -%}
@@ -101,7 +101,7 @@
                    required>
           </div>
           {%- comment -%}{%- endcomment -%}
-          <button class="input-with-button__button button" type="submit">
+          <button class="input-with-button__button button .mycustom-newsletter-icon-styling_button" type="submit">
             {%- case section.settings.mycustom_icon -%}
                   {%- when 'svg-package' -%}
                     {% render 'svg-package' %}
