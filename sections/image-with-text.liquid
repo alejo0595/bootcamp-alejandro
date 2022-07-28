@@ -58,11 +58,6 @@
           {% if section.settings.image != blank %}
             {%- assign img = section.settings.image -%}
             <div class="media-with-text__image lazyload-placeholder" style="padding-top: {{ 1 | divided_by: img.aspect_ratio | times: 100 }}%;" data-cc-animate>
-              {% style %}
-                {{ section.id }} .test > img{
-                  border: 3px solid red;
-                }
-              {% endstyle %}
               <picture class="no-js-hidden">
                 <source data-srcset="{%- if img.width < 640 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
                                      {%- if img.width >= 640 %}{{ img | image_url: width: 640 }} 640w{% endif -%}
