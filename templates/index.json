@@ -213,7 +213,7 @@
       "settings": {
         "heading": "Subscribe to our newsletter",
         "text": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "none",
         "color_bg": "",
         "color_heading": "",
         "color_text": ""
