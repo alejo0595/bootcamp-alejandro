@@ -100,7 +100,7 @@
                    aria-required="true"
                    required>
           </div>
-          <button class="input-with-button__button button" type="submit">{% render 'mycustom-{{ section.settings.mycustom_icon }}' %}</button>
+          <button class="input-with-button__button button" type="submit">{% render '{{ section.settings.mycustom_icon }}' %}</button>
         </div>
 
         {%- if section.settings.text != blank -%}
