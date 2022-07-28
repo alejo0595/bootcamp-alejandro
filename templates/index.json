@@ -205,13 +205,17 @@
         "mycustom_collection_title_alignment": "center",
         "mycustom_collection_title_font_weight": true,
         "mycustom_collection_title_font_size": 0.8,
-        "mycustom_collection_title_font_color": "#EAAE86"
+        "mycustom_collection_title_font_color": "#eaae86"
       }
     },
     "1658379177e98c8095": {
       "type": "newsletter",
       "settings": {
+        "mycustom_show_icon": false,
         "heading": "Stay in the Know About",
+        "mycustom_sub_heading": "living the natural lifestyle",
+        "mycustom_sub_heading_font_size": 3.2,
+        "mycustom_sub_heading_font_color": "#EAAE86",
         "text": "",
         "color_scheme": "none",
         "color_bg": "",
