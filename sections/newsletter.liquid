@@ -1,10 +1,10 @@
 {%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
 {%- style -%}
 
-#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
+#{{ section.id }} .mycustom-feautured_collection-sub_heading-font {
   font-family: {{settings.mycustom_sub_heading_font}}!important;
-  color: {{section.settings.mycustom_sub_title_font_color}}!important;
-  font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
+  color: {{section.settings.mycustom_sub_heading_font_color}}!important;
+  font-size: {{section.settings.mycustom_sub_heading_font_size}}rem !important;
 }
 
 }
@@ -67,15 +67,17 @@
       {%- assign form_id = section.id | prepend: 'signup-form-' -%}
       {% form 'customer', id: form_id %}
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+        {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
         {%- if section.settings.mycustom_show_icon -%}
           <div class="signup-icon">
             {% render 'svg-email' %}
           </div>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 class="section-heading h3">{{ section.settings.heading }}</h2>
-          {%- if condition -%}
-            
+          <h2 class="section-heading h3">{{ section.settings.heading | escape }}</h2>
+          {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
+          {%- if section.settings.mycustom_sub_heading != blank-%}
+            <h3>{{ section.settings.mycustom_sub_heading | escape }}</h3>
           {%- endif -%}
         {%- endif -%}
         <div class="input-with-button">
@@ -119,6 +121,26 @@
         "label": "Heading",
         "default": "Subscribe to our newsletter"
       },
+      {
+      "type": "text",
+      "id": "mycustom_sub_heading",
+      "label": "Sub-Heading",
+      "default": "My awsome newsletter "
+    }, {
+      "type": "range",
+      "id": "mycustom_sub_heading_font_size",
+      "label": "Sub-heading size",
+      "unit": "rem",
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "default": 1
+    }, {
+      "type": "color",
+      "id": "mycustom_sub_heading_font_color",
+      "label": "Sub-heading color",
+      "default": "#EAAE86"
+    },
       {
         "type": "richtext",
         "id": "text",
