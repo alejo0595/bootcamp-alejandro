@@ -15,7 +15,7 @@
   {%- endif -%}
 }
 {%- endstyle -%}
-
+{%- comment -%}Alejandro Custom Modification:{%- endcomment -%}
 <div id="{{ section.id }}" class="spaced-section" data-section-type="collection-list">
   <div class="container section-content">
     {%- if section.settings.title != blank -%}
@@ -142,6 +142,46 @@
         "step": 1,
         "label": "Number of collections per row",
         "default": 4
+      },
+      {
+        "type": "header",
+        "content": "Title positioning"
+      }, {
+        "type": "select",
+        "id": "mycustom_product_title_alignment",
+        "label": "Product card title position",
+        "options": [
+          {
+            "value": "start",
+            "label": "Rigth"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "end",
+            "label": "Left"
+          }
+        ],
+        "default": "start"
+      }, {
+        "type": "checkbox",
+        "id": "mycustom_product_title_font_weight",
+        "label": "Bold",
+        "default": false
+      }, {
+        "type": "range",
+        "id": "mycustom_product_title_font_size",
+        "label": "Title size",
+        "unit": "rem",
+        "min": 0.5,
+        "max": 10,
+        "step": 0.1,
+        "default": 1
+      }, {
+        "type": "color",
+        "id": "mycustom_product_title_font_color",
+        "label": "Title color",
+        "default": "#EAAE86"
       }
     ],
     "blocks": [
