@@ -197,7 +197,10 @@
         "1b4a24e0-c9e0-4e4f-8ace-e532a8c48e82"
       ],
       "settings": {
-        "title": "Products by Category",
+        "title": "Products by <b>Category<\/b>",
+        "mycustom_sub_title": "all hand-crafted",
+        "mycustom_sub_title_font_size": 1,
+        "mycustom_sub_title_font_color": "#EAAE86",
         "collections_per_row_int": 4
       }
     },
