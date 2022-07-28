@@ -86,7 +86,7 @@
         {%- endif -%}
         {%- comment -%}{%- endcomment -%}
         <div class="input-with-button">
-           <div class="col-6">
+           <div class="col-9">
              <div class="input-with-button__input-wrapper me-0">
                <input class="input-with-button__input input test"
                       type="email"
@@ -98,9 +98,7 @@
                       required>
              </div>
           </div>
-          <div class="col-6">
-            <button class="input-with-button__button button" type="submit">{% render 'mycustom-svg-arrow_foward' %}</button>
-          </div>
+          <button class="input-with-button__button button" type="submit">{% render 'mycustom-svg-arrow_foward' %}</button>
         </div>
 
         {%- if section.settings.text != blank -%}
