@@ -100,7 +100,64 @@
                    aria-required="true"
                    required>
           </div>
-          <button class="input-with-button__button button" type="submit">{% render '{{ section.settings.mycustom_icon }}' %}</button>
+          <button class="input-with-button__button button" type="submit">
+            {%- case block.settings.icon -%}
+                  {%- when 'svg-package' -%}
+                    {% render 'svg-package' %}
+                  {%- when 'svg-support' -%}
+                    {% render 'svg-support' %}
+                  {%- when 'svg-shield' -%}
+                    {% render 'svg-shield' %}
+                  {%- when 'svg-return' -%}
+                    {% render 'svg-return' %}
+                  {%- when 'svg-cart' -%}
+                    {% render 'svg-cart' %}
+                  {%- when 'svg-beer' -%}
+                    {% render 'svg-beer' %}
+                  {%- when 'svg-coffee' -%}
+                    {% render 'svg-coffee' %}
+                  {%- when 'svg-draw' -%}
+                    {% render 'svg-draw' %}
+                  {%- when 'svg-map-location' -%}
+                    {% render 'svg-map-location' %}
+                  {%- when 'svg-send' -%}
+                    {% render 'svg-send' %}
+                  {%- when 'svg-view' -%}
+                    {% render 'svg-view' %}
+                  {%- when 'svg-bookmark' -%}
+                    {% render 'svg-bookmark' %}
+                  {%- when 'svg-compass' -%}
+                    {% render 'svg-compass' %}
+                  {%- when 'svg-heart-mobile' -%}
+                    {% render 'svg-heart-mobile' %}
+                  {%- when 'svg-phone' -%}
+                    {% render 'svg-phone' %}
+                  {%- when 'svg-world' -%}
+                    {% render 'svg-world' %}
+                  {%- when 'svg-chat' -%}
+                    {% render 'svg-chat' %}
+                  {%- when 'svg-credit-card' -%}
+                    {% render 'svg-credit-card' %}
+                  {%- when 'svg-lock' -%}
+                    {% render 'svg-lock' %}
+                  {%- when 'svg-thumbs-up' -%}
+                    {% render 'svg-thumbs-up' %}
+                  {%- when 'mycustom-svg-baby_cart' -%}
+                    {% render 'mycustom-svg-baby_cart' %}
+                  {%- when 'mycustom-svg-flower' -%}
+                    {% render 'mycustom-svg-flower' %}
+                  {%- when 'mycustom-svg-hand_water' -%}
+                    {% render 'mycustom-svg-hand_water' %}
+                  {%- when 'mycustom-svg-plant' -%}
+                    {% render 'mycustom-svg-plant' %}
+                  {%- when 'mycustom-svg-spa' -%}
+                    {% render 'mycustom-svg-spa' %}
+                  {%- when 'mycustom-svg-field' -%}
+                    {% render 'mycustom-svg-field' %}
+                  {%- when 'mycustom-svg-arrow_forward' -%}
+                    {% render 'mycustom-svg-arrow_forward' %}
+                {%- endcase -%}
+          </button>
         </div>
 
         {%- if section.settings.text != blank -%}
