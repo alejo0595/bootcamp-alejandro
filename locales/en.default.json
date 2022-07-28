@@ -12,7 +12,7 @@
     },
     "signup": {
       "post_success": "Thank you for signing up!",
-      "email": "email@email.gmail.com",
+      "email": "Email address",
       "button": "Subscribe"
     },
     "search": {
