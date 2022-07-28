@@ -7,6 +7,10 @@
   font-size: {{section.settings.mycustom_sub_heading_font_size}}rem !important;
 }
 
+#{{section.id}} .test{
+
+}
+
 }
 {%- endstyle -%}
 
@@ -80,6 +84,7 @@
             <h3 class="mycustom-feautured_collection-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}</h3>
           {%- endif -%}
         {%- endif -%}
+        {%- comment -%}{%- endcomment -%}
         <div class="input-with-button">
           <div class="input-with-button__input-wrapper">
             <input class="input-with-button__input input"
@@ -92,6 +97,8 @@
                    required>
           </div>
           <button class="input-with-button__button button" type="submit">{% render 'svg-left' %}</button>
+          <!-- <div class="col">
+          </div> -->
         </div>
 
         {%- if section.settings.text != blank -%}
