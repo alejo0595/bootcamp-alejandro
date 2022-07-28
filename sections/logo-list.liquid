@@ -113,8 +113,8 @@
                   <img src="{{ img | image_url: width: 200 }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}">
                 </noscript>
               {%- else -%}
-                {%- comment -%} Custom modification: Add several svg icons {%- endcomment -%}
-                {%- render: 'mycustom-icon_list', variable: section.settings.icon -%}
+              {%- comment -%} Custom modification: Add several svg icons {%- endcomment -%}
+              {%- render: 'mycustom-icon_list', variable: block.settings.icon -%}
               {%- endif -%}
             </div>
             {%- if block.settings.title != blank -%}
