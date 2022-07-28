@@ -1,3 +1,15 @@
+{%- comment -%}Alejandro Custom modfication: Add a classes for product-card and sub-headings fonts{%- endcomment -%}
+{%- style -%}
+
+#{{ section.id }} .mycustom-feautured_collection-sub_title-font {
+  font-family: {{settings.mycustom_sub_heading_font}}!important;
+  color: {{section.settings.mycustom_sub_title_font_color}}!important;
+  font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
+}
+
+}
+{%- endstyle -%}
+
 {%- unless section.settings.color_scheme == 'none' -%}
   {%- liquid
     if section.settings.color_scheme == 'scheme-1'
@@ -55,11 +67,16 @@
       {%- assign form_id = section.id | prepend: 'signup-form-' -%}
       {% form 'customer', id: form_id %}
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
-        <div class="signup-icon">
-          {% render 'svg-email' %}
-        </div>
+        {%- if section.settings.mycustom_show_icon -%}
+          <div class="signup-icon">
+            {% render 'svg-email' %}
+          </div>
+        {%- endif -%}
         {%- if section.settings.heading != blank -%}
           <h2 class="section-heading h3">{{ section.settings.heading }}</h2>
+          {%- if condition -%}
+            
+          {%- endif -%}
         {%- endif -%}
         <div class="input-with-button">
           <div class="input-with-button__input-wrapper">
@@ -90,6 +107,12 @@
     "name": "Newsletter",
     "tag": "section",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "mycustom_show_icon",
+        "label": "Show icon",
+        "default": false
+      },
       {
         "type": "text",
         "id": "heading",
