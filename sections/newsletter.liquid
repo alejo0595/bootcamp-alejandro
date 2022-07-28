@@ -86,17 +86,15 @@
         {%- endif -%}
         {%- comment -%}{%- endcomment -%}
         <div class="input-with-button">
-           <div class="col-9">
-             <div class="input-with-button__input-wrapper me-0">
-               <input class="input-with-button__input input test"
-                      type="email"
-                      name="contact[email]"
-                      autocomplete="email"
-                      placeholder="{{ 'layout.signup.email' | t }}"
-                      aria-label="{{ 'layout.signup.email' | t | escape }}"
-                      aria-required="true"
-                      required>
-             </div>
+          <div class="input-with-button__input-wrapper me-0">
+            <input class="input-with-button__input input test"
+                   type="email"
+                   name="contact[email]"
+                   autocomplete="email"
+                   placeholder="{{ 'layout.signup.email' | t }}"
+                   aria-label="{{ 'layout.signup.email' | t | escape }}"
+                   aria-required="true"
+                   required>
           </div>
           <button class="input-with-button__button button" type="submit">{% render 'mycustom-svg-arrow_foward' %}</button>
         </div>
