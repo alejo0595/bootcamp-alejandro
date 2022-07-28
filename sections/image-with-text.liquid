@@ -66,7 +66,7 @@
             {%- assign img = section.settings.image -%}
             {% style %}
               #{{ section.id }} .test{
-                /*height: 200px !important;*/
+                height: 200px !important;
               }
             {% endstyle %}
             <div class="media-with-text__image lazyload-placeholder" style="padding-top: {{ 1 | divided_by: img.aspect_ratio | times: 100 }}%;" data-cc-animate>
