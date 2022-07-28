@@ -74,7 +74,7 @@
           </div>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 class="section-heading h3">{{ section.settings.heading | escape }}</h2>
+          <h2 class="section-heading h3 {%- if section.settings.mycustom_sub_heading != blank -%} {{ 'mb-1' | prepend: ' ' }} {%- endif -%}">{{ section.settings.heading | escape }}</h2>
           {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
           {%- if section.settings.mycustom_sub_heading != blank-%}
             <h3 class="mycustom-feautured_collection-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}</h3>
