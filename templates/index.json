@@ -199,7 +199,7 @@
       "settings": {
         "title": "Products by Category",
         "mycustom_sub_title": "all hand-crafted",
-        "mycustom_sub_title_font_size": 1,
+        "mycustom_sub_title_font_size": 2,
         "mycustom_sub_title_font_color": "#eaae86",
         "collections_per_row_int": 4
       }
