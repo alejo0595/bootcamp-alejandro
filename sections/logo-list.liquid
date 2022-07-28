@@ -1,3 +1,15 @@
+{%- style -%}
+  {% assign grid_gutter = 40 %}
+  @media (max-width: 768px){
+    .column.half,.column.third,
+    .column.quarter,.column.fifth,
+    .column.sixth {
+      width: calc(100% - {{ grid_gutter }}px);
+    }    
+  }
+  
+{%- endstyle -%}
+
 {%- if section.settings.heading != blank or section.blocks.size > 0 -%}
   {%- liquid
     
