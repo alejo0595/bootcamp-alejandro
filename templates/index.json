@@ -1,28 +1,5 @@
 {
   "sections": {
-    "1658281447f3f74bef": {
-      "type": "image-with-text",
-      "settings": {
-        "skip_container": false,
-        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
-        "layout": "left",
-        "heading": "We Make Our Pure Products",
-        "mycustom_sub_heading": "just for mothers",
-        "mycustom_sub_heading_font_size": 3.3,
-        "mycustom_sub_heading_font_color": "#eaae86",
-        "text": "<p>Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural.<\/p>",
-        "button_text": "Learn More",
-        "button_link": "shopify:\/\/collections\/all",
-        "button_style": "button button--alt",
-        "text_alignment": "center",
-        "text_center_mobile": true,
-        "bg_style": "content",
-        "color_scheme": "none",
-        "color_bg": "",
-        "color_heading": "",
-        "color_text": ""
-      }
-    },
     "1658264819fe640f7c": {
       "type": "image-banner",
       "blocks": {
@@ -88,6 +65,29 @@
         "mycustom_product_title_font_size": 0.8,
         "mycustom_product_title_font_color": "#eaae86",
         "mycustom_product_price_alignment": "center"
+      }
+    },
+    "1658281447f3f74bef": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
+        "layout": "left",
+        "heading": "We Make Our Pure Products",
+        "mycustom_sub_heading": "just for mothers",
+        "mycustom_sub_heading_font_size": 3.3,
+        "mycustom_sub_heading_font_color": "#eaae86",
+        "text": "<p>Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural products that are wholesome for you and your little one. Feel the love with our natural.<\/p>",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_style": "button button--alt",
+        "text_alignment": "center",
+        "text_center_mobile": true,
+        "bg_style": "content",
+        "color_scheme": "none",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
       }
     },
     "165828145485ed8763": {
@@ -221,9 +221,9 @@
     }
   },
   "order": [
-    "1658281447f3f74bef",
     "1658264819fe640f7c",
     "1658956760bcd9ccf4",
+    "1658281447f3f74bef",
     "165828145485ed8763",
     "165832695999ca0a16",
     "1658379946c16e8305",
