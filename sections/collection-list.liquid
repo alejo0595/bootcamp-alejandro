@@ -1,9 +1,30 @@
-<div class="spaced-section" data-section-type="collection-list">
+{%- comment -%}Alejandro Custom modfication: Add a classes for collection-card and sub-headings fonts{%- endcomment -%}
+{%- style -%}
+#{{ section.id }} .mycustom-collection_list-sub_title-font {
+  font-family: {{settings.mycustom_sub_heading_font}}!important;
+  color: {{section.settings.mycustom_sub_title_font_color}}!important;
+  font-size: {{section.settings.mycustom_sub_title_font_size}}rem !important;
+}
+
+#{{ section.id }} .mycustom-collection_list-collection_card_title-font {
+  font-family: inherit !important;
+  color: {{section.settings.mycustom_product_title_font_color}}!important;
+  font-size: {{section.settings.mycustom_product_title_font_size}}rem !important;
+  {%- if section.settings.mycustom_product_title_font_weight -%}
+    font-weight: bold !important;
+  {%- endif -%}
+}
+{%- endstyle -%}
+
+<div id="{{ section.id }}" class="spaced-section" data-section-type="collection-list">
   <div class="container section-content">
     {%- if section.settings.title != blank -%}
       <h2 class="section-heading align-center" data-cc-animate>
-        {{ section.settings.title | escape }}
+        {{ section.settings.title  }}
       </h2>
+      {%- if section.settings.mycustom_sub_title != blank -%}
+        {{ section.settings.mycustom_sub_title }}
+      {%- endif -%}
     {%- endif -%}
 
     <div class="grid grid--row-gutters product-list">
