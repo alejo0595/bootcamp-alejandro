@@ -132,6 +132,26 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "0d2fb1f1-5b3d-4064-858d-628ddf45fac4": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Footer links",
+              "menu": "footer"
+            }
+          },
+          "d63a034b-cbc7-4342-b405-3c82ef88e16f": {
+            "type": "text",
+            "settings": {
+              "heading": "Talk about your store",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "0d2fb1f1-5b3d-4064-858d-628ddf45fac4",
+          "d63a034b-cbc7-4342-b405-3c82ef88e16f"
+        ],
         "settings": {
           "show_newsletter": false,
           "newsletter_heading": "Subscribe to our newsletter",
