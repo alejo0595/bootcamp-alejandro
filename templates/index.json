@@ -231,9 +231,9 @@
       "settings": {
         "feed_width": 100,
         "mycustom_heading": "Follow Our Journey",
-        "heading_size": 1.7,
+        "heading_size": 1.3,
         "mycustom_sub_heading": "it’s fun we promise!",
-        "mycustom_sub_heading_font_size": 2,
+        "mycustom_sub_heading_font_size": 1.6,
         "mycustom_sub_heading_font_color": "#eaae86"
       }
     }
