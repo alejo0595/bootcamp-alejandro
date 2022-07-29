@@ -231,7 +231,7 @@
       "settings": {
         "heading_size": 20,
         "feed_width": 100,
-        "html_area": "<p>Hello<\/p>"
+        "html_area": "<div class=\"mb-4\" id=\"insta-feed\">\n    <h1>Hello<\/h1>\n  <\/div>"
       }
     }
   },
