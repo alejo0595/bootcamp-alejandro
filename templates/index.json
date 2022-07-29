@@ -231,10 +231,10 @@
       "settings": {
         "feed_width": 100,
         "mycustom_heading": "Follow Our Journey",
-        "heading_size": 29,
+        "heading_size": 2.8,
         "mycustom_sub_heading": "it’s fun we promise!",
         "mycustom_sub_heading_font_size": 2,
-        "mycustom_sub_heading_font_color": "#EAAE86"
+        "mycustom_sub_heading_font_color": "#eaae86"
       }
     }
   },
