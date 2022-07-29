@@ -226,11 +226,12 @@
         "color_text": ""
       }
     },
-    "16583484195fbfb4cf": {
-      "type": "custom-liquid",
+    "1659057953146a7ecb": {
+      "type": "instafeed",
       "settings": {
-        "skip_container": false,
-        "custom_liquid": "Pending: Make a Special gallery section"
+        "heading_size": 20,
+        "feed_width": 100,
+        "html_area": ""
       }
     }
   },
@@ -242,6 +243,6 @@
     "165832695999ca0a16",
     "1658379946c16e8305",
     "1658379177e98c8095",
-    "16583484195fbfb4cf"
+    "1659057953146a7ecb"
   ]
 }
