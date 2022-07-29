@@ -11,6 +11,10 @@
   border: 3px solid #F4AB9D !important;
 }
 
+#{{section.id}} .mycustom-newsletter-custom_width {
+  width: 40% !important;
+}
+
 #{{ section.id }} .mycustom-newsletter-icon-styling_button > svg {
   width: {{ section.settings.mycustom_icon_size }}px !important; height: {{ section.settings.icon_size }}px !important;
 }
@@ -89,7 +93,7 @@
           {%- endif -%}
         {%- endif -%}
         {%- comment -%}{%- endcomment -%}
-        <div class="input-with-button">
+        <div class="input-with-button .mycustom-newsletter-custom_width">
           <div class="input-with-button__input-wrapper me-0">
             <input class="input-with-button__input input mycustom-newsletter-input-styling"
                    type="email"
