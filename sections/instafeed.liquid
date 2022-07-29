@@ -1,18 +1,30 @@
+{%- comment -%}{%- endcomment -%}
 {% style %}
+
+#{{ section.id }} .mycustom-insta_feed-heading-font {
+  font-size: {{section.settings.heading_size}}rem !important;
+}
+
+#{{ section.id }} .mycustom-insta_feed-sub_heading-font {
+  font-family: {{settings.mycustom_sub_heading_font}}!important;
+  color: {{section.settings.mycustom_sub_heading_font_color}}!important;
+  font-size: {{section.settings.mycustom_sub_heading_font_size}}rem !important;
+}
 
 #insta-feed {
   width: {{section.settings.feed_width}}%;
 }
 
-#insta-feed h2 {
-  font-size: {{section.settings.heading_size}}px;
-}
-
 {% endstyle %}
 
-<section>
-  <h2 class="align-center">Follow Our Journey</h2>
-  <h3 class="align-center">it’s fun we promise!</h3>
+{%- comment -%}{%- endcomment -%}
+<section id="{{ section.id }}">
+  {%- if section.settings.mycustom_heading != blank -%}
+    <h2 class="align-center .mycustom-insta_feed-heading-font">{{ section.settings.mycustom_heading | escape }}Follow Our Journey</h2>
+    {%- if section.settings.mycustom_sub_heading != blank -%}
+      <h3 class="align-center mycustom-insta_feed-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}it’s fun we promise!</h3>
+    {%- endif -%}
+  {%- endif -%}
   <div class="p-5">
     <div id="insta-feed"></div>
   </div>
@@ -23,6 +35,12 @@
 {
   "name":"Instafeed App",
   "settings": [
+    {
+      "type": "text",
+      "id": "mycustom_heaidng",
+      "label": "Heading",
+      "default": "Insta - Feed"
+    },
     {
       "type":"range",
       "id":"heading_size",
@@ -44,9 +62,26 @@
       "default":100
     },
     {
-      "type":"textarea",
-      "id":"html_area",
-      "label":"Custom Code (optional)"
+      "type": "text",
+      "id": "mycustom_sub_heaidng",
+      "label": "Sub-Heading",
+      "default": "Yor awsome insta-feed"
+    },
+    {
+      "type": "range",
+      "id": "mycustom_sub_heaidng_font_size",
+      "label": "Sub-heading size",
+      "unit": "rem",
+      "min": 0,
+      "max": 10,
+      "step": 0.1,
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "mycustom_sub_heaidng_font_color",
+      "label": "Sub-heaidng color",
+      "default": "#EAAE86"
     }
   ],
   "presets": [
