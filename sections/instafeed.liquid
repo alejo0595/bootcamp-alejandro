@@ -1,6 +1,12 @@
 {%- comment -%}{%- endcomment -%}
 {% style %}
 
+
+
+
+
+
+
 #{{ section.id }} .mycustom-insta_feed-heading-font {
   font-size: {{section.settings.heading_size}}rem !important;
 }
@@ -14,6 +20,12 @@
 #insta-feed {
   width: {{section.settings.feed_width}}%;
 }
+
+
+
+
+
+
 
 {% endstyle %}
 
@@ -36,6 +48,16 @@
   "name":"Instafeed App",
   "settings": [
     {
+      "type":"range",
+      "id":"feed_width",
+      "min":50,
+      "max":100,
+      "step":5,
+      "unit":"%",
+      "label":"Feed Width",
+      "default":100
+    },
+    {
       "type": "text",
       "id": "mycustom_heading",
       "label": "Heading",
@@ -50,16 +72,6 @@
       "unit":"px",
       "label":"Heading Size",
       "default":20
-    },
-    {
-      "type":"range",
-      "id":"feed_width",
-      "min":50,
-      "max":100,
-      "step":5,
-      "unit":"%",
-      "label":"Feed Width",
-      "default":100
     },
     {
       "type": "text",
