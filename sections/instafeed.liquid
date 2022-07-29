@@ -37,7 +37,7 @@
       <h3 class="align-center mycustom-insta_feed-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}</h3>
     {%- endif -%}
   {%- endif -%}
-  <div class="p-5">
+  <div class="">
     <div id="insta-feed"></div>
   </div>
 </section>
@@ -66,12 +66,12 @@
     {
       "type":"range",
       "id":"heading_size",
-      "min":10,
-      "max":30,
-      "step":1,
-      "unit":"px",
+      "min":0,
+      "max":10,
+      "step":0.1,
+      "unit":"rem",
       "label":"Heading Size",
-      "default":20
+      "default":3
     },
     {
       "type": "text",
