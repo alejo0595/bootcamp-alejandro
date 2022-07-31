@@ -1,10 +1,18 @@
 {%- comment -%}{%- endcomment -%}
-{% stylesheet %}
-  .hhh {
-    color: red !important;
-    font-weight: bold !important;
-  }
-{% endstylesheet %}
+{% style %}
+
+#pagefooter .mycustom-footer-heading-font {
+  font-family: {{ settings.type_heading_font }} !important;
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'link_list' -%}
+        font-size: mycustom_heading_font_size !important;
+    {%- endcase -%}
+  {%- endfor -%}
+  font-size: {{section.settings.mycustom_sub_heading_font_size}}rem !important;
+}
+
+{% endstyle %}
 
 <footer id="pagefooter" class="pagefooter" data-section-type="footer">
   
@@ -50,7 +58,7 @@
           "
           {{ block.shopify_attributes }}>
             {%- if block.settings.heading -%}
-              <h2 class="hhh footer-column-heading h6">{{ block.settings.heading | escape }}</h2>
+              <h2 class="footer-column-heading h6 mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
 
             {%- if block.type == 'link_list' -%}
@@ -214,6 +222,16 @@
             "default": "Footer links"
           },
           {
+            "type": "range",
+            "id": "mycustom_heading_font_size",
+            "label": "Heading size",
+            "unit": "rem",
+            "min": 0.1,
+            "max": 10,
+            "step": 0.1,
+            "default": 1
+          },
+          {
             "type": "link_list",
             "id": "menu",
             "label": "Menu",
@@ -226,13 +244,13 @@
         "type": "image",
         "name": "Logo",
         "limit": 1,
-       "settings": [
-        {
-         "type": "image_picker",
-         "id": "logo_image",
-         "label": "Log image"
-        }
-       ]
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Log image"
+          }
+        ]
       },
       {
         "type": "text",
