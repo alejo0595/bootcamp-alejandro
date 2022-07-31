@@ -35,7 +35,7 @@
     <div class="container p-5">
       <div class="footer-columns footer-columns--count-{{ section.blocks.size }}">
         {%- for block in section.blocks -%}
-          <div class="footer-columns__column {%- if block.type != 'image'  -%} {{ 'mx-5' | prepend: ' ' }} {%- endif -%}" {{ block.shopify_attributes }}>
+          <div class="footer-columns__column mx-3" {{ block.shopify_attributes }}>
             {%- if block.settings.heading -%}
               <h2 class="footer-column-heading h6">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
