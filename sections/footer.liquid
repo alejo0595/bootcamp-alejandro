@@ -6,10 +6,21 @@
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'link_list' -%}
-        font-size: mycustom_heading_font_size !important;
+      font-size: {{ block.settings.mycustom_heading_font_size }}rem !important;
     {%- endcase -%}
   {%- endfor -%}
-  font-size: {{section.settings.mycustom_sub_heading_font_size}}rem !important;
+}
+#pagefooter .mycustom-footer-links-font {
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'link_list' -%}
+      color: {{ block.settings.mycustom_link_font_color }} !important;
+      {%- if block.settings.mycustom_link_font_weight -%}
+        font-weight: bold !important;
+      {%- endif -%}
+      font-size: {{ block.settings.mycustom_link_font_size }}rem !important;
+    {%- endcase -%}
+  {%- endfor -%}
 }
 
 {% endstyle %}
@@ -55,8 +66,7 @@
           <div class="footer-columns__column 
           {%- if block.type == 'image'  -%} {{ 'mx-5' | prepend: ' ' }} {%- endif -%}
           {%- if block.type != 'image'  -%} {{ 'mx-0 px-0' | prepend: ' ' }} {%- endif -%}
-          "
-          {{ block.shopify_attributes }}>
+          " {{ block.shopify_attributes }}>
             {%- if block.settings.heading -%}
               <h2 class="footer-column-heading h6 mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
@@ -64,7 +74,7 @@
             {%- if block.type == 'link_list' -%}
               <ul class="footer-nav-links">
                 {%- for link in block.settings.menu.links -%}
-                  <li class="footer-nav-links__item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  <li class="footer-nav-links__item mycustom-footer-links-font"><a href="{{ link.url }}">{{ link.title }}</a></li>
                 {%- endfor -%}
               </ul>
             {%- elsif block.type == 'text' -%}
@@ -237,6 +247,28 @@
             "label": "Menu",
             "info": "This menu won't show dropdown items",
             "default": "footer"
+          },
+          {
+            "type": "range",
+            "id": "mycustom_link_font_size",
+            "label": "Links size",
+            "unit": "rem",
+            "min": 0.1,
+            "max": 10,
+            "step": 0.1,
+            "default": 1
+          },
+          {
+            "type": "color",
+            "id": "mycustom_link_font_color",
+            "label": "Links color",
+            "default": "#D79E93"
+          },
+          {
+            "type": "checkbox",
+            "id": "mycustom_link_font_weight",
+            "label": "Bold links",
+            "default": false
           }
         ]
       },
