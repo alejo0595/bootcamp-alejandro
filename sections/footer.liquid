@@ -50,6 +50,8 @@
               <div class="rte">
                 {{ block.settings.text }}
               </div>
+            {%- elsif block.type == 'image' -%}
+              <img src="{{ block.settings.logo_image.src }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
             {%- endif -%}
           </div>
         {%- endfor -%}
@@ -112,6 +114,7 @@
   </div>
 </footer>
 
+{%- comment -%}{%- endcomment -%}
 {% schema %}
   {
     "name": "Footer",
@@ -205,6 +208,18 @@
             "default": "footer"
           }
         ]
+      },
+      {
+        "type": "image",
+        "name": "Logo",
+        "limit": 1,
+       "settings": [
+        {
+         "type": "image_picker",
+         "id": "logo_image",
+         "label": "Log image"
+        }
+       ]
       },
       {
         "type": "text",
