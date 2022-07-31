@@ -145,7 +145,7 @@
               "heading": "Helpful links",
               "mycustom_heading_font_size": 1.9,
               "menu": "helpful-links",
-              "mycustom_link_font_size": 1,
+              "mycustom_link_font_size": 7.3,
               "mycustom_link_font_color": "#5c6ac4",
               "mycustom_link_font_weight": false
             }
