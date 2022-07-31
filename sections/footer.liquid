@@ -13,6 +13,24 @@
 
 -%}
 
+{%- comment -%}{%- endcomment -%}
+{% style %}
+
+#pagefooter .mycustom-footer-heading-font {
+  font-family: {{ settings.type_heading_font }} !important;
+  font-size: {{ mycustom_heading_font_size }}rem !important;
+
+}
+
+#pagefooter .mycustom-footer-link-font > a {
+  color: red !important;
+  font-weight: bold !important;
+  font-size: 2rem !important;
+
+}
+
+{% endstyle %}
+
 <footer id="pagefooter" class="pagefooter" data-section-type="footer">
   
   {%- if section.settings.show_newsletter -%}
