@@ -1,10 +1,9 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
   for block in section.blocks
-    case block.type
-      when 'link_list'
+    if block.type == 'link_list'
         assign mycustom_heading_font_size = block.settings.mycustom_heading_font_size
-    endcase
+    endif
   endfor
 
   for block in section.blocks
