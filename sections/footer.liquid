@@ -25,7 +25,13 @@
 #pagefooter .mycustom-footer-link-font > a {
   color: red !important;
   font-weight: bold !important;
-  font-size: {{ mycustom_link_font_size }} !important;
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'link_list' -%}
+        font-size: {{ block.settings.mycustom_link_font_size }} !important;
+    {%- endcase -%}
+  {%- endfor -%}
+  
 
 }
 
