@@ -13,25 +13,6 @@
 
 -%}
 
-{%- comment -%}{%- endcomment -%}
-{% style %}
-
-#pagefooter .mycustom-footer-heading-font {
-  font-family: {{ settings.type_heading_font }} !important;
-  font-size: {{ mycustom_heading_font_size }}rem !important;
-
-}
-#pagefooter .mycustom-footer-link-font > a {
-  color: {{ mycustom_link_font_color }} !important;
-  {%- if mycustom_link_font_weight -%}
-    font-weight: bold !important;
-  {%- endif -%}
-  font-size: {{ mycustom_link_font_size }}rem !important;
-
-}
-
-{% endstyle %}
-
 <footer id="pagefooter" class="pagefooter" data-section-type="footer">
   
   {%- if section.settings.show_newsletter -%}
