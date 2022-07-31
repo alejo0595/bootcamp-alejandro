@@ -1,3 +1,4 @@
+{%- comment -%}{%- endcomment -%}
 {%-liquid
   for block in section.blocks
     case block.type
@@ -14,7 +15,7 @@
         assign mycustom_link_font_size = block.settings.mycustom_link_font_size
     endcase
   endfor
-  
+
         -%}
 
 {%- comment -%}{%- endcomment -%}
@@ -155,6 +156,7 @@
     </div>
   </div>
 </footer>
+<h1>{{ mycustom_heading_font_size }}</h1>
 
 {%- comment -%}{%- endcomment -%}
 {% schema %}
