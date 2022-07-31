@@ -51,7 +51,7 @@
                 {{ block.settings.text }}
               </div>
             {%- elsif block.type == 'image' -%}
-              <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
+              <img src="{{ block.settings.logo_image | image_url: width: 400 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
             {%- endif -%}
           </div>
         {%- endfor -%}
