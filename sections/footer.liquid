@@ -25,12 +25,7 @@
 #pagefooter .mycustom-footer-link-font > a {
   color: red !important;
   font-weight: bold !important;
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when 'link_list' -%}
-        font-size: {{ block.settings.mycustom_link_font_size }} !important;
-    {%- endcase -%}
-  {%- endfor -%}
+  
   
 
 }
@@ -156,7 +151,13 @@
     </div>
   </div>
 </footer>
-<h1>{{  mycustom_heading_font_wight }}</h1>
+{%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'link_list' -%}
+      <h1>{{  block.settings.mycustom_link_font_size }}</h1>
+    {%- endcase -%}
+  {%- endfor -%}
+
 
 {%- comment -%}{%- endcomment -%}
 {% schema %}
