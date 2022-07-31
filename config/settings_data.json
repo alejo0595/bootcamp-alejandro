@@ -143,14 +143,22 @@
             "type": "link_list",
             "settings": {
               "heading": "Helpful links",
-              "menu": "helpful-links"
+              "mycustom_heading_font_size": 8.8,
+              "menu": "helpful-links",
+              "mycustom_link_font_size": 1,
+              "mycustom_link_font_color": "#D79E93",
+              "mycustom_link_font_weight": true
             }
           },
           "35b7c9bf-3814-48f7-a51d-a1cab09ee76e": {
             "type": "link_list",
             "settings": {
               "heading": "Policies",
-              "menu": "policies"
+              "mycustom_heading_font_size": 1,
+              "menu": "policies",
+              "mycustom_link_font_size": 1,
+              "mycustom_link_font_color": "#D79E93",
+              "mycustom_link_font_weight": false
             }
           }
         },
