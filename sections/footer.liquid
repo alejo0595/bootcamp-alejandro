@@ -153,8 +153,11 @@
 </footer>
 {%- for block in section.blocks -%}
     {%- case block.type -%}
-      {%- when 'link_list' -%}
-      <h1>{{  block.settings.mycustom_link_font_size }}</h1>
+    {%- when 'link_list' -%}
+    <h1>{{  block.settings.mycustom_link_font_size }}</h1>
+    {%- else -%}
+    <h1>nothing</h1>
+    
     {%- endcase -%}
   {%- endfor -%}
 
