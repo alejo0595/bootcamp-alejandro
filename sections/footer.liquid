@@ -22,6 +22,7 @@
   {%- if mycustom_link_font_weight -%}
     font-weight: bold !important;
   {%- endif -%}
+
 }
 
 {% endstyle %}
@@ -106,7 +107,7 @@
   -%}
 
   {%- if show_country_selector or show_language_selector or section.settings.show_social -%}
-    <div class="lower-footer{% if section.blocks.size == 0 %} no-border-top{% endif %} no-js-hidden">
+    <div class="lower-footer no-border-top no-js-hidden">
       <div class="container">
         {%- if show_country_selector or show_language_selector -%}
           <div class="lower-footer__left">
@@ -124,7 +125,7 @@
     </div>
   {%- endif -%}
 
-  <div class="lower-footer lower-footer--lowest">
+  <div class="lower-footer no-border-top lower-footer--lowest">
     <div class="container">
       <div class="lower-footer__left">
         <div class="copyright">
