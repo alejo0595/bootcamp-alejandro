@@ -1,5 +1,6 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
+  assign mycustom_shop_name = 'Natural Mums Co.'
   assign mycustom_payment_methods = "visa,master,american_express,paypal,diners_club,discover" | split: ',' 
   assign mycustom_heading_font_size = section.settings.mycustom_heading_font_size
   assign mycustom_link_font_color = section.settings.mycustom_link_font_color
@@ -106,47 +107,47 @@
     endif
   -%}
 
-  <div class="d-flex">
-    {%- if show_country_selector or show_language_selector or section.settings.show_social -%}
-      <div class="lower-footer no-border-top no-js-hidden">
-        <div class="container">
-          {%- if show_country_selector or show_language_selector -%}
-            <div class="lower-footer__left">
-              <div class="store-localization">
-                {% render 'localization', input_prefix: 'footer' %}
-              </div>
-            </div>
-          {%- endif -%}
-          {%- if section.settings.show_social -%}
-            <div class="{% if show_country_selector == false and show_language_selector == false %}lower-footer__full{% else %}lower-footer__right{% endif %}">
-              {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x44' %}
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
-    {%- endif -%}
-
-    <div class="lower-footer no-border-top lower-footer--lowest">
+  {%- if show_country_selector or show_language_selector or section.settings.show_social -%}
+    <div class="lower-footer no-border-top no-js-hidden">
       <div class="container">
-        <div class="lower-footer__left">
-          <div class="copyright">
-            <span class="seg">&copy; {{ "now" | date: "%Y" }} {{ shop.name }}</span>
-            {{ powered_by_link }}
-          </div>
-        </div>
-  
-        {%- if section.settings.show_payment_icons -%}
-          <div class="payment-methods lower-footer__right">
-            <div class="payment-methods__inner">
-              {%- comment -%}{%- endcomment -%}
-              {%- for type in mycustom_payment_methods -%}
-                {{ type | payment_type_svg_tag: class: 'payment-icon' }}
-              {%- endfor -%}
+        {%- if show_country_selector or show_language_selector -%}
+          <div class="lower-footer__left">
+            <div class="store-localization">
+              {% render 'localization', input_prefix: 'footer' %}
             </div>
+          </div>
+        {%- endif -%}
+        {%- if section.settings.show_social -%}
+          <div class="{% if show_country_selector == false and show_language_selector == false %}lower-footer__full{% else %}lower-footer__right{% endif %}">
+            {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x44' %}
           </div>
         {%- endif -%}
       </div>
     </div>
+  {%- endif -%}
+
+  <div class="lower-footer no-border-top lower-footer--lowest">
+    <div class="container d-flex flex-column">
+      <div class="lower-footer__left">
+        <div class="copyright">
+          <span class="seg">Copyright {{ "now" | date: "%Y" }} {{ mycustom_shop_name }}</span>
+        </div>
+      </div>
+
+      {%- if section.settings.show_payment_icons -%}
+        <div class="payment-methods lower-footer__right">
+          <div class="payment-methods__inner">
+            {%- comment -%}{%- endcomment -%}
+            {%- for type in mycustom_payment_methods -%}
+              {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="d-flex">
   </div>
 
 </footer>
