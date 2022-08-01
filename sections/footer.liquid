@@ -12,6 +12,7 @@
 #pagefooter .mycustom-footer-heading-font {
   font-family: {{ settings.type_heading_font }} !important;
   font-size: {{ mycustom_heading_font_size }}rem !important;
+  letter-spacing: normal !important;
 }
 
 #pagefooter .mycustom-footer-link-font > a {
@@ -20,7 +21,6 @@
   {%- if mycustom_link_font_weight -%}
     font-weight: bold !important;
   {%- endif -%}
-  letter-spacing: normal !important;
 }
 
 {% endstyle %}
