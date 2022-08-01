@@ -1,6 +1,6 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
-  assign some = "Orange,Apple,Banana" | split: ',' 
+  assign mycustom_payment_methods = "visa,master,american_express,paypal,diners_club,discover" | split: ',' 
   assign mycustom_heading_font_size = section.settings.mycustom_heading_font_size
   assign mycustom_link_font_color = section.settings.mycustom_link_font_color
   assign mycustom_link_font_weight = section.settings.mycustom_link_font_weight
@@ -136,7 +136,8 @@
       {%- if section.settings.show_payment_icons -%}
         <div class="payment-methods lower-footer__right">
           <div class="payment-methods__inner">
-            {%- for type in shop.enabled_payment_types -%}
+            {%- comment -%}{%- endcomment -%}
+            {%- for type in mycustom_payment_methods -%}
               {{ type | payment_type_svg_tag: class: 'payment-icon' }}
             {%- endfor -%}
           </div>
