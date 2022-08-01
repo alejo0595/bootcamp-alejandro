@@ -1,16 +1,9 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
-
-  for block in section.blocks
-    case block.type
-      when 'link_list'
-        assign mycustom_heading_font_size = block.settings.mycustom_heading_font_size
-        assign mycustom_link_font_color = block.settings.mycustom_link_font_color
-        assign mycustom_link_font_weight = block.settings.mycustom_link_font_weight
-        assign mycustom_link_font_size = block.settings.mycustom_link_font_size
-    endcase
-  endfor
-
+  assign mycustom_heading_font_size = block.settings.mycustom_heading_font_size
+  assign mycustom_link_font_color = block.settings.mycustom_link_font_color
+  assign mycustom_link_font_weight = block.settings.mycustom_link_font_weight
+  assign mycustom_link_font_size = block.settings.mycustom_link_font_size
 -%}
 
 {%- comment -%}{%- endcomment -%}
@@ -19,15 +12,14 @@
 #pagefooter .mycustom-footer-heading-font {
   font-family: {{ settings.type_heading_font }} !important;
   font-size: {{ mycustom_heading_font_size }}rem !important;
-
 }
 
 #pagefooter .mycustom-footer-link-font > a {
-  color: red !important;
-  font-weight: bold !important;
-  
-  
-
+  color: {{ mycustom_link_font_color }} !important;
+  font-size: {{ mycustom_link_font_size }} !important;
+  {%- if mycustom_link_font_weight -%}
+    font-weight: bold !important;
+  {%- endif -%}
 }
 
 {% endstyle %}
@@ -193,6 +185,49 @@
       },
       {
         "type": "header",
+        "content": "Footer links"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_heading_font_size",
+        "label": "Heading size",
+        "unit": "rem",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "default": 2
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "info": "This menu won't show dropdown items",
+        "default": "footer"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_link_font_size",
+        "label": "Links size",
+        "unit": "rem",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "default": 1
+      },
+      {
+        "type": "color",
+        "id": "mycustom_link_font_color",
+        "label": "Links color",
+        "default": "#D79E93"
+      },
+      {
+        "type": "checkbox",
+        "id": "mycustom_link_font_weight",
+        "label": "Bold links",
+        "default": false
+      },
+      {
+        "type": "header",
         "content": "Social"
       },
       {
@@ -234,56 +269,18 @@
         "default": true
       }
     ],
-    "max_blocks": 4,
+    "max_blocks": 5,
     "blocks": [
       {
         "type": "link_list",
         "name": "Menu",
+        "limit": 2,
         "settings": [
           {
             "type": "text",
             "id": "heading",
             "label": "Heading",
             "default": "Footer links"
-          },
-          {
-            "type": "range",
-            "id": "mycustom_heading_font_size",
-            "label": "Heading size",
-            "unit": "rem",
-            "min": 0.1,
-            "max": 10,
-            "step": 0.1,
-            "default": 2
-          },
-          {
-            "type": "link_list",
-            "id": "menu",
-            "label": "Menu",
-            "info": "This menu won't show dropdown items",
-            "default": "footer"
-          },
-          {
-            "type": "range",
-            "id": "mycustom_link_font_size",
-            "label": "Links size",
-            "unit": "rem",
-            "min": 0.1,
-            "max": 10,
-            "step": 0.1,
-            "default": 1
-          },
-          {
-            "type": "color",
-            "id": "mycustom_link_font_color",
-            "label": "Links color",
-            "default": "#D79E93"
-          },
-          {
-            "type": "checkbox",
-            "id": "mycustom_link_font_weight",
-            "label": "Bold links",
-            "default": false
           }
         ]
       },
