@@ -111,7 +111,7 @@
   -%}
 
   {%- if show_country_selector or show_language_selector or section.settings.show_social -%}
-    <div class="lower-footer no-border-top no-js-hidden py-0">
+    <div class="lower-footer no-border-top no-js-hidden pb-0">
       <div class="container">
         {%- if show_country_selector or show_language_selector -%}
           <div class="lower-footer__left">
@@ -129,9 +129,9 @@
     </div>
   {%- endif -%}
 
-  <div class="lower-footer no-border-top lower-footer--lowest">
+  <div class="lower-footer no-border-top lower-footer--lowest pt-1">
     <div class="container d-flex flex-column">
-      <div class="">
+      <div class="mb-3">
         <div class="copyright">
           {%- if section.settings.mycustom_copyright_text != blank -%}
             <span class="seg mycustom-footer-copyryght-font">
