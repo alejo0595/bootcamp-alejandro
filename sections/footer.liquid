@@ -134,7 +134,7 @@
         <div class="copyright">
           {%- if section.settings.mycustom_copyright_text != blank -%}
             <span class="seg mycustom-footer-copyryght-font">
-              {{ section.settings.mycustom_copyright_text }}
+              {{ section.settings.mycustom_copyright_text | escape }}
             </span>
           {%- else -%}
             <span class="seg mycustom-footer-copyryght-font">
