@@ -1,11 +1,9 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
-  assign mycustom_shop_name = 'Natural Mums Co.'
-  assign mycustom_payment_methods = "visa,master,american_express,paypal,diners_club,discover" | split: ',' 
-  assign mycustom_heading_font_size = section.settings.mycustom_heading_font_size
-  assign mycustom_link_font_color = section.settings.mycustom_link_font_color
-  assign mycustom_link_font_weight = section.settings.mycustom_link_font_weight
-  assign mycustom_link_font_size = section.settings.mycustom_link_font_size
+
+  assign mycustom_shop_name =  section.settings.mycustom_copyright_text
+  assign mycustom_payment_methods = "visa,master,american_express,paypal,diners_club,discover" | split: ','
+
 -%}
 
 {%- comment -%}{%- endcomment -%}
@@ -13,17 +11,24 @@
 
 #pagefooter .mycustom-footer-heading-font {
   font-family: {{ settings.type_heading_font }} !important;
-  font-size: {{ mycustom_heading_font_size }}rem !important;
+  font-size: {{ section.settings.mycustom_heading_font_size }}rem !important;
   letter-spacing: normal !important;
 }
 
 #pagefooter .mycustom-footer-link-font > a {
-  color: {{ mycustom_link_font_color }} !important;
-  font-size: {{ mycustom_link_font_size }} !important;
+  color: {{ section.settings.mycustom_link_font_color }} !important;
+  font-size: {{ section.settings.mycustom_link_font_size }} !important;
+  {%- if section.settings.mycustom_link_font_weight -%}
+    font-weight: bold !important;
+  {%- endif -%}
+}
+
+#pagefooter .mycustom-footer-copyryght-font {
+  font-family: {{ settings.type_heading_font }} !important;
+  font-size: {{ mycustom_heading_font_size }}rem !important;
   {%- if mycustom_link_font_weight -%}
     font-weight: bold !important;
   {%- endif -%}
-
 }
 
 {% endstyle %}
@@ -130,7 +135,15 @@
     <div class="container d-flex flex-column">
       <div class="">
         <div class="copyright">
-          <span class="seg">Copyright {{ "now" | date: "%Y" }} {{ mycustom_shop_name }}</span>
+          {%- if section.settings.mycustom_copyright_text != blank -%}
+            <span class="seg mycustom-footer-copyryght-font">
+              {{ section.settings.mycustom_copyright_text }}
+            </span>
+          {%- else -%}
+            <span class="seg mycustom-footer-copyryght-font">
+              Copyright {{ "now" | date: "%Y" }} {{ shop.name }}
+            </span>
+          {%- endif -%}
         </div>
       </div>
 
@@ -145,9 +158,6 @@
         </div>
       {%- endif -%}
     </div>
-  </div>
-
-  <div class="d-flex">
   </div>
 
 </footer>
@@ -218,6 +228,31 @@
         "id": "mycustom_link_font_weight",
         "label": "Bold links",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Copyright customization"
+      },
+      {
+        "type": "text",
+        "id": "mycustom_copyright_text",
+        "label": "Copyright text"
+      },
+      {
+        "type": "font_picker",
+        "id": "mycustom_copyright_font",
+        "label": "Font",
+       "default": "lato_n4"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_copyright_font_size",
+        "label": "Font size",
+        "unit": "rem",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "default": 1
       },
       {
         "type": "header",
