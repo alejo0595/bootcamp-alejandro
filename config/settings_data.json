@@ -143,22 +143,14 @@
             "type": "link_list",
             "settings": {
               "heading": "Helpful links",
-              "mycustom_heading_font_size": 1.9,
-              "menu": "helpful-links",
-              "mycustom_link_font_size": 7.3,
-              "mycustom_link_font_color": "#5c6ac4",
-              "mycustom_link_font_weight": false
+              "menu": "helpful-links"
             }
           },
           "35b7c9bf-3814-48f7-a51d-a1cab09ee76e": {
             "type": "link_list",
             "settings": {
               "heading": "Policies",
-              "mycustom_heading_font_size": 1,
-              "menu": "policies",
-              "mycustom_link_font_size": 1,
-              "mycustom_link_font_color": "#d79e93",
-              "mycustom_link_font_weight": false
+              "menu": "policies"
             }
           }
         },
@@ -171,6 +163,10 @@
           "show_newsletter": false,
           "newsletter_heading": "Subscribe to our newsletter",
           "newsletter_text": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "mycustom_heading_font_size": 1,
+          "mycustom_link_font_size": 1,
+          "mycustom_link_font_color": "#D79E93",
+          "mycustom_link_font_weight": true,
           "show_social": true,
           "show_payment_icons": true,
           "show_country_selector": true,

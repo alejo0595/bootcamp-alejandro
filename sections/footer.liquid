@@ -67,7 +67,7 @@
           {%- if block.type != 'image'  -%} {{ 'mx-0 px-0' | prepend: ' ' }} {%- endif -%}
           " {{ block.shopify_attributes }}>
             {%- if block.settings.heading -%}
-              <h2 class="footer-column-heading h6 mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
+              <h2 class="footer-column-heading h6 mycustom-footer-heading-font">{{ block.settings.heading | escape | camelcase }}</h2>
             {%- endif -%}
 
             {%- if block.type == 'link_list' -%}
