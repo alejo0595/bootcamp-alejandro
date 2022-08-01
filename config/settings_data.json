@@ -173,7 +173,7 @@
           "mycustom_link_font_color": "#d79e93",
           "mycustom_link_font_weight": true,
           "mycustom_copyright_text": "",
-          "mycustom_copyright_font": "playfair_display_n4",
+          "mycustom_copyright_font": "montserrat_n4",
           "mycustom_copyright_font_size": 0.7,
           "show_social": true,
           "show_payment_icons": true,
