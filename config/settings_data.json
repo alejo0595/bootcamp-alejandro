@@ -66,6 +66,7 @@
     "search_type": "product",
     "live_search_show_vendor": false,
     "live_search_search_meta": false,
+    "social_instagram_url": "https:\/\/instagram.com\/alejandroinstaapi\/",
     "enable_transition_in": true,
     "enable_overlay_transition": true,
     "show_currency_code": true,
