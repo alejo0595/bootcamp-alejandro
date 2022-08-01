@@ -24,11 +24,8 @@
 }
 
 #pagefooter .mycustom-footer-copyryght-font {
-  font-family: {{ settings.type_heading_font }} !important;
-  font-size: {{ mycustom_heading_font_size }}rem !important;
-  {%- if mycustom_link_font_weight -%}
-    font-weight: bold !important;
-  {%- endif -%}
+  font-family: {{ section.settings.mycustom_copyright_font }} !important;
+  font-size: {{ section.settings.mycustom_copyright_font_size }}rem !important;
 }
 
 {% endstyle %}
