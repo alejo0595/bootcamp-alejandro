@@ -186,15 +186,15 @@
     "1658379946c16e8305": {
       "type": "collection-list",
       "blocks": {
-        "1b4a24e0-c9e0-4e4f-8ace-e532a8c48e82": {
+        "3211dc05-ee8f-47b0-9bca-db95e36e9aa4": {
           "type": "collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "natural-soaps"
           }
         }
       },
       "block_order": [
-        "1b4a24e0-c9e0-4e4f-8ace-e532a8c48e82"
+        "3211dc05-ee8f-47b0-9bca-db95e36e9aa4"
       ],
       "settings": {
         "title": "Products by Category",

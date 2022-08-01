@@ -63,6 +63,7 @@
     "prod_stock_warn_limit_int": 5,
     "enable_reviews_collection": true,
     "coll_card_image_ratio": "0.75",
+    "coll_card_image_fit": "cover",
     "swatch_enabled": true,
     "swatch_option_name": "Color",
     "swatch_images": false,
