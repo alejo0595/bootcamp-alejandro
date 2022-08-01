@@ -191,10 +191,24 @@
           "settings": {
             "collection": "natural-soaps"
           }
+        },
+        "fb71d493-8e48-4fba-a2cb-128b04d569d0": {
+          "type": "collection",
+          "settings": {
+            "collection": "pure-creams"
+          }
+        },
+        "613ba376-f5c7-41bf-8115-c8bd7e18af03": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-teas"
+          }
         }
       },
       "block_order": [
-        "3211dc05-ee8f-47b0-9bca-db95e36e9aa4"
+        "3211dc05-ee8f-47b0-9bca-db95e36e9aa4",
+        "fb71d493-8e48-4fba-a2cb-128b04d569d0",
+        "613ba376-f5c7-41bf-8115-c8bd7e18af03"
       ],
       "settings": {
         "title": "Products by Category",
