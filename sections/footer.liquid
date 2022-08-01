@@ -151,10 +151,13 @@
     </div>
   </div>
 </footer>
+
 {%- for block in section.blocks -%}
-  <h1>{{  block.type }}</h1>
-    
-  {%- endfor -%}
+  {%- case block.type -%}
+    {%- when 'link_list' -%}
+      <h1>{{  block.settings }}</h1>
+  {%- endcase -%}    
+{%- endfor -%}
 
 
 {%- comment -%}{%- endcomment -%}
