@@ -1,9 +1,9 @@
 {%- comment -%}{%- endcomment -%}
 {%-liquid
-  assign mycustom_heading_font_size = settings.mycustom_heading_font_size
-  assign mycustom_link_font_color = settings.mycustom_link_font_color
-  assign mycustom_link_font_weight = settings.mycustom_link_font_weight
-  assign mycustom_link_font_size = settings.mycustom_link_font_size
+  assign mycustom_heading_font_size = section.settings.mycustom_heading_font_size
+  assign mycustom_link_font_color = section.settings.mycustom_link_font_color
+  assign mycustom_link_font_weight = section.settings.mycustom_link_font_weight
+  assign mycustom_link_font_size = section.settings.mycustom_link_font_size
 -%}
 
 {%- comment -%}{%- endcomment -%}
