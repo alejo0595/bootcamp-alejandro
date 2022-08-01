@@ -203,12 +203,19 @@
           "settings": {
             "collection": "organic-teas"
           }
+        },
+        "ae7d58b3-296f-4bf7-8d5b-adb61e677a5a": {
+          "type": "collection",
+          "settings": {
+            "collection": "shop-all-products"
+          }
         }
       },
       "block_order": [
         "3211dc05-ee8f-47b0-9bca-db95e36e9aa4",
         "fb71d493-8e48-4fba-a2cb-128b04d569d0",
-        "613ba376-f5c7-41bf-8115-c8bd7e18af03"
+        "613ba376-f5c7-41bf-8115-c8bd7e18af03",
+        "ae7d58b3-296f-4bf7-8d5b-adb61e677a5a"
       ],
       "settings": {
         "title": "Products by Category",
