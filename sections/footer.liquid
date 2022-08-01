@@ -128,14 +128,14 @@
 
   <div class="lower-footer no-border-top lower-footer--lowest">
     <div class="container d-flex flex-column">
-      <div class="lower-footer__left">
+      <div class="">
         <div class="copyright">
           <span class="seg">Copyright {{ "now" | date: "%Y" }} {{ mycustom_shop_name }}</span>
         </div>
       </div>
 
       {%- if section.settings.show_payment_icons -%}
-        <div class="payment-methods lower-footer__right">
+        <div class="payment-methods">
           <div class="payment-methods__inner">
             {%- comment -%}{%- endcomment -%}
             {%- for type in mycustom_payment_methods -%}
