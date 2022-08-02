@@ -146,7 +146,7 @@
                                   {%- if child_link.links != blank -%}
                                     <ul>
                                       {%- for child_child_link in child_link.links -%}
-                                        <li class="my-0 {% if child_child_link.active %}active{% endif %}">
+                                        <li class=" {% if child_child_link.active %}active{% endif %}">
                                           <a href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
                                         </li>
                                       {%- endfor -%}
