@@ -136,7 +136,7 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
-                              <div class="d-flex flex-column mx-4 border">
+                              <div class="d-flex flex-column mx-4 border border-dark">
                                 <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
@@ -144,7 +144,7 @@
                                   </a>
   
                                   {%- if child_link.links != blank -%}
-                                    <ul class="border">
+                                    <ul>
                                       {%- for child_child_link in child_link.links -%}
                                         <li class="{% if child_child_link.active %}active{% endif %}">
                                           <a class="py-2" href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
