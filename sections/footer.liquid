@@ -114,13 +114,13 @@
   {%- if show_country_selector or show_language_selector or section.settings.show_social -%}
     <div class="lower-footer no-border-top no-js-hidden pb-0">
       <div class="container">
-        {%- if show_country_selector or show_language_selector -%}
+        <!-- {%- if show_country_selector or show_language_selector -%}
           <div class="lower-footer__left">
             <div class="store-localization">
               {% render 'localization', input_prefix: 'footer' %}
             </div>
           </div>
-        {%- endif -%}
+        {%- endif -%} -->
         {%- if section.settings.show_social -%}
           <div class="{% if show_country_selector == false and show_language_selector == false %}lower-footer__full{% else %}lower-footer__right{% endif %}">
             {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x44' %}
