@@ -158,12 +158,19 @@
               "heading": "Policies",
               "menu": "policies"
             }
+          },
+          "f41b03ee-5b2b-4cda-a926-84a443a71d6d": {
+            "type": "blog",
+            "settings": {
+              "mycustom_blog": "news"
+            }
           }
         },
         "block_order": [
           "2a3b64ed-76ae-426a-a671-b7c960b539c0",
           "0d2fb1f1-5b3d-4064-858d-628ddf45fac4",
-          "35b7c9bf-3814-48f7-a51d-a1cab09ee76e"
+          "35b7c9bf-3814-48f7-a51d-a1cab09ee76e",
+          "f41b03ee-5b2b-4cda-a926-84a443a71d6d"
         ],
         "settings": {
           "show_newsletter": false,
