@@ -89,7 +89,7 @@
             {%- elsif block.type == 'image' -%}
               <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
             {%- elsif block.type == 'blog' -%}
-              <h6>{{ block.settings.mycustom_blog.articles_count | json }}</h6>
+              <h6>{{ block.settings.mycustom_blog.articles | json }}</h6>
             {%- endif -%}
           </div>
         {%- endfor -%}
