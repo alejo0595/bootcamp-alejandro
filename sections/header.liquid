@@ -136,24 +136,24 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
-                              <div>
+                              <div class="d-flex flex-column">
                                 <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
+                                <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
+                                  <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                    {{ child_link.title | strip }}
+                                  </a>
+  
+                                  {%- if child_link.links != blank -%}
+                                    <ul>
+                                      {%- for child_child_link in child_link.links -%}
+                                        <li class="{% if child_child_link.active %}active{% endif %}">
+                                          <a href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endif -%}
+                                </li>
                               </div>
-                              <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
-                                <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
-                                  {{ child_link.title | strip }}
-                                </a>
-
-                                {%- if child_link.links != blank -%}
-                                  <ul>
-                                    {%- for child_child_link in child_link.links -%}
-                                      <li class="{% if child_child_link.active %}active{% endif %}">
-                                        <a href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
-                                      </li>
-                                    {%- endfor -%}
-                                  </ul>
-                                {%- endif -%}
-                              </li>
                             {%- endfor -%}
 
                             {%- for block in section.blocks -%}
