@@ -79,7 +79,7 @@
             {%- if block.type == 'link_list' -%}
               <ul class="footer-nav-links">
                 {%- for link in block.settings.menu.links -%}
-                  <li class="footer-nav-links__item mycustom-footer-link-font"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  <li class="mb-1 footer-nav-links__item mycustom-footer-link-font"><a href="{{ link.url }}">{{ link.title }}</a></li>
                 {%- endfor -%}
               </ul>
             {%- elsif block.type == 'text' -%}
@@ -88,6 +88,8 @@
               </div>
             {%- elsif block.type == 'image' -%}
               <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
+            {%- elsif block.type == 'blog' -%}
+              <h6>{{ block.settings | json }}</h6>
             {%- endif -%}
           </div>
         {%- endfor -%}
@@ -343,6 +345,17 @@
             "id": "text",
             "label": "Text",
             "default": "<p>Share store details, promotions, or brand content with your customers.</p>"
+          }
+        ]
+      },
+      {
+        "type": "blog",
+        "name": "Blog",
+        "settings":[
+          {
+            "type": "blog",
+            "id": "mycustom_blog",
+            "label": "Blog"
           }
         ]
       }
