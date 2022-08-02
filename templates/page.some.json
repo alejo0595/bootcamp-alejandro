@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page-some",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "main"
+  ]
+}
