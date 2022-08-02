@@ -374,7 +374,7 @@
                               <a class="main-menu-link" href="{{ child_link.url }}" {% if child_link.links != blank %}aria-haspopup="true" aria-controls="main-menu-panel-{{ outer_forloop_index }}-{{ forloop.index }}"{% endif %}>
                                 {{- child_link.title | strip -}}
 
-                                {%- if child_link.links == blank -%}
+                                {%- if child_link.links != blank -%}
                                   <span class="child-indicator">{% render 'svg-arrow-right' %}</span>
                                 {%- endif -%}
                               </a>
