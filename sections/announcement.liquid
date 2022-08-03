@@ -16,11 +16,14 @@
       {%- if section.settings.announcement_bar_link != blank -%}
         <a href="{{ section.settings.announcement_bar_link }}">
       {%- endif -%}
-      {%- comment -%}Alejandro Custom modification: Add icon and Css{%- endcomment -%}
+      {%- comment -%}Alejandro Custom modification: Add icon and CSS{%- endcomment -%}
       <div class="announcement__inner d-flex justify-content-center align-items-center">
         {% if section.settings.mycustom_announcement_icon_show %}
         <div class="me-2 mycustom-announcement-icon">
-          {%- render: 'mycustom-icon_list' variable: section.settings.mycustom_announcement_icon_color -%}
+          {%- render: 'mycustom-icon_list'
+            variable: section.settings.mycustom_announcement_icon,
+            color: section.settings.mycustom_announcement_icon_color
+          -%}
           {{ section.settings.mycustom_announcement_icon }}</div>
         {% endif %}
         <div>{{ section.settings.announcement_bar_text }}</div>
