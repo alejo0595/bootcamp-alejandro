@@ -135,7 +135,7 @@
           "tint_opacity": 0,
           "text_color": "#ffffff",
           "mycustom_font": "playfair_display_n4",
-          "mycustom_font_color": "#D79E93",
+          "mycustom_font_color": "#d79e93",
           "mycustom_font_size_heading": 1,
           "mycustom_font_size_sub_heading": 0.9,
           "mycustom_font_weight": true
@@ -167,7 +167,7 @@
           "f41b03ee-5b2b-4cda-a926-84a443a71d6d": {
             "type": "blog",
             "settings": {
-              "mycustom_blog": "news"
+              "mycustom_blog": "natural-care-blog"
             }
           }
         },
