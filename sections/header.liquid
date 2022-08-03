@@ -157,7 +157,7 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
-                              <div class="d-flex flex-column mx-1 p-3 {%- if child_link.links -%}  mycustom-header-mega_menu-border{%- endif -%}">
+                              <div class="d-flex flex-column mx-1 p-3 {%- if child_link.links -%}mycustom-header-mega_menu-border{%- endif -%}">
                                 <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} mycustom-header-mega_menu-font-size-heading" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
