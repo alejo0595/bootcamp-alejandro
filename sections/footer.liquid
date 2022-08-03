@@ -90,7 +90,9 @@
               <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
             {%- elsif block.type == 'blog' -%}
               {%- for article in block.settings.mycustom_blog.articles -%}
-                <h6>{{ article.title | json }}</h6>
+                <div class="d-flex">
+                  <p>{{ article.title}}</p>
+                </div>
               {%- endfor -%}
             {%- endif -%}
           </div>
