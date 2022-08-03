@@ -133,7 +133,12 @@
           "show_language_selector": true,
           "tint_color": "#000000",
           "tint_opacity": 0,
-          "text_color": "#ffffff"
+          "text_color": "#ffffff",
+          "mycustom_font": "montserrat_n4",
+          "mycustom_font_color": "#D79E93",
+          "mycustom_font_size_heading": 1,
+          "mycustom_font_size_sub_heading": 0.8,
+          "mycustom_font_weight": true
         }
       },
       "footer": {
@@ -162,7 +167,6 @@
           "f41b03ee-5b2b-4cda-a926-84a443a71d6d": {
             "type": "blog",
             "settings": {
-              "heading": "",
               "mycustom_blog": "news"
             }
           }
