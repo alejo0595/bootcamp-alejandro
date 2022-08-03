@@ -75,6 +75,7 @@
     <div class="container p-5">
       <div class="footer-columns footer-columns--count-{{ section.blocks.size }}">
         {%- for block in section.blocks -%}
+          {%- comment -%}{%- endcomment -%}
           <div class="footer-columns__column 
           {%- if block.type == 'image'  -%} {{ 'mx-5' | prepend: ' ' }} {%- endif -%}
           {%- if block.type != 'image'  -%} {{ 'mx-0 px-0' | prepend: ' ' }} {%- endif -%}
