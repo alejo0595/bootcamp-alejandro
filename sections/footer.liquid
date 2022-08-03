@@ -104,7 +104,7 @@
               {%- comment -%}{%- endcomment -%}
             {%- elsif block.type == 'blog' -%}
             <div class="d-flex flex-wrap w-25">
-              {%- for tag in block.settings.mycustom_blog.all_tags -%}
+              {%- for tag in block.settings.mycustom_blog.tags -%}
                 <span class="me-1 mt-1 mycustom-footer-blog">{{ tag | link_to_add_tag: tag }}</span>
               {%- endfor -%}
             </div>
