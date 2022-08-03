@@ -79,7 +79,7 @@
           {%- if block.type == 'image'  -%} {{ 'mx-5' | prepend: ' ' }} {%- endif -%}
           {%- if block.type != 'image'  -%} {{ 'mx-0 px-0' | prepend: ' ' }} {%- endif -%}
           " {{ block.shopify_attributes }}>
-          
+
             {%- comment -%}{%- endcomment -%}
             {%- if block.settings.heading -%}
               <h2 class="mb-2 footer-column-heading  mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
@@ -104,8 +104,8 @@
               {%- comment -%}{%- endcomment -%}
             {%- elsif block.type == 'blog' -%}
             <div class="d-flex">
-              {%- for article in block.settings.mycustom_blog.articles -%}
-                <span class="mycustom-footer-blog"><a class="text-decoration-none" href="{{ article.url }}">{{ article.title }}</a></span>
+              {%- for tag in block.settings.mycustom_blog.all_tags -%}
+                <span class="mx-1 mycustom-footer-blog">{{ tag | link_to_tag: tag }}</span>
               {%- endfor -%}
             </div>
             {%- endif -%}
