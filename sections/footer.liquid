@@ -28,6 +28,10 @@
   font-size: {{ section.settings.mycustom_copyright_font_size }}rem !important;
 }
 
+#pagefooter .mycustom-footer-blog {
+  border: 1px solid rgba(0,0,0,1);
+}
+
 {% endstyle %}
 
 <footer id="pagefooter" class="pagefooter" data-section-type="footer">
@@ -337,6 +341,7 @@
       {
         "type": "text",
         "name": "Text area",
+        "limit": 1,
         "settings": [
           {
             "type": "text",
@@ -355,6 +360,7 @@
       {
         "type": "blog",
         "name": "Blog",
+        "limit": 1,
         "settings":[
           {
             "type": "text",
