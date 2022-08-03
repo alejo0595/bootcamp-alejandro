@@ -105,7 +105,7 @@
             {%- elsif block.type == 'blog' -%}
             <div class="d-flex flex-wrap w-75">
               {%- for tag in block.settings.mycustom_blog.all_tags -%}
-                <span class="me-1 mt-1 mycustom-footer-blog">{{ tag }}<a href="{{ block.settings.mycustom_blog.url }}{{ tag | handle | prepend: '/tagged/' }}"></a></span>
+                <span class="me-1 mt-1 mycustom-footer-blog"><a href="{{ block.settings.mycustom_blog.url }}{{ tag | handle | prepend: '/tagged/' }}">{{ tag }}</a></span>
               {%- endfor -%}
             </div>
             {%- endif -%}
