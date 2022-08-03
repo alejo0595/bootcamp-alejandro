@@ -131,12 +131,12 @@
                         endif
                       -%}
                       <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
-                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
+                        <a class="pe-0" href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                         </a>
                         {%- comment -%}{%- endcomment -%}
                         {% if has_mega_drop_down -%}
-                          <span class="ms-1">{%- render: 'mycustom-svg-arrow_down' -%}</span>
+                          <span>{%- render: 'mycustom-svg-arrow_down' -%}</span>
                         {%- endif -%}
 
                         {%- if link.links != blank -%}
