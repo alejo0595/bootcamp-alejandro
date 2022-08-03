@@ -33,7 +33,7 @@
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Homepage_Header.jpg",
-        "image_align_desktop": "top",
+        "image_align_desktop": "center",
         "image_align_mobile": "center",
         "tint_color": "{{ shop.brand.colors.primary[0].foreground }}",
         "tint_opacity": 30,
