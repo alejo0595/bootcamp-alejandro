@@ -77,25 +77,27 @@
   .logo__image { max-width: {{ section.settings.logo_width }}px; }
 
   {%- comment -%}{%- endcomment -%}
-  #pageheader .mycustom-header-mega_menu-font {
+  #pageheader .mycustom-header-mega_menu-font-size-heading {
+    font-size: {{ section.settings.mycustom_font_size_heading }}rem !important;
+  }
+  
+  #pageheader .mycustom-header-mega_menu-font-size-sub_heading {
     font-family: {{ section.settings.mycustom_font }} !important;
+    font-size: {{ section.settings.mycustom_font_size_sub_heading }}rem !important;
     color: {{ section.settings.mycustom_font_color }} !important;
     {%- if section.settings.mycustom_font_weight -%}
       font-weight: bold !important;
     {%- endif -%}
   }
 
-  #pageheader .mycustom-header-mega_menu-font-size-heading {
-    font-size: {{ section.settings.mycustom_font_size_heading }} !important;
-  }
-  
-  #pageheader .mycustom-header-mega_menu-font-size-sub_heading {
-    font-size: {{ section.settings.mycustom_font_size_sub_heading }} !important;
-  }
-
-  #pageheader .mycustom-header-mega_menu-border {
+  #pageheader .mycustom-header-mega_menu-border-right {
     border-right: 2px solid rgba(0,0,0,0.1) !important;
   }
+
+  #pageheader .mycustom-header-mega_menu-border-bottom {
+    border-right: 2px solid rgba(0,0,0,0.1) !important;
+  }
+
 {%- endstyle -%}
 
 <div data-section-type="header">
@@ -157,7 +159,7 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
-                              <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border' | prepend: ' ' }}{%- endunless -%}">
+                              <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
                                 <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} mycustom-header-mega_menu-font-size-heading" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
@@ -167,6 +169,7 @@
                                   {%- if child_link.links != blank -%}
                                     <ul>
                                       {%- for child_child_link in child_link.links -%}
+                                        {%- comment -%}{%- endcomment -%}
                                         <li class="{% if child_child_link.active %}active{% endif %}">
                                           <a class="py-2 mycustom-header-mega_menu-font-size-sub_heading" href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
                                         </li>
