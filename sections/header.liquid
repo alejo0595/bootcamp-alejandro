@@ -134,6 +134,7 @@
                         <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                         </a>
+                        <span>{%- render: 'mycustom-svg-arrow_down' -%}</span>
 
                         {%- if link.links != blank -%}
                           {%- liquid
