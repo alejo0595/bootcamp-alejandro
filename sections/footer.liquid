@@ -79,6 +79,7 @@
           {%- if block.type == 'image'  -%} {{ 'mx-5' | prepend: ' ' }} {%- endif -%}
           {%- if block.type != 'image'  -%} {{ 'mx-0 px-0' | prepend: ' ' }} {%- endif -%}
           " {{ block.shopify_attributes }}>
+          
             {%- comment -%}{%- endcomment -%}
             {%- if block.settings.heading -%}
               <h2 class="mb-2 footer-column-heading  mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
@@ -371,12 +372,7 @@
         "name": "Blog",
         "limit": 1,
         "settings":[
-          {
-            "type": "text",
-            "id": "heading",
-            "label": "Heading",
-            "default": "Blog"
-          },
+          
           {
             "type": "blog",
             "id": "mycustom_blog",
