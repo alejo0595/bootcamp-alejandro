@@ -82,6 +82,8 @@
             {%- comment -%}{%- endcomment -%}
             {%- if block.settings.heading -%}
               <h2 class="mb-2 footer-column-heading  mycustom-footer-heading-font">{{ block.settings.heading | escape }}</h2>
+            {%- elsif block.type == 'blog' -%}
+              <h2 class="mb-2 footer-column-heading  mycustom-footer-heading-font">{{ block.settings.mycustom_blog.title}}</h2>
             {%- endif -%}
 
             {%- if block.type == 'link_list' -%}
