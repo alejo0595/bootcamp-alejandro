@@ -186,8 +186,8 @@
           "mycustom_copyright_font_size": 0.7,
           "show_social": true,
           "show_payment_icons": true,
-          "show_country_selector": true,
-          "show_language_selector": true
+          "show_country_selector": false,
+          "show_language_selector": false
         }
       },
       "popup": {
