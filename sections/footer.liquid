@@ -29,7 +29,9 @@
 }
 
 #pagefooter .mycustom-footer-blog {
-  border: 1px solid rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,0.2) !important; 
+  font-size: 0.6rem !important;
+  font-weight: 500 !important;
 }
 
 {% endstyle %}
@@ -97,11 +99,11 @@
               <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
               {%- comment -%}{%- endcomment -%}
             {%- elsif block.type == 'blog' -%}
+            <div class="d-flex">
               {%- for article in block.settings.mycustom_blog.articles -%}
-                <div class="d-flex">
-                  <span class="mycustom-footer-blog"><a class="text-decoration-none" href="{{ article.url }}">{{ article.title }}</a></span>
-                </div>
+                <span class="mycustom-footer-blog"><a class="text-decoration-none" href="{{ article.url }}">{{ article.title }}</a></span>
               {%- endfor -%}
+            </div>
             {%- endif -%}
           </div>
         {%- endfor -%}
