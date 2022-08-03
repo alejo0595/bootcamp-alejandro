@@ -91,7 +91,7 @@
             {%- elsif block.type == 'blog' -%}
               {%- for article in block.settings.mycustom_blog.articles -%}
                 <div class="d-flex border">
-                  <p><a href="">{{ article.title }} | {{ article.url }}</a></p>
+                  <p><a href="{{ article.url }}">{{ article.title }}</a></p>
                 </div>
               {%- endfor -%}
             {%- endif -%}
