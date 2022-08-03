@@ -103,7 +103,7 @@
               <img src="{{ block.settings.logo_image | image_url: width: 295 }}" alt="{{ block.settings.logo_image.alt }}" srcset="">
               {%- comment -%}{%- endcomment -%}
             {%- elsif block.type == 'blog' -%}
-            <div class="d-flex">
+            <div class="d-flex flex-wrap">
               {%- for tag in block.settings.mycustom_blog.all_tags -%}
                 <span class="mx-1 mycustom-footer-blog">{{ tag | link_to_tag: tag }}</span>
               {%- endfor -%}
