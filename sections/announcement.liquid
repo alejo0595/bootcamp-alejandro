@@ -20,8 +20,9 @@
       <div class="announcement__inner d-flex justify-content-center align-items-center">
         {% if section.settings.mycustom_announcement_icon_show %}
         <div class="me-2 mycustom-announcement-icon">
-          {%- render: 'mycustom-icon_list'
-            variable: section.settings.mycustom_announcement_icon,
+          
+          {%- render: 'mycustom-icon-customize'
+            name: section.settings.mycustom_announcement_icon,
             color: section.settings.mycustom_announcement_icon_color
           -%}
         </div>
