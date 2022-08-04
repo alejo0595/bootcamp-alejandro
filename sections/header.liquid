@@ -110,7 +110,45 @@
       {%- if section.settings.enable_inline_links %} data-nav-inline="true" {% endif -%}
       id="pageheader__contents">
 
-      <div class="pageheader__layout container">
+      <div class="pageheader__layout">
+        
+        <div class="logo logo--{% if section.settings.logo == blank %}text{% else %}image{% endif %}">
+          {%- if section.settings.logo != blank -%}
+            <div class="logo__image{% if section.settings.alt_logo %} has-contrast-image{% endif %}">
+              <a href="{{ routes.root_url }}">
+                <img class="logo__default-image"
+                     src="{{ section.settings.logo | image_url: width: logo_width }}"
+                     {%- if section.settings.logo.width >= logo_width_2x and section.settings.logo.height >= logo_height_2x %}
+                       srcset="{{ section.settings.logo | image_url: width: logo_width_2x }} 2x"
+                     {% endif -%}
+                     width="{{ logo_width }}"
+                     height="{{ logo_height }}"
+                     alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+                {%- if section.settings.alt_logo -%}
+                  <img class="logo__contrast-image"
+                       src="{{ section.settings.alt_logo | image_url: width: logo_width }}"
+                       {%- if section.settings.alt_logo.width >= logo_width_2x and section.settings.alt_logo.height >= logo_height_2x %}
+                         srcset="{{ section.settings.alt_logo | image_url: width: logo_width_2x }} 2x"
+                       {% endif -%}
+                       width="{{ logo_width }}"
+                       height="{{ logo_height }}"
+                       alt="{{ section.settings.alt_logo.alt | default: shop.name | escape }}">
+                {%- endif -%}
+              </a>
+            </div>
+          {%- endif -%}
+
+          {%- if template == 'index' -%}
+            <h1 class="logo__text{% if section.settings.logo != blank %} hidden{% endif %}">
+              <a href="{{ routes.root_url }}">{{ shop.name }}</a>
+            </h1>
+          {%- else -%}
+            <a class="logo__text{% if section.settings.logo != blank %} hidden{% endif %}" href="{{ routes.root_url }}">
+              {{- shop.name -}}
+            </a>
+          {%- endif -%}
+        </div>
+        
         <div class="header-left">
           {%- if section.settings.enable_inline_links -%}
             <div class="inline-header-nav">
@@ -466,43 +504,6 @@
               </div>
             </div>
           </details>
-        </div>
-
-        <div class="logo logo--{% if section.settings.logo == blank %}text{% else %}image{% endif %}">
-          {%- if section.settings.logo != blank -%}
-            <div class="logo__image{% if section.settings.alt_logo %} has-contrast-image{% endif %}">
-              <a href="{{ routes.root_url }}">
-                <img class="logo__default-image"
-                     src="{{ section.settings.logo | image_url: width: logo_width }}"
-                     {%- if section.settings.logo.width >= logo_width_2x and section.settings.logo.height >= logo_height_2x %}
-                       srcset="{{ section.settings.logo | image_url: width: logo_width_2x }} 2x"
-                     {% endif -%}
-                     width="{{ logo_width }}"
-                     height="{{ logo_height }}"
-                     alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
-                {%- if section.settings.alt_logo -%}
-                  <img class="logo__contrast-image"
-                       src="{{ section.settings.alt_logo | image_url: width: logo_width }}"
-                       {%- if section.settings.alt_logo.width >= logo_width_2x and section.settings.alt_logo.height >= logo_height_2x %}
-                         srcset="{{ section.settings.alt_logo | image_url: width: logo_width_2x }} 2x"
-                       {% endif -%}
-                       width="{{ logo_width }}"
-                       height="{{ logo_height }}"
-                       alt="{{ section.settings.alt_logo.alt | default: shop.name | escape }}">
-                {%- endif -%}
-              </a>
-            </div>
-          {%- endif -%}
-
-          {%- if template == 'index' -%}
-            <h1 class="logo__text{% if section.settings.logo != blank %} hidden{% endif %}">
-              <a href="{{ routes.root_url }}">{{ shop.name }}</a>
-            </h1>
-          {%- else -%}
-            <a class="logo__text{% if section.settings.logo != blank %} hidden{% endif %}" href="{{ routes.root_url }}">
-              {{- shop.name -}}
-            </a>
-          {%- endif -%}
         </div>
 
         <div class="header-items">
