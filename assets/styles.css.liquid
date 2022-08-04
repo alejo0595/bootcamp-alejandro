@@ -6181,7 +6181,6 @@ h3.card__title {
   border-top: 0 !important;
 }
 
-/*Comment*/
 .pageheader__layout {
   display: flex;
   position: relative;
@@ -6293,10 +6292,17 @@ h3.card__title {
   /*Comment*/
   .nav-row .tier-1 {
     display: flex;
-    justify-content: flex-end !important;
     width: 100%;
     height: 100%;
   }
+
+  /*Comment*/
+  @media (min-width: 768px) {
+    .nav-row .tier-1{
+      justify-content: flex-end !important;
+    }
+  }
+
   .nav-row .tier-1 > ul {
     height: 100%;
     margin-left: -0.7em;
@@ -6607,8 +6613,16 @@ h3.card__title {
   position: relative;
   right: -10px;
   align-items: center;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
 }
+
+/*Comment*/
+@media (min-width: 768px) {
+  .header-items{
+    justify-content: flex-start !important;
+  }
+}
+
 .header-items a {
   color: inherit;
 }
