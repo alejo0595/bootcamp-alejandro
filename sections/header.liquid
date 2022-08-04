@@ -352,8 +352,8 @@
                         </ul>
                       {%- endif -%}
                     {% endif %}
-
-                    {%- if has_country_dd or has_lang_dd -%}
+                    {%- comment -%}has_country_dd or has_lang_dd{%- endcomment -%}
+                    {%- if true -%}
                       <div class="main-menu-section store-localization no-js-hidden">
                         {% render 'localization', input_prefix: 'menu' %}
                       </div>
