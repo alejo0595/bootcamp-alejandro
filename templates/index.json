@@ -50,7 +50,6 @@
     },
     "1658956760bcd9ccf4": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Our Most Popular Products",
         "mycustom_sub_title": "all hand-crafted",
@@ -70,7 +69,6 @@
     },
     "1658281447f3f74bef": {
       "type": "image-with-text",
-      "disabled": true,
       "settings": {
         "skip_container": false,
         "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
@@ -94,7 +92,6 @@
     },
     "165828145485ed8763": {
       "type": "image-with-text",
-      "disabled": true,
       "settings": {
         "skip_container": false,
         "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
@@ -118,7 +115,6 @@
     },
     "165832695999ca0a16": {
       "type": "logo-list",
-      "disabled": true,
       "blocks": {
         "165832695963050079-0": {
           "type": "logo",
@@ -189,7 +185,6 @@
     },
     "1658379946c16e8305": {
       "type": "collection-list",
-      "disabled": true,
       "blocks": {
         "3211dc05-ee8f-47b0-9bca-db95e36e9aa4": {
           "type": "collection",
@@ -236,7 +231,6 @@
     },
     "1658379177e98c8095": {
       "type": "newsletter",
-      "disabled": true,
       "settings": {
         "mycustom_show_icon": false,
         "heading": "Stay in the Know About",
@@ -255,7 +249,6 @@
     },
     "1659057953146a7ecb": {
       "type": "instafeed",
-      "disabled": true,
       "settings": {
         "feed_width": 100,
         "mycustom_heading": "Follow Our Journey",
