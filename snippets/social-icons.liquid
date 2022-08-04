@@ -1,6 +1,6 @@
 {% capture social_icon_html %}
   <div class="social-links {{ container_class }}">
-    <ul class="social-links__list">
+    <ul class="social-links__list d-flex">
       {% if settings.social_twitter_url != blank %}
         <li><a aria-label="Twitter" class="twitter" target="_blank" rel="noopener" href="{{ settings.social_twitter_url }}">{% render 'svg-twitter' %}</a></li>
       {% endif %}
