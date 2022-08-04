@@ -131,7 +131,7 @@
                         endif
                       -%}
                       <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
-                        <a class="pe-0" href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
+                        <a class="" href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                         </a>
                         {%- comment -%}{%- endcomment -%}
