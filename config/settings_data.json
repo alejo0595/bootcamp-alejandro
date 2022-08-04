@@ -285,7 +285,8 @@
           "settings": {
             "tint_color": "#000000",
             "tint_opacity": 15,
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "mycustom_font_color": "#D79E93"
           }
         }
       }
@@ -364,7 +365,8 @@
           "settings": {
             "tint_color": "#252525",
             "tint_opacity": 25,
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "mycustom_font_color": "#D79E93"
           }
         }
       }
@@ -441,7 +443,8 @@
           "settings": {
             "tint_color": "#000000",
             "tint_opacity": 25,
-            "text_color": "#ffffff"
+            "text_color": "#ffffff",
+            "mycustom_font_color": "#D79E93"
           }
         }
       }
