@@ -115,7 +115,7 @@
           {%- if section.settings.enable_inline_links -%}
             <div class="inline-header-nav">
               <div class="nav-row multi-level-nav" role="navigation" aria-label="{{ 'general.navigation.main_navigation_aria_label' | t | escape }}">
-                <div class="tier-1 w-50">
+                <div class="tier-1 w-50 me-0">
                   <ul>
                     {%- for link in linklists[section.settings.menu_linklist].links -%}
                       {%- liquid
