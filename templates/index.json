@@ -50,6 +50,7 @@
     },
     "1658956760bcd9ccf4": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Our Most Popular Products",
         "mycustom_sub_title": "all hand-crafted",
