@@ -1,10 +1,18 @@
 {% comment %}
   Parameters:
-  - variable {string} [required] - The variable controlling the Case statement
+  - name {string} [required] - The icon name to render
   - color {string} [required] - The color to fill the icon
 {% endcomment %}
 
-{%- case variable -%}
+{%-liquid
+  if color
+    assign fill_color = color
+  else
+    assign fill_color= 'currentColor'
+  endif
+  -%}
+
+{%- case name -%}
     {%- when 'svg-package' -%}
       {% render 'svg-package' color: color %}
     {%- when 'svg-support' -%}
