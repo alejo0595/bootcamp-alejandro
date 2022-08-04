@@ -6336,7 +6336,7 @@ h3.card__title {
     position: absolute;
     z-index: 10;
     top: calc(100% + {{ header_vertical_padding }}px);
-    left: 0;
+    /* left: 0; */
     /* width: calc(100vw + 5px); */
     margin-left: -{{ site_container_side_padding }}px;
     padding-right: {{ gutter }}px;
@@ -6344,6 +6344,7 @@ h3.card__title {
     border-top: 1px solid {{ col_header_bg | color_mix: col_header_text, 85 }};
     opacity: 0;
   }
+
   .scrolled-down .nav-row .tier-2,
 .scrolled-down .nav-row .tier-3 {
     top: calc(100% + {{ header_vertical_padding | divided_by: 2 }}px - 1px);
