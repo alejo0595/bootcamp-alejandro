@@ -131,13 +131,13 @@
                         endif
                       -%}
                       <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
-                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %} text-decoration-none pe-0"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
+                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %}"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
+                          {%- comment -%}{%- endcomment -%}
+                          {% if has_mega_drop_down -%}
+                            <span>{%- render: 'mycustom-svg-arrow_down' -%}</span>
+                          {%- endif -%}
                         </a>
-                        {%- comment -%}{%- endcomment -%}
-                        {% if has_mega_drop_down -%}
-                          <span>{%- render: 'mycustom-svg-arrow_down' -%}</span>
-                        {%- endif -%}
 
                         {%- if link.links != blank -%}
                           {%- liquid
