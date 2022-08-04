@@ -130,8 +130,8 @@
                           assign has_mega_drop_down = false
                         endif
                       -%}
-                      <li class="{% if link.active %}{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
-                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %} pe-0"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
+                      <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
+                        <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %} test-decoration-none pe-0"{% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                         </a>
                         {%- comment -%}{%- endcomment -%}
