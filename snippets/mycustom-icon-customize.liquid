@@ -1,0 +1,15 @@
+{% comment %}
+  Parameters:
+  - color {string} [required] - The color to fill the icon
+  - name string} [required] - The icon name to render
+{% endcomment %}
+
+{%-liquid
+  if color
+    assign fill_color = color
+  else
+    assign fill_color= 'currentColor'
+  endif
+  -%}
+
+  {%- render: 'svg-world' color: color-%}
