@@ -135,7 +135,7 @@
                           {{- link.title | strip -}}
                           {%- comment -%}{%- endcomment -%}
                           {%- case has_mega_drop_down -%}
-                          {%- when true -%}
+                          {%- when 'true' -%}
                             <span>{%- render: 'mycustom-svg-arrow_down' -%}</span>
                             {%- else -%}
                           {%- endcase -%}
