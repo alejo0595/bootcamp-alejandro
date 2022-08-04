@@ -37,7 +37,7 @@
         "image_align_mobile": "center",
         "tint_color": "{{ shop.brand.colors.primary[0].foreground }}",
         "tint_opacity": 30,
-        "size": "full-fixed",
+        "size": "full-auto",
         "height_desktop": 630,
         "height_mobile": 400,
         "text_box_style": "none",
