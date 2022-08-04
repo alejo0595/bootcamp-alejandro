@@ -1,6 +1,6 @@
 {% capture social_icon_html %}
   <div class="social-links {{ container_class }}">
-    <ul class="social-links__list d-flex">
+    <ul class="social-links__list">
       {% if settings.social_twitter_url != blank %}
         <li><a aria-label="Twitter" class="twitter" target="_blank" rel="noopener" href="{{ settings.social_twitter_url }}">{% render 'svg-twitter' %}</a></li>
       {% endif %}
@@ -14,7 +14,7 @@
         <li><a aria-label="Vimeo" class="vimeo" target="_blank" rel="noopener" href="{{ settings.social_vimeo_url }}">{% render 'svg-vimeo' %}</a></li>
       {% endif %}
       {% if settings.social_instagram_url != blank %}
-        <li><a aria-label="Instagram" class="instagram" target="_blank" rel="noopener" href="{{ settings.social_instagram_url }}">{% render 'svg-instagram' %}</a></li>
+        <li style="margin-left: -5px;"><a aria-label="Instagram" class="instagram" target="_blank" rel="noopener" href="{{ settings.social_instagram_url }}">{% render 'svg-instagram' %}</a></li>
       {% endif %}
       {% if settings.social_pinterest_url != blank %}
         <li><a aria-label="Pinterest" class="pinterest" target="_blank" rel="noopener" href="{{ settings.social_pinterest_url }}">{% render 'svg-pinterest' %}</a></li>
