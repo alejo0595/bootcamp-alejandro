@@ -164,8 +164,8 @@
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
-                                {{ link.title }}
-                                {{ link.handle }}
+                                {{ link.links[0].title }}
+                                {{ link.links[0].handle }}
                                 {%- case link -%}
                                   {%- when '' -%}
                                 {%- endcase -%}
