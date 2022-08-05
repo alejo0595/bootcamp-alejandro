@@ -11,11 +11,9 @@
   
   #{{ section.id }} .mycustom-logo_list-border-top{
     border-top: 2px solid rgba(0,0,0,0.1);
-  }
-
-  #{{ section.id }} .mycustom-logo_list-border-bottom{
     border-bottom: 2px solid rgba(0,0,0,0.1);
   }
+
 {%- endstyle -%}
 
 {%- if section.settings.heading != blank or section.blocks.size > 0 -%}
@@ -89,7 +87,7 @@
     {%- endif -%}
   {%- endstyle -%}
 
-  <div class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}" id="{{ section.id }}">
+  <div id="{{ section.id }} class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}" mycustom-logo_list-border">
     <div class="container align-center ">
       {%- if section.settings.heading != blank -%}
         <h2 class="section-heading" data-cc-animate>
