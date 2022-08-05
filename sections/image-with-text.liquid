@@ -77,7 +77,7 @@
                      {%- comment -%}{%- endcomment -%}
                      class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
                      width="{{ img.width }}"
-                     height="{{ img.width }}"
+                     height="{{ img.height }}"
                      alt="{{ img.alt | escape }}">
               </picture>
               <noscript>
