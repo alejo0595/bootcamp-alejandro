@@ -1,6 +1,6 @@
 {% style %}
   #{{ section.id }} .section-fit{
-    height: 428px;
+    height: {{ section.settings.mycustom_image_height }}}}px;
   }
 
   #{{ section.id }} .height-inherit{
@@ -158,6 +158,16 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_image_height",
+        "label": "Image height",
+        "unit": "px",
+        "min": 100,
+        "max": 750,
+        "step": 25,
+        "default": 450
       },
       {
         "type": "select",
