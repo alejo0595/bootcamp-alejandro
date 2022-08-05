@@ -164,9 +164,8 @@
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
-                                {{ child_link.title }}
                                 {{ child_link.handle }}
-                                {%- case link -%}
+                                {%- case child_link.handle -%}
                                   {%- when '' -%}
                                 {%- endcase -%}
                                   <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
@@ -649,10 +648,6 @@
         "default": 150
       },
       {
-        "type": "header",
-        "content": "Layout"
-      },
-      {
         "type": "checkbox",
         "id": "enable_header_overlap",
         "label": "Show on top of full width sections",
@@ -699,6 +694,48 @@
         "id": "menu_align_logo_left",
         "label": "Keep logo on the left",
         "info": "Only applies to the inline menu.",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu"
+      },
+      {
+        "type": "font_picker",
+        "id": "mycustom_font",
+        "label": "Font",
+        "default": "montserrat_n4"
+      },
+      {
+        "type": "color",
+        "id": "mycustom_font_color",
+        "label": "Font color",
+        "default": "#D79E93"
+      },
+      {
+        "type": "range",
+        "id": "mycustom_font_size_heading",
+        "label": "Heading size",
+        "unit": "rem",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "default": 0.5
+      },
+      {
+        "type": "range",
+        "id": "mycustom_font_size_sub_heading",
+        "label": "Sub-heading size",
+        "unit": "rem",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "default": 0.5
+      },
+      {
+        "type": "checkbox",
+        "id": "mycustom_font_weight",
+        "label": "Bold",
         "default": false
       },
       {
@@ -799,48 +836,6 @@
         "id": "text_color",
         "label": "Text color",
         "default": "#ffffff"
-      },
-      {
-        "type": "header",
-        "content": "Mega-menu style"
-      },
-      {
-        "type": "font_picker",
-        "id": "mycustom_font",
-        "label": "Font",
-        "default": "montserrat_n4"
-      },
-      {
-        "type": "color",
-        "id": "mycustom_font_color",
-        "label": "Font color",
-        "default": "#D79E93"
-      },
-      {
-        "type": "range",
-        "id": "mycustom_font_size_heading",
-        "label": "Heading size",
-        "unit": "rem",
-        "min": 0.1,
-        "max": 10,
-        "step": 0.1,
-        "default": 0.5
-      },
-      {
-        "type": "range",
-        "id": "mycustom_font_size_sub_heading",
-        "label": "Sub-heading size",
-        "unit": "rem",
-        "min": 0.1,
-        "max": 10,
-        "step": 0.1,
-        "default": 0.5
-      },
-      {
-        "type": "checkbox",
-        "id": "mycustom_font_weight",
-        "label": "Bold",
-        "default": false
       }
     ],
     "blocks": [
