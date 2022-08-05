@@ -9,7 +9,7 @@
     }    
   }
   
-  #{{ section.id }}.mycustom-logo_list-border{
+  #{{ section.id }} .mycustom-logo_list-border{
     border-top: 2px solid rgba(0,0,0,0.1);
     border-bottom: 2px solid rgba(0,0,0,0.1);
   }
@@ -87,8 +87,8 @@
     {%- endif -%}
   {%- endstyle -%}
 
-  <div id="{{ section.id }}" class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %} mycustom-logo_list-border">
-    <div class="container align-center ">
+  <div id="{{ section.id }}" class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %} ">
+    <div class="container align-center mycustom-logo_list-border">
       {%- if section.settings.heading != blank -%}
         <h2 class="section-heading" data-cc-animate>
           {{ section.settings.heading | escape }}
