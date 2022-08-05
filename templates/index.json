@@ -86,7 +86,7 @@
         "sub_heading_text_alignment": "center",
         "text_center_mobile": true,
         "mycustom_text_alignment": "justify",
-        "button_text_alignment": "left",
+        "button_text_alignment": "center",
         "bg_style": "content",
         "color_scheme": "none",
         "color_bg": "",
