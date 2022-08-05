@@ -75,7 +75,7 @@
                      data-src="{{ img | image_url: width: 600 }}"
                      data-sizes="{% if section.settings.skip_container %}(min-width: 768px) 50vw, 100vw{% else %}(min-width: 1280px) 600px, (min-width: 992px) calc(50vw - 40px), (min-width: 768px) calc(50vw - 30px), calc(100vw - 40px){% endif %}"
                      {%- comment -%}{%- endcomment -%}
-                     class=" lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
+                     class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
                      width="{{ img.width }}"
                      height="{{ img.height }}"
                      alt="{{ img.alt | escape }}">
