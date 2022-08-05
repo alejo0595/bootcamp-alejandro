@@ -73,6 +73,7 @@
       "settings": {
         "skip_container": false,
         "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
+        "mycustom_image_height": 450,
         "layout": "left",
         "heading": "We Make Our Pure Products",
         "mycustom_sub_heading": "just for mothers",
@@ -96,6 +97,7 @@
       "settings": {
         "skip_container": false,
         "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
+        "mycustom_image_height": 400,
         "layout": "right",
         "heading": "Our Ingredients Are Amazing",
         "mycustom_sub_heading": "naturally sourced",
