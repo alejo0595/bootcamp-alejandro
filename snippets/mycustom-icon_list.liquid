@@ -13,58 +13,60 @@
   -%}
 
 {%- case name -%}
-    {%- when 'svg-package' -%}
-      {% render 'svg-package' color: color %}
-    {%- when 'svg-support' -%}
-      {% render 'svg-support' color: color %}
-    {%- when 'svg-shield' -%}
-      {% render 'svg-shield' color: color %}
-    {%- when 'svg-return' -%}
-      {% render 'svg-return' color: color %}
-    {%- when 'svg-cart' -%}
-      {% render 'svg-cart' color: color %}
-    {%- when 'svg-beer' -%}
-      {% render 'svg-beer' color: color %}
-    {%- when 'svg-coffee' -%}
-      {% render 'svg-coffee' color: color %}
-    {%- when 'svg-draw' -%}
-      {% render 'svg-draw' color: color %}
-    {%- when 'svg-map-location' -%}
-      {% render 'svg-map-location' color: color %}
-    {%- when 'svg-send' -%}
-      {% render 'svg-send' color: color %}
-    {%- when 'svg-view' -%}
-      {% render 'svg-view' color: color %}
-    {%- when 'svg-bookmark' -%}
-      {% render 'svg-bookmark' color: color %}
-    {%- when 'svg-compass' -%}
-      {% render 'svg-compass' color: color %}
-    {%- when 'svg-heart-mobile' -%}
-      {% render 'svg-heart-mobile' color: color %}
-    {%- when 'svg-phone' -%}
-      {% render 'svg-phone' color: color %}
-    {%- when 'svg-world' -%}
-      {% render 'svg-world' color: color %}
-    {%- when 'svg-chat' -%}
-      {% render 'svg-chat' color: color %}
-    {%- when 'svg-credit-card' -%}
-      {% render 'svg-credit-card' color: color %}
-    {%- when 'svg-lock' -%}
-      {% render 'svg-lock' color: color %}
-    {%- when 'svg-thumbs-up' -%}
-      {% render 'svg-thumbs-up' color: color %}
-    {%- when 'mycustom-svg-baby_cart' -%}
-      {% render 'mycustom-svg-baby_cart' color: color %}
-    {%- when 'mycustom-svg-flower' -%}
-      {% render 'mycustom-svg-flower' color: color %}
-    {%- when 'mycustom-svg-hand_water' -%}
-      {% render 'mycustom-svg-hand_water' color: color %}
-    {%- when 'mycustom-svg-plant' -%}
-      {% render 'mycustom-svg-plant' color: color %}
-    {%- when 'mycustom-svg-spa' -%}
-      {% render 'mycustom-svg-spa' color: color %}
-    {%- when 'mycustom-svg-field' -%}
-      {% render 'mycustom-svg-field' color: color %}
-    {%- when 'mycustom-svg-arrow_forward' -%}
-      {% render 'mycustom-svg-arrow_forward' color: color %}
-  {%- endcase -%}
+  {%- when 'svg-beer' -%}
+    {% render 'svg-beer' color: fill_color %}
+  {%- when 'svg-bookmark' -%}
+    {% render 'svg-bookmark' color: color %}
+  {%- when 'svg-cart' -%}
+    {% render 'svg-cart' color: fill_color %}
+  {%- when 'svg-chat' -%}
+    {% render 'svg-chat' color: color %}
+  {%- when 'svg-coffee' -%}
+    {% render 'svg-coffee' color: fill_color %}
+  {%- when 'svg-compass' -%}
+    {% render 'svg-compass' color: color %}
+  {%- when 'svg-credit-card' -%}
+    {% render 'svg-credit-card' color: color %}
+  {%- when 'svg-draw' -%}
+    {% render 'svg-draw' color: fill_color %}
+  {%- when 'svg-heart-mobile' -%}
+    {% render 'svg-heart-mobile' color: color %}
+  {%- when 'svg-lock' -%}
+    {% render 'svg-lock' color: color %}
+  {%- when 'svg-map-location' -%}
+    {% render 'svg-map-location' color: color %}
+  {%- when 'svg-package' -%}
+    {% render 'svg-package' color: fill_color %}
+  {%- when 'svg-phone' -%}
+    {% render 'svg-phone' color: color %}
+  {%- when 'svg-return' -%}
+    {% render 'svg-return' color: fill_color %}
+  {%- when 'svg-send' -%}
+    {% render 'svg-send' color: color %}
+  {%- when 'svg-shield' -%}
+    {% render 'svg-shield' color: fill_color %}
+  {%- when 'svg-support' -%}
+    {% render 'svg-support' color: fill_color %}
+  {%- when 'svg-thumbs-up' -%}
+    {% render 'svg-thumbs-up' color: fill_color %}
+  {%- when 'svg-view' -%}
+    {% render 'svg-view' color: fill_color %}
+  {%- when 'svg-world' -%}
+    {% render 'svg-world' color: fill_color %}
+  {%- when 'mycustom-svg-arrow_forward' -%}
+    {% render 'mycustom-svg-arrow_forward' color: fill_color %}
+  {%- when 'mycustom-svg-baby_cart' -%}
+    {% render 'mycustom-svg-baby_cart' color: fill_color %}
+  {%- when 'mycustom-svg-field' -%}
+    {% render 'mycustom-svg-field' color: fill_color %}
+  {%- when 'mycustom-svg-flower' -%}
+    {% render 'mycustom-svg-flower' color: fill_color %}
+  {%- when 'mycustom-svg-hand_water' -%}
+    {% render 'mycustom-svg-hand_water' color: fill_color %}
+  {%- when 'mycustom-svg-plant' -%}
+    {% render 'mycustom-svg-plant' color: fill_color %}
+  {%- when 'mycustom-svg-spa' -%}
+    {% render 'mycustom-svg-spa' color: fill_color %}
+
+
+{%- endcase -%}
