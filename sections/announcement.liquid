@@ -2,35 +2,38 @@
   {%- unless template != 'index' and section.settings.announcement_home_only -%}
     {%- comment -%}Alejandro Custom modification: Add style tag and classes{%- endcomment -%}
     {% style %}
-      .announcement {
-        background-color: {{ section.settings.announcement_bar_bg_color }};
-        color: {{ section.settings.announcement_bar_bg_text }};
-      }
-      .mycustom-announcement-icon svg {
-        width: {{ section.settings.mycustom_announcement_icon_size }}px;
-        height: {{ section.settings.mycustom_announcement_icon_size }}px;
-      }
-    {% endstyle %}
+
+.announcement {
+  background-color: {{section.settings.announcement_bar_bg_color}};
+  color: {{section.settings.announcement_bar_bg_text}};
+}
+
+.mycustom-announcement-icon svg {
+  width: {{section.settings.mycustom_announcement_icon_size}}px;
+  height: {{section.settings.mycustom_announcement_icon_size}}px;
+}
+
+{% endstyle %}
 
     <div class="announcement">
       {%- if section.settings.announcement_bar_link != blank -%}
         <a href="{{ section.settings.announcement_bar_link }}">
-      {%- endif -%}
-      {%- comment -%}Alejandro Custom modification: Add icon and CSS{%- endcomment -%}
-      <div class="announcement__inner d-flex justify-content-center align-items-center">
-        {% if section.settings.mycustom_announcement_icon_show %}
-        <div class="me-2 mycustom-announcement-icon">
-          
-          {%- render: 'mycustom-icon_list',
+        {%- endif -%}
+        {%- comment -%}Alejandro Custom modification: Add icon and CSS{%- endcomment -%}
+        <div class="announcement__inner d-flex justify-content-center align-items-center">
+          {% if section.settings.mycustom_announcement_icon_show %}
+            <div class="me-2 mycustom-announcement-icon">
+
+              {%- render: 'mycustom-icon_list',
             name: section.settings.mycustom_announcement_icon,
             color: section.settings.mycustom_announcement_icon_color
           -%}
-          
+
+            </div>
+          {% endif %}
+          <div>{{ section.settings.announcement_bar_text }}</div>
         </div>
-        {% endif %}
-        <div>{{ section.settings.announcement_bar_text }}</div>
-      </div>
-      {%- if section.settings.announcement_bar_link != blank -%}
+        {%- if section.settings.announcement_bar_link != blank -%}
         </a>
       {%- endif -%}
     </div>
@@ -39,181 +42,70 @@
 
 {%- comment -%}Alejandro Custom modification: Add settings to the schema{%- endcomment -%}
 {% schema %}
-  {
-    "name": "Announcement bar",
-    "settings": [
-      {
-				"type": "checkbox",
-				"id": "show_announcement",
-				"label": "Show announcement",
-				"default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "announcement_home_only",
-        "label": "Home page only",
-        "default": false
-      },
-      {
-				"type": "text",
-				"id": "announcement_bar_text",
-				"label": "Text"
-      },
-      {
-				"type": "url",
-				"id": "announcement_bar_link",
-				"label": "Link"
-      },
-      {
-				"type": "color",
-				"id": "announcement_bar_bg_color",
-				"label": "Background color",
-				"default": "#ffe2d1"
-      },
-      {
-				"type": "color",
-				"id": "announcement_bar_bg_text",
-				"label": "Text color",
-				"default": "#132625"
-      },
-      {
-        "type": "select",
-        "id": "mycustom_announcement_icon",
-        "label": "SVG Icon",
-        "options": [
-          {
-            "value": "svg-package",
-            "label": "Package"
-          },
-          {
-            "value": "svg-support",
-            "label": "Support"
-          },
-          {
-            "value": "svg-shield",
-            "label": "Shield"
-          },
-          {
-            "value": "svg-return",
-            "label": "Return"
-          },
-          {
-            "value": "svg-cart",
-            "label": "Cart"
-          },
-          {
-            "value": "svg-beer",
-            "label": "Beer"
-          },
-          {
-            "value": "svg-coffee",
-            "label": "Coffee"
-          },
-          {
-            "value": "svg-draw",
-            "label": "Draw"
-          },
-          {
-            "value": "svg-map-location",
-            "label": "Map location"
-          },
-          {
-            "value": "svg-send",
-            "label": "Send"
-          },
-          {
-            "value": "svg-view",
-            "label": "View"
-          },
-          {
-            "value": "svg-bookmark",
-            "label": "Bookmark"
-          },
-          {
-            "value": "svg-compass",
-            "label": "Compass"
-          },
-          {
-            "value": "svg-heart-mobile",
-            "label": "Heart mobile"
-          },
-          {
-            "value": "svg-phone",
-            "label": "Phone"
-          },
-          {
-            "value": "svg-world",
-            "label": "World"
-          },
-          {
-            "value": "svg-chat",
-            "label": "Chat"
-          },
-          {
-            "value": "svg-credit-card",
-            "label": "Credit card"
-          },
-          {
-            "value": "svg-lock",
-            "label": "Lock"
-          },
-          {
-            "value": "svg-thumbs-up",
-            "label": "Thumbs up"
-          },
-          {
-            "value": "mycustom-svg-baby_cart",
-            "label": "Baby Cart"
-          },
-          {
-            "value": "mycustom-svg-flower",
-            "label": "Flower"
-          },
-          {
-            "value": "mycustom-svg-hand_water",
-            "label": "Hand and Water"
-          },
-          {
-            "value": "mycustom-svg-plant",
-            "label": "Plant"
-          },
-          {
-            "value": "mycustom-svg-spa",
-            "label": "Spa"
-          },
-          {
-            "value": "mycustom-svg-field",
-            "label": "Field"
-          },
-          {
-            "value": "mycustom-svg-arrow_forward",
-            "label": "Arrow Forward"
-          }
-        ],
-        "default": "mycustom-svg-field"
-      },
-      {
-        "type": "checkbox",
-        "id": "mycustom_announcement_icon_show",
-        "label": "Show icon",
-        "default": false
-      },
-      {
-        "type": "color",
-        "id": "mycustom_announcement_icon_color",
-        "label": "Icon color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "range",
-        "id": "mycustom_announcement_icon_size",
-        "min": 10,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
-        "label": "Icon size",
-        "default": 20
-      }
-		]
-  }
+
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": false
+    }, {
+      "type": "checkbox",
+      "id": "announcement_home_only",
+      "label": "Home page only",
+      "default": false
+    }, {
+      "type": "text",
+      "id": "announcement_bar_text",
+      "label": "Text"
+    }, {
+      "type": "url",
+      "id": "announcement_bar_link",
+      "label": "Link"
+    }, {
+      "type": "color",
+      "id": "announcement_bar_bg_color",
+      "label": "Background color",
+      "default": "#ffe2d1"
+    }, {
+      "type": "color",
+      "id": "announcement_bar_bg_text",
+      "label": "Text color",
+      "default": "#132625"
+    }, {
+      "type": "select",
+      "id": "mycustom_announcement_icon",
+      "label": "SVG Icon",
+      "options": [
+        {
+          "value": "svg-beer",
+          "label": "Beer"
+        }
+      ],
+      "default": "svg-beer"
+    }, {
+      "type": "checkbox",
+      "id": "mycustom_announcement_icon_show",
+      "label": "Show icon",
+      "default": false
+    }, {
+      "type": "color",
+      "id": "mycustom_announcement_icon_color",
+      "label": "Icon color",
+      "default": "#ffffff"
+    }, {
+      "type": "range",
+      "id": "mycustom_announcement_icon_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    }
+  ]
+}
+
 {% endschema %}
