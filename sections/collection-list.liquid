@@ -11,8 +11,8 @@
   font-family: inherit !important;
   color: {{section.settings.mycustom_collection_title_font_color}}!important;
   font-size: {{section.settings.mycustom_collection_title_font_size}}rem !important;
-  {%- if section.settings.mycustom_collection_title_font_weight -%}
-    font-weight: bold !important;
+  {%- if section.settings.mycustom_collection_title_font_weight_show -%}
+    font-weight: {{ section.settings.mycustom_collection_title_font_weight }} !important;
   {%- endif -%}
 }
 
@@ -174,10 +174,19 @@ Alejandro Custom Modification:
         "default": "start"
       }, {
         "type": "checkbox",
-        "id": "mycustom_collection_title_font_weight",
+        "id": "mycustom_collection_title_font_weight_show",
         "label": "Bold",
         "default": false
-      }, {
+      },{
+        "type": "range",
+        "id": "mycustom_collection_title_font_weight",
+        "label": "Bold value",
+        "unit": "u",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },{
         "type": "range",
         "id": "mycustom_collection_title_font_size",
         "label": "Title size",
