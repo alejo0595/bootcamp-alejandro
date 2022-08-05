@@ -114,7 +114,7 @@
                 </noscript>
               {%- else -%}
               {%- comment -%} Custom modification: Add several svg icons {%- endcomment -%}
-              {%- render: 'mycustom-icon_list', variable: block.settings.icon -%}
+              {%- render: 'mycustom-icon_list', name: block.settings.icon, color: block.settings.mycustom_icon_color -%}
               {%- endif -%}
             </div>
             {%- if block.settings.title != blank -%}
@@ -301,9 +301,15 @@ Custom modification:
                 "value": "mycustom-svg-spa",
                 "label": "Spa"
               }
-              ],
-              "default": "svg-package"
-            },
+            ],
+            "default": "svg-package"
+          },
+          {
+          "type": "color",
+          "id": "mycustom_icon_color",
+          "label": "Icon color",
+          "default": "#3E7879"
+          },
           {
             "type": "image_picker",
             "id": "image",
