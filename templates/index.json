@@ -236,7 +236,7 @@
         "collections_per_row_int": 4,
         "mycustom_collection_title_alignment": "center",
         "mycustom_collection_title_font_weight": true,
-        "mycustom_collection_title_font_size": 0.8,
+        "mycustom_collection_title_font_size": 0.9,
         "mycustom_collection_title_font_color": "#d79e93"
       }
     },
