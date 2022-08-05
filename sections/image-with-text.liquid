@@ -130,7 +130,7 @@
             </div>
           {%- endif -%}
           {%- if section.settings.button_text != blank -%}
-            <div class="media-with-text__link align-{{ section.settings.heading_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.3s">
+            <div class="media-with-text__link align-{{ section.settings.button_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.3s">
               <a class="{{ section.settings.button_style }}" {% if section.settings.button_link != blank %}href="{{ section.settings.button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>
                 {{ section.settings.button_text | escape }}
               </a>
@@ -258,26 +258,6 @@
       },
       {
         "type": "select",
-        "id": "button_text_alignment",
-        "label": "Button alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left"
-      },
-      {
-        "type": "select",
         "id": "heading_text_alignment",
         "label": "Heading alignment",
         "options": [
@@ -345,6 +325,26 @@
           }
         ],
        "default": "justify"
+      },
+      {
+        "type": "select",
+        "id": "button_text_alignment",
+        "label": "Button alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
       },
       {
         "type": "header",
