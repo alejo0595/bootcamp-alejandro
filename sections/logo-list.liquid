@@ -125,14 +125,14 @@
             {%- if block.settings.title != blank -%}
               {%- comment -%}{%- endcomment -%}
               {% style %}
-                #{{ block.id }}.test {
-                  font-size: {{ block.settings.mycustom_icon_title_font_size }}rem;
+                #{{ block.id }} {
+                  font-size: {{ block.settings.mycustom_icon_title_font_size }}rem !important;
                   {%- if block.settings.mycustom_icon_title_font_weight -%}
-                    font-weight: 500;
+                    font-weight: 500 !important;
                   {%- endif -%}
                 }
               {% endstyle %}
-              <div id="{{ block.id }}" class=" test logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
+              <div id="{{ block.id }}" class=" logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
                 {{ block.settings.title }}
               </div>
             {%- endif -%}
