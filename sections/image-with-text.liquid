@@ -7,6 +7,16 @@
     height: inherit !important;
   }
 
+  #{{ section.id }} .mycustom-image_with_text-sub_heading-font {
+    font-family: {{ settings.mycustom_sub_heading_font }} !important;
+    color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
+    font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem !important;
+  }
+
+  #{{ section.id }} .mycustom-image_with_text-text-alignment {
+    text-align: {{ section.settings.mycustom_text_alignment }} !important;
+  }
+
 {% endstyle %}
 
 {%- unless section.settings.color_scheme == 'none' -%}
@@ -111,15 +121,7 @@
             </h2>
           {%- endif -%}
           {%- comment -%}Alejandro Custom modfication: Add a sub-headings{%- endcomment -%}
-          {%- if section.settings.mycustom_sub_heading != blank -%}          
-            {%- comment -%}Alejandro Custom modfication: Add classes for sub-headings font syle{%- endcomment -%}
-            {%- style -%}
-            #{{ section.id }} .mycustom-image_with_text-sub_heading-font {
-              font-family: {{ settings.mycustom_sub_heading_font }} !important;
-              color: {{ section.settings.mycustom_sub_heading_font_color }} !important;
-              font-size: {{ section.settings.mycustom_sub_heading_font_size }}rem !important;
-            }
-            {%- endstyle -%}
+          {%- if section.settings.mycustom_sub_heading != blank -%}                      
             <h3 class="mycustom-image_with_text-sub_heading-font align-{{ section.settings.text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">{{ section.settings.mycustom_sub_heading }}</h3>
           {%- endif -%}
           {%- if section.settings.text != blank -%}
