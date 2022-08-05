@@ -116,13 +116,13 @@
       <div class="media-with-text__half">
         <div class="media-with-text__text {% if section.settings.text_center_mobile %} align-center-mobile{% endif %}{% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' and section.settings.skip_container == false %} media-with-text__text--no-pad{% endif %}">
           {%- if section.settings.heading != blank -%}
-            <h2 class="section-heading {%- if section.settings.mycustom_sub_heading != blank -%} {{'mb-1' | prepend: ' '}} {%- endif -%} align-{{ section.settings.sub_heading_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.1s">
+            <h2 class="section-heading {%- if section.settings.mycustom_sub_heading != blank -%} {{'mb-1' | prepend: ' '}} {%- endif -%} align-{{ section.settings.heading_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.1s">
               {{- section.settings.heading | escape -}}
             </h2>
           {%- endif -%}
           {%- comment -%}Alejandro Custom modfication: Add a sub-headings{%- endcomment -%}
           {%- if section.settings.mycustom_sub_heading != blank -%}                      
-            <h3 class="mycustom-image_with_text-sub_heading-font align-{{ section.settings.heading_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">{{ section.settings.mycustom_sub_heading }}</h3>
+            <h3 class="mycustom-image_with_text-sub_heading-font align-{{ section.settings.sub_heading_text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">{{ section.settings.mycustom_sub_heading }}</h3>
           {%- endif -%}
           {%- if section.settings.text != blank -%}
             <div class="rte mycustom-image_with_text-text-alignment" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">
