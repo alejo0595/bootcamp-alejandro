@@ -122,9 +122,8 @@
           "type": "logo",
           "settings": {
             "title": "Everything is safe and green",
-            "mycustom_icon_title": 0.8,
             "icon": "mycustom-svg-plant",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         },
@@ -132,9 +131,8 @@
           "type": "logo",
           "settings": {
             "title": "No Known Allergens, Baby Approved",
-            "mycustom_icon_title": 0.5,
             "icon": "mycustom-svg-baby_cart",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         },
@@ -142,9 +140,8 @@
           "type": "logo",
           "settings": {
             "title": "Hand-made, vegan, and cruelty-free",
-            "mycustom_icon_title": 0.7,
             "icon": "mycustom-svg-hand_water",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         },
@@ -152,9 +149,8 @@
           "type": "logo",
           "settings": {
             "title": "All Products are 100% Organic",
-            "mycustom_icon_title": 0.5,
             "icon": "mycustom-svg-spa",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         },
@@ -162,9 +158,8 @@
           "type": "logo",
           "settings": {
             "title": "No chemicals, no dyes, no problems :)",
-            "mycustom_icon_title": 0.5,
             "icon": "mycustom-svg-flower",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         },
@@ -172,9 +167,8 @@
           "type": "logo",
           "settings": {
             "title": "Natural ingredients from sustainable sources",
-            "mycustom_icon_title": 0.5,
             "icon": "mycustom-svg-field",
-            "mycustom_icon_color": "#3E7879",
+            "mycustom_icon_color": "#3e7879",
             "url": ""
           }
         }
@@ -191,6 +185,8 @@
         "heading": "",
         "icon_size": 50,
         "enlarge_text": false,
+        "mycustom_icon_title_font_size": 0.7,
+        "mycustom_icon_title_font_weight": true,
         "color_scheme": "none",
         "color_bg": "",
         "color_heading": "",
