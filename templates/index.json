@@ -72,7 +72,7 @@
       "settings": {
         "skip_container": false,
         "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
-        "mycustom_image_height": 450,
+        "mycustom_image_height": 400,
         "layout": "left",
         "heading": "We Make Our Pure Products",
         "mycustom_sub_heading": "just for mothers",
