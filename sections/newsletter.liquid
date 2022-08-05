@@ -79,12 +79,6 @@
       {%- assign form_id = section.id | prepend: 'signup-form-' -%}
       {% form 'customer', id: form_id %}
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
-        {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
-        {%- if section.settings.mycustom_show_icon -%}
-          <div class="signup-icon">
-            {% render 'svg-email' %}
-          </div>
-        {%- endif -%}
         {%- if section.settings.heading != blank -%}
           <h2 class="section-heading {%- if section.settings.mycustom_sub_heading != blank -%} {{ 'mb-1' | prepend: ' ' }} {%- endif -%}">{{ section.settings.heading | escape }}</h2>
           {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
@@ -129,12 +123,6 @@
     "name": "Newsletter",
     "tag": "section",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "mycustom_show_icon",
-        "label": "Show email icon",
-        "default": false
-      },
       {
         "type": "text",
         "id": "heading",
