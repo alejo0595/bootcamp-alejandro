@@ -165,6 +165,7 @@
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
                                 {{ link.title }}
+                                {{ link.handle }}
                                 {%- case link -%}
                                   {%- when '' -%}
                                 {%- endcase -%}
