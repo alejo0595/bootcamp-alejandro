@@ -123,7 +123,13 @@
               {%- endif -%}
             </div>
             {%- if block.settings.title != blank -%}
-              <div class="logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
+              {%- comment -%}{%- endcomment -%}
+              {% style %}
+                #{{ block.id }} {
+                  font-size: {{ block.settings.mycustom_icon_title }}rem;
+                }
+              {% endstyle %}
+              <div id="{{ block.id }}" class="logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
                 {{ block.settings.title }}
               </div>
             {%- endif -%}
@@ -218,6 +224,16 @@ Custom modification:
             "id": "title",
             "label": "Text",
             "default": "Logo / feature"
+          },
+          {
+            "type": "range",
+            "id": "mycustom_icon_title",
+            "label": "label",
+            "unit": "rem",
+            "min": 0.1,
+            "max": 10,
+            "step": 0.1,
+            "default": 0.5
           },
           {
             "type": "select",
