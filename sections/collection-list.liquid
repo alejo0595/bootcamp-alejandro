@@ -18,13 +18,13 @@
 
 {%- endstyle -%}
 
-{%- comment -%}Alejandro Custom Modification:{%- endcomment -%}
 <div id="{{ section.id }}" class="spaced-section" data-section-type="collection-list">
   <div class="container section-content">
     {%- if section.settings.title != blank -%}
       <h2 class="section-heading align-center {%- if  section.settings.mycustom_sub_title != blank -%} {{ 'mb-1' | prepend: ' ' }} {%- endif -%}" data-cc-animate>
         {{ section.settings.title | escape }}
       </h2>
+      {%- comment -%}Alejandro Custom Modification: Add sub-heading and styling{%- endcomment -%}
       {%- if section.settings.mycustom_sub_title != blank -%}
         <h3 class="align-center mycustom-collection_list-sub_title-font" data-cc-animate>{{ section.settings.mycustom_sub_title | escape}}</h3>
       {%- endif -%}
@@ -108,6 +108,10 @@
   </div>
 </div>
 
+{%- comment -%}
+Alejandro Custom Modification: 
+-Several custom modifications
+{%- endcomment -%}
 {% schema %}
   {
     "name": "Collection list",
