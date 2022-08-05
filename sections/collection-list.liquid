@@ -1,5 +1,6 @@
 {%- comment -%}Alejandro Custom modfication: Add a classes for collection-card and sub-headings fonts{%- endcomment -%}
 {%- style -%}
+
 #{{ section.id }} .mycustom-collection_list-sub_title-font {
   font-family: {{settings.mycustom_sub_heading_font}}!important;
   color: {{section.settings.mycustom_sub_title_font_color}}!important;
@@ -14,7 +15,9 @@
     font-weight: bold !important;
   {%- endif -%}
 }
+
 {%- endstyle -%}
+
 {%- comment -%}Alejandro Custom Modification:{%- endcomment -%}
 <div id="{{ section.id }}" class="spaced-section" data-section-type="collection-list">
   <div class="container section-content">
