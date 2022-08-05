@@ -104,7 +104,7 @@
           "announcement_bar_link": "",
           "announcement_bar_bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
           "announcement_bar_bg_text": "#ffffff",
-          "mycustom_announcement_icon": "svg-world",
+          "mycustom_announcement_icon": "mycustom-svg-shipping",
           "mycustom_announcement_icon_show": true,
           "mycustom_announcement_icon_color": "#ffffff",
           "mycustom_announcement_icon_size": 20
