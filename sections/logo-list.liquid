@@ -87,7 +87,7 @@
     {%- endif -%}
   {%- endstyle -%}
 
-  <div id="{{ section.id }} class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}" mycustom-logo_list-border">
+  <div id="{{ section.id }}" class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %} mycustom-logo_list-border">
     <div class="container align-center ">
       {%- if section.settings.heading != blank -%}
         <h2 class="section-heading" data-cc-animate>
