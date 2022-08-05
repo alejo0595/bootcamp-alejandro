@@ -19,8 +19,8 @@
 
   #{{ section.id }} .mycustom-logo_list-font {
     font-size: {{ section.settings.mycustom_icon_title_font_size }}rem !important;
-    {%- if section.settings.mycustom_icon_title_font_weight -%}
-      font-weight: 500 !important;
+    {%- if section.settings.mycustom_icon_title_font_weight_show -%}
+      font-weight: {{ section.settings.mycustom_icon_title_font_weight }} !important;
     {%- endif -%}
   }
 
@@ -56,6 +56,7 @@
         endif
       endif
     endfor
+    
   -%}
 
   {%- unless section.settings.color_scheme == 'none' -%}
@@ -83,18 +84,22 @@
   {%- endunless -%}
 
   {%- style -%}
+
     #{{ section.id }} .logo-list__image {
       width: {{ section.settings.icon_size }}px; height: {{ image_height }}px;
     }
+
     #{{ section.id }} .logo-list__image > svg {
       width: {{ section.settings.icon_size }}px; height: {{ section.settings.icon_size }}px;
     }
+
     {%- if section.settings.color_scheme == 'custom' -%}
       #{{ section.id }} { background-color: {{ bg_color }}; color: {{ text_color }}; }
       {%- if section.settings.heading != blank and heading_color -%}
         #{{ section.id }} .section-heading { color: {{ heading_color }}; }
       {%- endif -%}
     {%- endif -%}
+
   {%- endstyle -%}
 
   <div id="{{ section.id }}" class="logo-list {% if bg_color == settings.col_page_bg or section.settings.color_scheme == 'none' %}spaced-section{% else %}padded-section{% endif %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %} ">
@@ -133,7 +138,7 @@
               {%- endif -%}
             </div>
             {%- if block.settings.title != blank -%}
-              {%- comment -%}{%- endcomment -%}
+              {%- comment -%}Alejandro Custom Modification: Add font customizations {%- endcomment -%}
               <div class="mycustom-logo_list-font logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
                 {{ block.settings.title }}
               </div>
@@ -152,6 +157,7 @@
 {%- comment -%}
 Custom modification:
 -Add several svg icons
+-Add logo text font customizations
 {%- endcomment -%}
 {% schema %}
   {
@@ -173,6 +179,10 @@ Custom modification:
         "default": 50
       },
       {
+        "type": "header",
+        "content": "Text style"
+      },
+      {
         "type": "checkbox",
         "id": "enlarge_text",
         "label": "Enlarge text",
@@ -190,9 +200,19 @@ Custom modification:
       },
       {
         "type": "checkbox",
-        "id": "mycustom_icon_title_font_weight",
+        "id": "mycustom_icon_title_font_weight_show",
         "label": "Bold",
         "default": false
+      },
+      {
+        "type": "range",
+        "id": "mycustom_icon_title_font_weight",
+        "label": "Bold value",
+        "unit": "u",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400
       },
       {
         "type": "select",
