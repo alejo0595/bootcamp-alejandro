@@ -3,6 +3,11 @@
     height: 428px;
   }
 
+  #{{ section.id }} .height-inherit{
+    height: inherit !important;
+  }
+
+
   
 {% endstyle %}
 
@@ -61,11 +66,11 @@
     <div class="container section-content section-content--no-padding">
   {%- endunless -%}
     <div class=" section-fit media-with-text{% if section.settings.layout == 'right' %} media-with-text--reverse{% endif %}{% unless section.settings.bg_style == 'section' %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}{% endunless %}">
-      <div class="media-with-text__half">
-        <div class="media-with-text__media">
+      <div class="media-with-text__half height-inherit">
+        <div class="media-with-text__media height-inherit">
           {% if section.settings.image != blank %}
             {%- assign img = section.settings.image -%}
-            <div class="media-with-text__image lazyload-placeholder" style="padding-top: {{ 1 | divided_by: img.aspect_ratio | times: 100 }}%;" data-cc-animate>
+            <div class="media-with-text__image lazyload-placeholder height-inherit" style="padding-top: {{ 1 | divided_by: img.aspect_ratio | times: 100 }}%;" data-cc-animate>
               <picture class="no-js-hidden">
                 <source data-srcset="{%- if img.width < 640 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
                                      {%- if img.width >= 640 %}{{ img | image_url: width: 640 }} 640w{% endif -%}
@@ -83,7 +88,7 @@
                      data-src="{{ img | image_url: width: 600 }}"
                      data-sizes="{% if section.settings.skip_container %}(min-width: 768px) 50vw, 100vw{% else %}(min-width: 1280px) 700px, (min-width: 992px) calc(50vw - 40px), (min-width: 768px) calc(50vw - 30px), calc(100vw - 40px){% endif %}"
                      {%- comment -%}{%- endcomment -%}
-                     class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
+                     class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %} height-inherit"
                      width="{{ img.width }}"
                      height="{{ img.height }}"
                      alt="{{ img.alt | escape }}">
