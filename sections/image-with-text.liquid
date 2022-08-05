@@ -75,7 +75,7 @@
                         width="428"
                         height="{{ 428 | divided_by: img.aspect_ratio  | round }}">
                 <img  data-srcset="{%- if img.width < 600 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
-                                  {%- if img.width >= 600 %}{{ img | image_url: width: 600 }} 600w{% endif -%}
+                                  {%- if img.width >= 600 %}{{ img | image_url: width: 600 }} 700w{% endif -%}
                                   {%- if img.width >= 960 %}, {{ img | image_url: width: 960 }} 960w{% endif -%}
                                   {%- if img.width >= 1200 %}, {{ img | image_url: width: 1200 }} 1200w{% endif -%}
                                   {%- if img.width >= 1600 %}, {{ img | image_url: width: 1600 }} 1600w{% endif -%}
@@ -85,7 +85,7 @@
                      {%- comment -%}{%- endcomment -%}
                      class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
                      width="{{ img.width }}"
-                     height="428"
+                     height="{{ img.height }}"
                      alt="{{ img.alt | escape }}">
               </picture>
               <noscript>
