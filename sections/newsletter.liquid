@@ -86,9 +86,9 @@
             <h3 class="mycustom-feautured_collection-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}</h3>
           {%- endif -%}
         {%- endif -%}
-        {%- comment -%}Alejandro Custom Modfication: {%- endcomment -%}
-        <div class="col">
-          <div class="input-with-button">
+        {%- comment -%}Alejandro Custom Modfication: Add col class to rezise the input {%- endcomment -%}
+        <div class="input-with-button">
+          <div class="col-8">
             <div class="input-with-button__input-wrapper me-0">
               <input class="input-with-button__input input mycustom-newsletter-input-styling"
                      type="email"
@@ -99,14 +99,15 @@
                      aria-required="true"
                      required>
             </div>
-            {%- comment -%}Alejandro Custom Modfication: {%- endcomment -%}
+          </div>
+          <div class="col-4">
+            {%- comment -%}Alejandro Custom Modfication: Add icon list {%- endcomment -%}
             <button class="input-with-button__button button mycustom-newsletter-icon-styling_button" type="submit">
               {%- render: 'mycustom-icon_list',
               name: section.settings.mycustom_icon,
               color: section.settings.mycustom_icon_color -%}
             </button>
           </div>
-          
         </div>
 
         {%- if section.settings.text != blank -%}
