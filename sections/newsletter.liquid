@@ -16,7 +16,8 @@
 }
 
 #{{ section.id }} .mycustom-newsletter-icon-styling_button > svg {
-  width: {{ section.settings.mycustom_icon_size }}px !important; height: {{ section.settings.icon_size }}px !important;
+  width: {{ section.settings.mycustom_icon_size }}px !important;
+  height: {{ section.settings.icon_size }}px !important;
 }
 
 }
@@ -102,7 +103,7 @@
           </div>
           <div class="col-4">
             {%- comment -%}Alejandro Custom Modfication: Add icon list {%- endcomment -%}
-            <button class="input-with-button__button button mycustom-newsletter-icon-styling_button" type="submit">
+            <button class="input-with-button__button button mycustom-newsletter-icon-styling_button w-100" type="submit">
               {%- render: 'mycustom-icon_list',
               name: section.settings.mycustom_icon,
               color: section.settings.mycustom_icon_color -%}
