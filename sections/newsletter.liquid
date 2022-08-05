@@ -81,14 +81,14 @@
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
         {%- if section.settings.heading != blank -%}
           <h2 class="section-heading {%- if section.settings.mycustom_sub_heading != blank -%} {{ 'mb-1' | prepend: ' ' }} {%- endif -%}">{{ section.settings.heading | escape }}</h2>
-          {%- comment -%}Alejandro Custom Modfication:{%- endcomment -%}
+          {%- comment -%}Alejandro Custom Modfication: Add sub-heading and styling{%- endcomment -%}
           {%- if section.settings.mycustom_sub_heading != blank-%}
             <h3 class="mycustom-feautured_collection-sub_heading-font">{{ section.settings.mycustom_sub_heading | escape }}</h3>
           {%- endif -%}
         {%- endif -%}
-        {%- comment -%}{%- endcomment -%}
+        {%- comment -%}Alejandro Custom Modfication: {%- endcomment -%}
         <div class="col">
-          <div class="input-with-button mycustom-newsletter-custom_width">
+          <div class="input-with-button">
             <div class="input-with-button__input-wrapper me-0">
               <input class="input-with-button__input input mycustom-newsletter-input-styling"
                      type="email"
@@ -99,9 +99,11 @@
                      aria-required="true"
                      required>
             </div>
-            {%- comment -%}{%- endcomment -%}
+            {%- comment -%}Alejandro Custom Modfication: {%- endcomment -%}
             <button class="input-with-button__button button mycustom-newsletter-icon-styling_button" type="submit">
-              {%- render: 'mycustom-icon_list', variable: section.settings.mycustom_icon -%}
+              {%- render: 'mycustom-icon_list',
+              name: section.settings.mycustom_icon,
+              color: section.settings.mycustom_icon_color -%}
             </button>
           </div>
           
@@ -258,6 +260,12 @@
         "unit": "px",
         "label": "Icon size",
         "default": 50
+      },
+      {
+        "type": "color",
+        "id": "mycustom_icon_color",
+        "label": "Icon color",
+        "default": "#FFFFFF"
       },
       {
         "type": "header",
