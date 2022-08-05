@@ -59,7 +59,7 @@
   {%- unless section.settings.skip_container -%}
     <div class="container section-content section-content--no-padding">
   {%- endunless -%}
-    <div class="media-with-text{% if section.settings.layout == 'right' %} media-with-text--reverse{% endif %}{% unless section.settings.bg_style == 'section' %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}{% endunless %}">
+    <div class=" section-fit media-with-text{% if section.settings.layout == 'right' %} media-with-text--reverse{% endif %}{% unless section.settings.bg_style == 'section' %}{% if section.settings.color_scheme == 'scheme-1' or section.settings.color_scheme == 'scheme-2' %} color-{{ section.settings.color_scheme }}{% endif %}{% endunless %}">
       <div class="media-with-text__half">
         <div class="media-with-text__media">
           {% if section.settings.image != blank %}
