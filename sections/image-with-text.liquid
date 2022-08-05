@@ -65,7 +65,7 @@
                                      {%- if img.width >= 856 %}, {{ img | image_url: width: 856 }} 856w{% endif -%}"
                         media="(max-width: 480px)"
                         width="428"
-                        height="{{ 428 | divided_by: 5  | round }}">
+                        height="{{ 428 | divided_by: img.aspect_ratio  | round }}">
                 <img  data-srcset="{%- if img.width < 600 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
                                   {%- if img.width >= 600 %}{{ img | image_url: width: 600 }} 600w{% endif -%}
                                   {%- if img.width >= 960 %}, {{ img | image_url: width: 960 }} 960w{% endif -%}
@@ -74,9 +74,10 @@
                                   {%- if img.width >= 1920 %}, {{ img | image_url: width: 1920 }} 1920w{% endif -%}"
                      data-src="{{ img | image_url: width: 600 }}"
                      data-sizes="{% if section.settings.skip_container %}(min-width: 768px) 50vw, 100vw{% else %}(min-width: 1280px) 600px, (min-width: 992px) calc(50vw - 40px), (min-width: 768px) calc(50vw - 30px), calc(100vw - 40px){% endif %}"
+                     {%- comment -%}{%- endcomment -%}
                      class="img-fit lazyload {% if section.settings.layout == 'right' %}{{ 'ms-5' | prepend: ' ' }}{% else %}{{ 'me-5' | prepend: ' ' }}{% endif %}"
                      width="{{ img.width }}"
-                     height="{{ img.width | divided_by: 5 }}"
+                     height="{{ img.width }}"
                      alt="{{ img.alt | escape }}">
               </picture>
               <noscript>
