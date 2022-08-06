@@ -76,7 +76,7 @@
   {%- endif -%}
   .logo__image { max-width: {{ section.settings.logo_width }}px; }
 
-  {%- comment -%}{%- endcomment -%}
+  {%- comment -%}Alejandro Custom Modification: Add styling{%- endcomment -%}
   #pageheader .mycustom-header-mega_menu-font-size-heading {
     font-size: {{ section.settings.mycustom_font_size_heading }}rem !important;
   }
@@ -142,7 +142,8 @@
                 <div class="tier-1">
                   <ul>
                     {%- for link in linklists[section.settings.menu_linklist].links -%}
-                      {%- liquid
+                    {%- comment -%}Alejandro Custom Modification: Vhange mega menu logic{%- endcomment -%}  
+                    {%- liquid
                         assign has_mega_drop_down = true
                         if link.links != blank
                           assign has_mega_drop_down = true
@@ -153,7 +154,7 @@
                       <li class="{% if link.active %}active{% endif %}{% if link.links != blank %} contains-children{% endif %}{% if has_mega_drop_down %} contains-mega-menu{% endif %}">
                         <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %} d-flex" {% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
-                          {%- comment -%}{%- endcomment -%}
+                          {%- comment -%}Alejandro Custom Modification: Add icon to mega menu dropdown{%- endcomment -%}
                           {% if has_mega_drop_down -%}
                             <span>{%- render: 'mycustom-svg-arrow_down', color: 'currentColor' -%}</span>
                           {%- endif -%}
@@ -172,7 +173,6 @@
                               endif
                             endfor
                           -%}
-                          {%- comment -%}{%- endcomment -%}
                           <ul {% if has_mega_drop_down -%}
                                 class="nav-columns nav-columns--count-{{ link.links.size }}
                                 {%- if link.links.size > 2 %} nav-columns--count-3-or-more {% endif -%}
@@ -181,7 +181,7 @@
                               {%- else -%}
                                 class="nav-rows"
                               {%- endif -%}>
-                            {%- comment -%}{%- endcomment -%}
+                            {%- comment -%}Alejandro Custom Modification: Add styling to mega menu{%- endcomment -%}
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
                                 <div class="{% if child_link.links != blank %}{{ 'mycustom-header-mega_menu-image-with_childs-style' | prepend: ' ' }}{% else %} {{ 'mycustom-header-mega_menu-image-without_childs-style' | prepend: ' ' }} {% endif %}">
@@ -203,7 +203,7 @@
                                   {%- if child_link.links != blank -%}
                                     <ul>
                                       {%- for child_child_link in child_link.links -%}
-                                        {%- comment -%}{%- endcomment -%}
+                                        {%- comment -%}Alejandro Custom Modification: Add styling{%- endcomment -%}
                                         <li class="{% if child_child_link.active %}active{% endif %}">
                                           <a class="text-start ps-0 py-1 mycustom-header-mega_menu-font-size-sub_heading" href="{{ child_child_link.url }}">{{ child_child_link.title | strip }}</a>
                                         </li>
@@ -559,6 +559,7 @@
               {% if cart.item_count > 0 %}<span class="cart-count">({{ cart.item_count }})</span>{% endif %}
             </a>
           </span>
+          {%- comment -%}Alejandro Custom Modification: Currency selector{%- endcomment -%}
           {%- if false -%}
             <span >
               <select name="currency" id="currency" style="min-width: 0; color: white; fill: white;">
@@ -653,7 +654,10 @@
     "url": {{ shop.url | append: page.url | json }}
   }
 </script>
-
+{%- comment -%}
+Alejandro Custom Modification:
+-Several custmizations
+{%- endcomment -%}
 {% schema %}
   {
     "name": "Header",
