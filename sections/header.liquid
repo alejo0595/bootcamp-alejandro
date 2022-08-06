@@ -172,6 +172,7 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
+                              {{link.links.size}}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
                                 <div class="mycustom-header-mega_menu-image-style">
                                   {%- assign filename = child_link.handle | append: '.jpg' -%}
