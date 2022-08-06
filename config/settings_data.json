@@ -52,7 +52,7 @@
     "hero_height_desktop": 360,
     "hero_height_mobile": 240,
     "hero_overlap": 0,
-    "prod_card_image_ratio": "0.75",
+    "prod_card_image_ratio": "tallest",
     "prod_card_image_position": "center",
     "prod_card_image_fit": "cover",
     "product_hover_image": false,
