@@ -168,13 +168,13 @@
                                   {%- when 'natural-soaps' -%}
                                     {{ images['natural-soaps.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
                                   {%- when 'natural-creams' -%}
-                                    {{ images['natural-creams.jpg'] | image_url: width: 200 | image_tag: height: 100 }}
+                                    {{ images['natural-creams.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
                                   {%- when 'natural-teas' -%}
-                                    {{ images['natural-teas.jpg'] | image_url: width: 200 | image_tag: height: 100 }}
+                                    {{ images['natural-teas.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
                                   {%- when 'postpartum-snacks' -%}
-                                    {{ images['postpartum-snacks.jpg'] | image_url: width: 200 | image_tag: height: 100 }}
+                                    {{ images['postpartum-snacks.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
                                   {%- when 'face-masks' -%}
-                                    {{ images['face-masks.jpg'] | image_url: width: 200 | image_tag: height: 100 }}
+                                    {{ images['face-masks.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
                                 {%- endcase -%}
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
