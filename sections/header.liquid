@@ -134,11 +134,7 @@
                       {%- liquid
                         assign has_mega_drop_down = true
                         if link.links != blank
-                          for child_link in link.links
-                            if child_link.links == blank
-                              assign has_mega_drop_down = false
-                            endif
-                          endfor
+                          assign has_mega_drop_down = false
                         else
                           assign has_mega_drop_down = false
                         endif
