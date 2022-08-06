@@ -98,9 +98,10 @@
     border-bottom: 2px solid rgba(0,0,0,0.1) !important;
   }
 
-  #pageheader .test {
+  #pageheader .mycustom-header-mega_menu-image {
     width: 500px !important;
     height: 25% !important;
+    object-fit: cover;
   }
 
 {%- endstyle -%}
@@ -171,15 +172,15 @@
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
                                 {%- case child_link.handle -%}
                                   {%- when 'natural-soaps' -%}
-                                    {{ images['natural-soaps.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
+                                    {{ images['natural-soaps.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                   {%- when 'natural-creams' -%}
-                                    {{ images['natural-creams.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
+                                    {{ images['natural-creams.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                   {%- when 'natural-teas' -%}
-                                    {{ images['natural-teas.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
+                                    {{ images['natural-teas.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                   {%- when 'postpartum-snacks' -%}
-                                    {{ images['postpartum-snacks.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
+                                    {{ images['postpartum-snacks.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                   {%- when 'face-masks' -%}
-                                    {{ images['face-masks.jpg'] | image_url: width: nil | image_tag: class: 'test' }}
+                                    {{ images['face-masks.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                 {%- endcase -%}
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
