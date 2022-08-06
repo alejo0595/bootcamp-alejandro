@@ -36,7 +36,7 @@
         "image_align_desktop": "center",
         "image_align_mobile": "center",
         "tint_color": "#465065",
-        "tint_opacity": 30,
+        "tint_opacity": 40,
         "size": "full-auto",
         "height_desktop": 630,
         "height_mobile": 400,
