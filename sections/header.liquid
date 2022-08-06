@@ -383,10 +383,20 @@
                       {%- endif -%}
                     {% endif %}
 
-                    {%- if has_country_dd or has_lang_dd or true -%}
+                    {%- if has_country_dd or has_lang_dd -%}
                       <div class="main-menu-section store-localization no-js-hidden">
                         {% render 'localization', input_prefix: 'menu' %}
                       </div>
+                    {%- endif -%}
+
+                    {%- if true -%}
+                      {%- render 'custom-select',
+                      id: 'colour-selector',
+                      option_values: ['Blue', 'Green', 'Red'],
+                      selected_value: 'Red',
+                      label: 'Colour',
+                      swatches: true
+                      -%}
                     {%- endif -%}
 
                     {%- if section.settings.contact_info_phone != blank or section.settings.contact_info_email != blank -%}
