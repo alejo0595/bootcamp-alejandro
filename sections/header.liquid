@@ -164,11 +164,10 @@
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
-                                {{ images['natural-soaps.jpg'] }}
                                 {%- case child_link.handle -%}
-                                  {%- when '' -%}
+                                  {%- when 'natural-soaps' -%}
+                                    {{ images['natural-soaps.jpg'] | image_url: width: 300 | image_tag }}
                                 {%- endcase -%}
-                                  <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg" alt="" srcset="">
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
                                     {{ child_link.title | strip }}
