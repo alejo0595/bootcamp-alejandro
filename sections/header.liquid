@@ -105,7 +105,7 @@
     object-fit: cover !important;
   }
 
-  #pageheader .test {
+  #pageheader .mycustom-header-mega_menu-image-style {
     height: 30%;
     width: 100%;
     background-color: #F4AB9D;
@@ -177,19 +177,9 @@
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
-                                <div class="test">
-                                  {%- case child_link.handle -%}
-                                    {%- when 'natural-soaps' -%}
-                                      {{ images['natural-soaps.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
-                                    {%- when 'natural-creams' -%}
-                                      {{ images['natural-creams.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
-                                    {%- when 'natural-teas' -%}
-                                      {{ images['natural-teas.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
-                                    {%- when 'postpartum-snacks' -%}
-                                      {{ images['postpartum-snacks.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
-                                    {%- when 'face-masks' -%}
-                                      {{ images['face-masks.jpg'] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
-                                  {%- endcase -%}
+                                <div class="mycustom-header-mega_menu-image-style">
+                                  {%- assign variable = child_link.handle | append: '.jpg' -%}
+                                  {{ images[variable] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                 </div>
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
