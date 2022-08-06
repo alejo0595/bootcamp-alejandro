@@ -147,7 +147,7 @@
                         <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}{% if link.links != blank %} has-children{% endif %} d-flex" {% if link.links != blank %} aria-haspopup="true"{% endif %}>
                           {{- link.title | strip -}}
                           {%- comment -%}{%- endcomment -%}
-                          {% if has_mega_drop_down -%}
+                          {% if has_mega_drop_down or true -%}
                             <span>{%- render: 'mycustom-svg-arrow_down', color: 'currentColor' -%}</span>
                           {%- endif -%}
                         </a>
