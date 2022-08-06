@@ -174,7 +174,7 @@
                                   {%- when 'postpartum-snacks' -%}
                                     {{ images['postpartum-snacks.jpg'] | image_url: width: 200, height: 200 | image_tag }}
                                   {%- when 'face-masks' -%}
-                                    {{ images['face-masks.jpg'] | image_url: width: 200, height: 200 | image_tag }}
+                                    {{ images['face-masks.jpg'] | image_url: width: 200 | image_tag }}
                                 {%- endcase -%}
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
