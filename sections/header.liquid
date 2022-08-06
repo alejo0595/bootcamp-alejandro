@@ -98,14 +98,27 @@
     border-bottom: 2px solid rgba(0,0,0,0.1) !important;
   }
 
-  #pageheader .mycustom-header-mega_menu-image {
+  #pageheader .mycustom-header-mega_menu-image-with_childs {
     position: relative !important;
     width: 500px !important;
     height: 85% !important;
     object-fit: cover !important;
   }
 
-  #pageheader .mycustom-header-mega_menu-image-style {
+  #pageheader .mycustom-header-mega_menu-image-with_childs-style {
+    height: 30%;
+    width: 100%;
+    background-color: #F4AB9D;
+  }
+
+  #pageheader .mycustom-header-mega_menu-image-without_childs {
+    position: relative !important;
+    width: 500px !important;
+    height: 85% !important;
+    object-fit: cover !important;
+  }
+
+  #pageheader .mycustom-header-mega_menu-image-without_childs-style {
     height: 30%;
     width: 100%;
     background-color: #F4AB9D;
@@ -172,11 +185,17 @@
                               {%- endif -%}>
                             {%- comment -%}{%- endcomment -%}
                             {%- for child_link in link.links -%}
-                              {{link.links.size}}
                               <div class="d-flex flex-column mx-1 px-3 {%- unless forloop.last -%}{{ 'mycustom-header-mega_menu-border-right' | prepend: ' ' }}{%- endunless -%}">
-                                <div class="mycustom-header-mega_menu-image-style">
+                                <div class="{% if child_link.links != blank %}{{ 'mycustom-header-mega_menu-image-with_childs-style' | prepend: ' ' }}{% else %} {{ 'mycustom-header-mega_menu-image-without_childs-style' | prepend: ' ' }} {% endif %}">
                                   {%- assign filename = child_link.handle | append: '.jpg' -%}
-                                  {{ images[filename] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
+                                  {%-liquid
+                                    if child_link.links != blank 
+                                      assign image_class = 'mycustom-header-mega_menu-image-with_childs' 
+                                    else 
+                                      assign image_class = 'mycustom-header-mega_menu-image-without_childs' 
+                                    endif 
+                                  -%}
+                                  {{ images[filename] | image_url: width: nil | image_tag: class: image_class }}
                                 </div>
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
                                   <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading {% if child_link.links != blank %}{{ 'mycustom-header-mega_menu-border-bottom' | prepend: ' ' }}{% endif %} " {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
