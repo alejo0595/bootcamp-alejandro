@@ -178,7 +178,7 @@
                                   {{ images[filename] | image_url: width: nil | image_tag: class: 'mycustom-header-mega_menu-image' }}
                                 </div>
                                 <li class="{% if child_link.links != blank %}contains-children{% endif %}{% if child_link.active %}  active{% endif %}">
-                                  <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading mycustom-header-mega_menu-border-bottom" {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                  <a href="{{ child_link.url }}" class="{% if child_link.links != blank %}has-children column-title{% endif %} text-start ps-0 pt-4 pb-1 mycustom-header-mega_menu-font-size-heading {% if child_link.links != blank %}{{ 'mycustom-header-mega_menu-border-bottom' | prepend: ' ' }}{% endif %} " {% if child_link.links != blank %}aria-haspopup="true"{% endif %}>
                                     {{ child_link.title | strip }}
                                   </a>
   
