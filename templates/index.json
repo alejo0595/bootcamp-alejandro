@@ -35,7 +35,7 @@
         "image_desktop": "shopify:\/\/shop_images\/Homepage_Header.jpg",
         "image_align_desktop": "center",
         "image_align_mobile": "center",
-        "tint_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "tint_color": "#000000",
         "tint_opacity": 30,
         "size": "full-auto",
         "height_desktop": 630,

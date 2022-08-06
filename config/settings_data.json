@@ -124,6 +124,11 @@
           "menu_under_text": "",
           "enable_inline_links": true,
           "menu_align_logo_left": true,
+          "mycustom_font": "playfair_display_n4",
+          "mycustom_font_color": "#d79e93",
+          "mycustom_font_size_heading": 1,
+          "mycustom_font_size_sub_heading": 0.9,
+          "mycustom_font_weight": true,
           "search_menu_title": "",
           "search_menu_linklist": "",
           "show_social_links": false,
@@ -134,12 +139,7 @@
           "show_language_selector": true,
           "tint_color": "#000000",
           "tint_opacity": 0,
-          "text_color": "#ffffff",
-          "mycustom_font": "playfair_display_n4",
-          "mycustom_font_color": "#d79e93",
-          "mycustom_font_size_heading": 1,
-          "mycustom_font_size_sub_heading": 0.9,
-          "mycustom_font_weight": true
+          "text_color": "#ffffff"
         }
       },
       "footer": {
