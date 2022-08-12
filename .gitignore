@@ -1,0 +1,14 @@
+#Folders
+/node_modules
+/scss
+/test
+
+#File extensions
+#*.
+
+#Individual files
+package.json
+package-lock.json
+gulpfile.js
+config.yml
+.browserslistrc
