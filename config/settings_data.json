@@ -103,7 +103,7 @@
           "announcement_home_only": true,
           "announcement_bar_text": "Free Shipping Worldwide on Any Minimum Order Purchases!",
           "announcement_bar_link": "",
-          "announcement_bar_bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "announcement_bar_bg_color": "#3e7879",
           "announcement_bar_bg_text": "#ffffff",
           "mycustom_announcement_icon": "mycustom-svg-shipping",
           "mycustom_announcement_icon_show": true,
